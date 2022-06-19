@@ -1,10 +1,10 @@
+import { initializeApollo } from "../lib/apollo";
 import { useMutation, useQuery } from "@apollo/client";
+import { Input, Button } from "@chakra-ui/react";
+import styled from "@emotion/styled";
 import { UpdateNameDocument, ViewerDocument } from "lib/graphql-operations";
 import Link from "next/link";
 import { useState } from "react";
-import { initializeApollo } from "../lib/apollo";
-import { Input, Button } from "@chakra-ui/react";
-import styled from "@emotion/styled";
 
 const Index = () => {
   const { data } = useQuery(ViewerDocument);

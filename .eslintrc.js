@@ -12,7 +12,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "@typescript-eslint"],
+  plugins: ["react", "@typescript-eslint", "import"],
   settings: {
     react: {
       version: "detect",
@@ -23,5 +23,13 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "require-jsdoc": "off",
     "react/no-unescaped-entities": 0,
+    "import/order": [
+      "error",
+      {
+        groups: ["index", "sibling", "parent", "internal", "external", "builtin", "object", "type"],
+        pathGroupsExcludedImportTypes: ["react"],
+        alphabetize: { order: "asc", caseInsensitive: true },
+      },
+    ],
   },
 };

@@ -1,12 +1,12 @@
-import { IncomingMessage, ServerResponse } from "http";
-import { useMemo } from "react";
+import resolvers from "./resolvers";
+import typeDefs from "./schema";
 import {
   ApolloClient,
   InMemoryCache,
   NormalizedCacheObject,
 } from "@apollo/client";
-import resolvers from "./resolvers";
-import typeDefs from "./schema";
+import { useMemo } from "react";
+import { IncomingMessage, ServerResponse } from "http";
 
 let apolloClient: ApolloClient<NormalizedCacheObject> | undefined;
 
