@@ -3,6 +3,8 @@ import { UpdateNameDocument, ViewerDocument } from "lib/graphql-operations";
 import Link from "next/link";
 import { useState } from "react";
 import { initializeApollo } from "../lib/apollo";
+import { Input, Button } from "@chakra-ui/react";
+import styled from "@emotion/styled";
 
 const Index = () => {
   const { data } = useQuery(ViewerDocument);
@@ -47,12 +49,12 @@ const Index = () => {
       </Link>{" "}
       page.
       <div>
-        <input
+        <StyledInput
           type="text"
           placeholder="your new name..."
           onChange={(e) => setNewName(e.target.value)}
         />
-        <input type="button" value="change" onClick={onChangeName} />
+        <Button onClick={onChangeName}>change</Button>
       </div>
     </div>
   ) : null;
@@ -73,3 +75,8 @@ export async function getStaticProps() {
 }
 
 export default Index;
+
+const StyledInput = styled(Input)`
+  margin-right: 5px;
+  width: 200px;
+`;
