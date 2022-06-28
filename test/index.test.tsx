@@ -30,7 +30,7 @@ describe("Index", () => {
     const component = renderer.create(
       <MockedProvider cache={cache}>
         <Index />
-      </MockedProvider>
+      </MockedProvider>,
     );
     expect(component.toJSON()).toMatchSnapshot();
   });

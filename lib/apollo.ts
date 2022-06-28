@@ -1,10 +1,6 @@
 import resolvers from "./resolvers";
 import typeDefs from "./schema";
-import {
-  ApolloClient,
-  InMemoryCache,
-  NormalizedCacheObject,
-} from "@apollo/client";
+import { ApolloClient, InMemoryCache, NormalizedCacheObject } from "@apollo/client";
 import { useMemo } from "react";
 import { IncomingMessage, ServerResponse } from "http";
 
@@ -46,7 +42,7 @@ export function initializeApollo(
   initialState: any = null,
   // Pages with Next.js data fetching methods, like `getStaticProps`, can send
   // a custom context which will be used by `SchemaLink` to server render pages
-  context?: ResolverContext
+  context?: ResolverContext,
 ) {
   const _apolloClient = apolloClient ?? createApolloClient(context);
 
