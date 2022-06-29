@@ -1,5 +1,5 @@
 schema:
-  - 'lib/schema.ts':
+  - "lib/schema.ts":
       noRequire: true
 documents: ./lib/documents/*.graphql
 generates:
