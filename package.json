@@ -29,11 +29,11 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "2.6.4",
-    "@graphql-codegen/typed-document-node": "^2.2.8",
-    "@graphql-codegen/typescript": "^2.4.8",
-    "@graphql-codegen/typescript-operations": "^2.3.5",
-    "@graphql-codegen/typescript-resolvers": "^2.6.1",
+    "@graphql-codegen/cli": "2.7.0",
+    "@graphql-codegen/typed-document-node": "2.2.14",
+    "@graphql-codegen/typescript": "2.6.0",
+    "@graphql-codegen/typescript-operations": "2.4.3",
+    "@graphql-codegen/typescript-resolvers": "2.6.7",
     "@types/jest": "28.1.4",
     "@types/mocha": "^9.0.0",
     "@types/react": "^18.0.14",
