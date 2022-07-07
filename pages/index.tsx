@@ -1,72 +1,33 @@
+import { useBlogQuery } from "../lib/api/query";
 import { initializeApollo } from "../lib/apollo";
-import { useMutation, useQuery } from "@apollo/client";
-import { Input, Button } from "@chakra-ui/react";
-import styled from "@emotion/styled";
-import { UpdateNameDocument, ViewerDocument } from "lib/graphql-operations";
-import Link from "next/link";
-import { useState } from "react";
 
 const Index = () => {
-  const { data } = useQuery(ViewerDocument);
-  const [newName, setNewName] = useState("");
-  const [updateNameMutation] = useMutation(UpdateNameDocument);
-
-  const onChangeName = () => {
-    updateNameMutation({
-      variables: {
-        name: newName,
-      },
-      // Follow apollo suggestion to update cache
-      //  https://www.apollographql.com/docs/angular/features/cache-updates/#update
-      update: (cache, mutationResult) => {
-        const { data } = mutationResult;
-        if (!data) return; // Cancel updating name in cache if no data is returned from mutation.
-        // Read the data from our cache for this query.
-        const result = cache.readQuery({
-          query: ViewerDocument,
-        });
-        const newViewer = result ? { ...result.viewer } : null;
-        // Add our comment from the mutation to the end.
-        // Write our data back to the cache.
-        if (newViewer) {
-          newViewer.name = data.updateName.name;
-          cache.writeQuery({
-            query: ViewerDocument,
-            data: { viewer: newViewer },
-          });
-        }
-      },
-    });
-  };
-
-  const viewer = data?.viewer;
-
-  return viewer ? (
+  const { data, loading, error } = useBlogQuery();
+  if (error) {
+    console.error(error);
+  }
+  if (loading || !data) {
+    return <div></div>;
+  }
+  return (
     <div>
-      You're signed in as {viewer.name} and you're {viewer.status}. Go to the{" "}
-      <Link href="/about">
-        <a>about</a>
-      </Link>{" "}
-      page.
-      <div>
-        <StyledInput
-          type="text"
-          placeholder="your new name..."
-          onChange={(e) => setNewName(e.target.value)}
-        />
-        <Button onClick={onChangeName}>change</Button>
-      </div>
+      {data.allBlogModels.map((blog) => (
+        <div key={blog.id}>
+          <h1>{blog.title}</h1>
+          <p>{blog.createdAt}</p>
+          <p>{blog.updatedAt}</p>
+          tags:{" "}
+          {blog.tag.map((t) => (
+            <p key={t.id}>{t.name}</p>
+          ))}
+        </div>
+      ))}
     </div>
-  ) : null;
+  );
 };
 
 export async function getStaticProps() {
   const apolloClient = initializeApollo();
-
-  await apolloClient.query({
-    query: ViewerDocument,
-  });
-
   return {
     props: {
       initialApolloState: apolloClient.cache.extract(),
@@ -75,8 +36,3 @@ export async function getStaticProps() {
 }
 
 export default Index;
-
-const StyledInput = styled(Input)`
-  margin-right: 5px;
-  width: 200px;
-`;
