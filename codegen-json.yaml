@@ -1,0 +1,10 @@
+overwrite: true
+schema:
+  - https://graphql.datocms.com/:
+      headers:
+        Authorization: Bearer ${NEXT_PUBLIC_API_TOKEN}
+
+generates:
+  schema.json:
+    plugins:
+      - introspection

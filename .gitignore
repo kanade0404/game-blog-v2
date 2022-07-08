@@ -25,7 +25,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env.local
+.env.local.json
 .env.development.local
 .env.test.local
 .env.production.local
@@ -37,7 +37,6 @@ yarn-error.log*
 .cache
 *.graphql.d.ts
 *.graphqls.d.ts
-.cache
 
-lib/resolvers-types.ts
-lib/graphql-operations.ts
+lib/api/
+.env
