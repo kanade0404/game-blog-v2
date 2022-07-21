@@ -18,7 +18,7 @@
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@graphql-tools/load-files": "6.6.0",
-    "@graphql-yoga/node": "2.13.3",
+    "@graphql-yoga/node": "2.13.4",
     "@graphql-tools/merge": "8.3.0",
     "@graphql-tools/schema": "8.5.0",
     "framer-motion": "6.5.1",
