@@ -2316,10 +2316,10 @@
   resolved "https://registry.yarnpkg.com/@graphql-typed-document-node/core/-/core-3.1.1.tgz#076d78ce99822258cf813ecc1e7fa460fa74d052"
   integrity sha512-NQ17ii0rK1b34VZonlmT2QMJFI70m0TRwbknO/ihlbatXyaktDhN/98vBiUU6kNBPljqGqyIrl2T4nY2RpFANg==
 
-"@graphql-yoga/common@^2.12.3":
-  version "2.12.3"
-  resolved "https://registry.yarnpkg.com/@graphql-yoga/common/-/common-2.12.3.tgz#8367847c89883aece94e43d66026666212d8f0a7"
-  integrity sha512-enyyl4qyd7SRaTQ8mZehoYVn6yvxFx9MvCd7KcAEo50s0g8oFSQj72TjQZk7eS4llHQ8dfqPiROq2af1GMnsnA==
+"@graphql-yoga/common@^2.12.5":
+  version "2.12.5"
+  resolved "https://registry.yarnpkg.com/@graphql-yoga/common/-/common-2.12.5.tgz#930cf3599a3398f6a56f2f1755e6c9785e60bedb"
+  integrity sha512-5p634xtfphiHNPd39kyDc3VSIX8shkinywalNiMHEAal1DGYCn4x/mKbA6Q7tgWvrCqC4fAAuklHoxxi7TIyxA==
   dependencies:
     "@envelop/core" "^2.4.0"
     "@envelop/parser-cache" "^4.4.0"
@@ -2327,36 +2327,36 @@
     "@graphql-tools/schema" "^8.5.0"
     "@graphql-tools/utils" "^8.8.0"
     "@graphql-typed-document-node/core" "^3.1.1"
-    "@graphql-yoga/subscription" "^2.2.2"
-    cross-undici-fetch "^0.4.13"
+    "@graphql-yoga/subscription" "^2.2.3"
+    "@whatwg-node/fetch" "^0.2.6"
     dset "^3.1.1"
     tslib "^2.3.1"
 
-"@graphql-yoga/node@2.13.4":
-  version "2.13.4"
-  resolved "https://registry.yarnpkg.com/@graphql-yoga/node/-/node-2.13.4.tgz#869593b83a24501d1497a7cf731d31eb72084f07"
-  integrity sha512-oxnEqIaqwm625h8xpI4dcLwk6l4yFQN/+tey5m7gW3blK21e2L2J78qGT9dG/1vITDggjM+z5A+WL+M9ztbkbw==
+"@graphql-yoga/node@2.13.6":
+  version "2.13.6"
+  resolved "https://registry.yarnpkg.com/@graphql-yoga/node/-/node-2.13.6.tgz#536b9e9b63d56c87e4886dd86808eab8ff83a979"
+  integrity sha512-gQDP2pZ88lR6+ZZbq6VosiCmhKR9cMWIAbtjTqcFu5k3isKdJnJvCSzk8vZuMjdwWl+IlyJaTVZTN8Xor+Z2tQ==
   dependencies:
     "@envelop/core" "^2.4.0"
     "@graphql-tools/utils" "^8.8.0"
-    "@graphql-yoga/common" "^2.12.3"
-    "@graphql-yoga/subscription" "^2.2.2"
-    cross-undici-fetch "^0.4.13"
+    "@graphql-yoga/common" "^2.12.5"
+    "@graphql-yoga/subscription" "^2.2.3"
+    "@whatwg-node/fetch" "^0.2.6"
     tslib "^2.3.1"
 
-"@graphql-yoga/subscription@^2.2.2":
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/@graphql-yoga/subscription/-/subscription-2.2.2.tgz#3a940a0c7daadede4adb824b262b29ce24f08425"
-  integrity sha512-830Aszxon2YDRW4+NXLjlh9ssP56hreMIA6vQIVCMzzQEbv4CnjPYDde6vVqCSZhJ51SvlJsVRYFbPEObEuzWw==
+"@graphql-yoga/subscription@^2.2.3":
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/@graphql-yoga/subscription/-/subscription-2.2.3.tgz#e378fa17a12675ae7b34b2f51e39bc02df312ba0"
+  integrity sha512-It/Dfh+nW2ClTtmOylAa+o7fbKIRYRTH6jfKLj3YB75tkv/rFZ70bjlChDCrEMa46I+zDMg7+cdkrQOXov2fDg==
   dependencies:
-    "@graphql-yoga/typed-event-target" "^0.1.0"
+    "@graphql-yoga/typed-event-target" "^0.1.1"
     "@repeaterjs/repeater" "^3.0.4"
     tslib "^2.3.1"
 
-"@graphql-yoga/typed-event-target@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@graphql-yoga/typed-event-target/-/typed-event-target-0.1.0.tgz#c83b4f3cb2793ba29c3442193c9369884fe8fde6"
-  integrity sha512-3zsJSSUgrJalE1/KoNN1ga1jU6GhTyEnAWACMP2vFzr3hkVyhB3QIkAYaGOVu0sg87K67gfD8QblT+WFZbsX6g==
+"@graphql-yoga/typed-event-target@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@graphql-yoga/typed-event-target/-/typed-event-target-0.1.1.tgz#248d56a76046d805af8c0da3ef590cdb95d2c192"
+  integrity sha512-l23kLKHKhfD7jmv4OUlzxMTihSqgIjGWCSb0KdlLkeiaF2jjuo8pRhX200hFTrtjRHGSYS1fx2lltK/xWci+vw==
   dependencies:
     "@repeaterjs/repeater" "^3.0.4"
     tslib "^2.3.1"
@@ -3203,6 +3203,21 @@
     undici "^5.8.0"
     web-streams-polyfill "^3.2.0"
 
+"@whatwg-node/fetch@^0.2.6":
+  version "0.2.8"
+  resolved "https://registry.yarnpkg.com/@whatwg-node/fetch/-/fetch-0.2.8.tgz#ccfa4a32873fcd5442a6a0c18e3fd3ae934329c4"
+  integrity sha512-KyUD1Vx9TpdTTlM01aXOx1NED93C33cOT/5RyCqVL6H/srGTU1hlLacOLgmYSLNzkEVerVfhb7Bd6IxiI7JziA==
+  dependencies:
+    "@peculiar/webcrypto" "^1.4.0"
+    abort-controller "^3.0.0"
+    busboy "^1.6.0"
+    event-target-polyfill "^0.0.3"
+    form-data-encoder "^1.7.1"
+    formdata-node "^4.3.1"
+    node-fetch "^2.6.7"
+    undici "^5.8.0"
+    web-streams-polyfill "^3.2.0"
+
 "@wry/context@^0.6.0":
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/@wry/context/-/context-0.6.1.tgz#c3c29c0ad622adb00f6a53303c4f965ee06ebeb2"
@@ -3999,19 +4014,6 @@ cross-undici-fetch@^0.4.0:
     formdata-node "^4.3.1"
     node-fetch "^2.6.7"
     undici "^5.1.0"
-    web-streams-polyfill "^3.2.0"
-
-cross-undici-fetch@^0.4.13:
-  version "0.4.13"
-  resolved "https://registry.yarnpkg.com/cross-undici-fetch/-/cross-undici-fetch-0.4.13.tgz#cc693121267f8203217e0c8768d3d4cf97889b44"
-  integrity sha512-7g4hCZcq/9DiYhF43lRWgtZjPqg8tMrjG3eO94QiFQcdFR4TcmcT0Czdu7H+brXDkdbWJQrjYCV93ggE61INDA==
-  dependencies:
-    abort-controller "^3.0.0"
-    busboy "^1.6.0"
-    form-data-encoder "^1.7.1"
-    formdata-node "^4.3.1"
-    node-fetch "^2.6.7"
-    undici "5.5.1"
     web-streams-polyfill "^3.2.0"
 
 crypto-random-string@^2.0.0:
@@ -7679,7 +7681,7 @@ unc-path-regex@^0.1.2:
   resolved "https://registry.yarnpkg.com/unc-path-regex/-/unc-path-regex-0.1.2.tgz#e73dd3d7b0d7c5ed86fbac6b0ae7d8c6a69d50fa"
   integrity sha512-eXL4nmJT7oCpkZsHZUOJo8hcX3GbsiDOa0Qu9F646fi8dT3XuSVopVqAcEiVzSKKH7UoDti23wNX3qGFxcW5Qg==
 
-undici@5.5.1, undici@^5.1.0:
+undici@^5.1.0:
   version "5.5.1"
   resolved "https://registry.yarnpkg.com/undici/-/undici-5.5.1.tgz#baaf25844a99eaa0b22e1ef8d205bffe587c8f43"
   integrity sha512-MEvryPLf18HvlCbLSzCW0U00IMftKGI5udnjrQbC5D4P0Hodwffhv+iGfWuJwg16Y/TK11ZFK8i+BPVW2z/eAw==
