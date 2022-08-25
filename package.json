@@ -34,7 +34,7 @@
     "@graphql-codegen/typescript": "2.7.3",
     "@graphql-codegen/typescript-operations": "2.5.3",
     "@graphql-codegen/typescript-resolvers": "2.7.3",
-    "@types/jest": "28.1.7",
+    "@types/jest": "28.1.8",
     "@types/mocha": "9.1.1",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
