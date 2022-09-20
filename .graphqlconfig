@@ -1,0 +1,15 @@
+{
+  "name": "Game Blog V2",
+  "schemaPath": "schema.json",
+  "extensions": {
+    "endpoints": {
+      "DatoCMS Endpoint": {
+        "url": "https://graphql.datocms.com",
+        "headers": {
+          "Authorization": "Bearer ${env:DATOCMS_API_TOKEN}"
+        },
+        "introspect": false
+      }
+    }
+  }
+}

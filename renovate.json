@@ -1,3 +1,10 @@
 {
-  "extends": ["config:base"]
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>kanade0404/renovate-config"
+  ],
+  "reviewers": [
+    "kanade0404",
+    "luvmini511"
+  ]
 }
