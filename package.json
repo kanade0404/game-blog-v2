@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "@apollo/client": "3.6.9",
-    "@chakra-ui/react": "2.3.2",
+    "@chakra-ui/react": "2.3.4",
     "@emotion/react": "11.10.4",
     "@emotion/styled": "11.10.4",
     "@graphql-tools/load-files": "6.6.1",
