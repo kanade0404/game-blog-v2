@@ -34,7 +34,7 @@
     "babel-jest": "29.0.3",
     "cspell": "6.10.1",
     "dotenv": "16.0.2",
-    "eslint": "8.23.1",
+    "eslint": "8.24.0",
     "eslint-config-google": "0.14.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.26.0",
