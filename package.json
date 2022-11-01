@@ -10,7 +10,7 @@
     "@graphql-tools/merge": "8.3.8",
     "@graphql-tools/schema": "9.0.6",
     "eslint": "8.22.0",
-    "framer-motion": "7.6.2",
+    "framer-motion": "7.6.3",
     "graphql": "16.6.0",
     "graphql-tag": "2.12.6",
     "next": "13.0.1",
