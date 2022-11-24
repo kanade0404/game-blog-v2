@@ -23,7 +23,7 @@
     "@graphql-codegen/typed-document-node": "2.3.7",
     "@graphql-codegen/typescript": "2.8.2",
     "@graphql-codegen/typescript-operations": "2.5.7",
-    "@graphql-codegen/typescript-react-apollo": "3.3.6",
+    "@graphql-codegen/typescript-react-apollo": "3.3.7",
     "@graphql-codegen/typescript-resolvers": "2.7.7",
     "@types/jest": "29.2.3",
     "@types/mocha": "10.0.0",
