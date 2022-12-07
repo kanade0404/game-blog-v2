@@ -9,7 +9,7 @@
     "@graphql-tools/load-files": "6.6.1",
     "@graphql-tools/merge": "8.3.14",
     "@graphql-tools/schema": "9.0.12",
-    "eslint": "8.28.0",
+    "eslint": "8.29.0",
     "framer-motion": "7.6.19",
     "graphql": "16.6.0",
     "graphql-tag": "2.12.6",
