@@ -20,4 +20,4 @@
 *.graphql.d.ts
 *.graphqls.d.ts
 
-lib/api/
+libs/api/
