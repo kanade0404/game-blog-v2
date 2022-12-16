@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [16.x, 18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -29,9 +29,13 @@ jobs:
     - run: yarn
     - run: yarn codegen
       env:
-        NEXT_PUBLIC_API_TOKEN: ${{ secrets.NEXT_PUBLIC_API_TOKEN }}
+        API_TOKEN: ${{ secrets.NEXT_PUBLIC_API_TOKEN }}
     - run: yarn build
       env:
-        NEXT_PUBLIC_API_TOKEN: ${{ secrets.NEXT_PUBLIC_API_TOKEN }}
+        API_TOKEN: ${{ secrets.NEXT_PUBLIC_API_TOKEN }}
     - run:
         yarn confirm
+    - run:
+        yarn test
+      env:
+        API_TOKEN: ${{ secrets.NEXT_PUBLIC_API_TOKEN }}

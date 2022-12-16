@@ -1,6 +1,7 @@
 import { ApolloClient, HttpLink, InMemoryCache, from, NormalizedCacheObject } from "@apollo/client";
 import { onError } from "@apollo/client/link/error";
 import { concatPagination } from "@apollo/client/utilities";
+import { fetch } from "cross-fetch";
 import merge from "deepmerge";
 import isEqual from "lodash/isEqual";
 import { useMemo } from "react";
@@ -23,9 +24,10 @@ const httpLink = new HttpLink({
   headers: {
     Authorization: `Bearer ${process.env.API_TOKEN}`,
   },
+  fetch,
 });
 
-function createApolloClient() {
+export function createApolloClient() {
   return new ApolloClient({
     ssrMode: typeof window === "undefined",
     link: from([errorLink, httpLink]),
