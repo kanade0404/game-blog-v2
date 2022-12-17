@@ -12,30 +12,28 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-20.04
-
-    strategy:
-      matrix:
-        node-version: [16.x, 18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    runs-on: ubuntu-22.04
 
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js $(cat .node-version)
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: $(cat .node-version)
         cache: 'npm'
     - run: yarn
     - run: yarn codegen
       env:
+        GRAPHQL_ENDPOINT: https://graphql.datocms.com
         API_TOKEN: ${{ secrets.NEXT_PUBLIC_API_TOKEN }}
     - run: yarn build
       env:
+        GRAPHQL_ENDPOINT: https://graphql.datocms.com
         API_TOKEN: ${{ secrets.NEXT_PUBLIC_API_TOKEN }}
     - run:
         yarn confirm
     - run:
         yarn test
       env:
+        GRAPHQL_ENDPOINT: https://graphql.datocms.com
         API_TOKEN: ${{ secrets.NEXT_PUBLIC_API_TOKEN }}
