@@ -13,6 +13,20 @@
       "extends": ["packages:eslint"],
       "matchPackageNames": ["eslint"],
       "allowedVersions": "<=8.22.0"
+    },
+    {
+      "groupName": "storybook families",
+      "matchPackagePrefixes": [
+        "@storybook"
+      ]
+    },
+    {
+      "groupName": "GraphQL families",
+      "matchPackagePrefixes": [
+        "@graphql-codegen",
+        "graphql",
+        "@graphql-tools"
+      ]
     }
   ]
 }
