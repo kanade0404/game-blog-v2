@@ -31,8 +31,6 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
       - if: ${{ steps.node_modules_cache_id.outputs.cache-hit != 'true' }}
         run: yarn
-      - run: yarn build-storybook
       - uses: chromaui/action@v1
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          token: ${{ secrets.GITHUB_TOKEN }}
