@@ -1,6 +1,7 @@
 {
   "name": "kanade.log",
   "version": "1.0.0",
+  "_id": "kanade.log@1.0.0",
   "dependencies": {
     "@apollo/client": "3.7.2",
     "@chakra-ui/react": "2.4.4",
@@ -44,6 +45,7 @@
     "@types/react-test-renderer": "18.0.0",
     "@typescript-eslint/eslint-plugin": "5.46.1",
     "@typescript-eslint/parser": "5.46.1",
+    "chromatic": "^6.13.1",
     "cspell": "6.17.0",
     "dotenv": "^16.0.3",
     "eslint": "8.22.0",
@@ -68,6 +70,7 @@
   "scripts": {
     "build": "yarn codegen && next build",
     "build-storybook": "build-storybook",
+    "chromatic": "chromatic",
     "codegen": "graphql-codegen --require dotenv/config -r ts-node/register -c codegen-json.yaml && graphql-codegen -r ts-node/register -c codegen.yml",
     "confirm": "run-p confirm:*",
     "confirm:format": "prettier '*/**/*.{js,ts,tsx}'",

@@ -8,6 +8,7 @@
   ],
   "ignorePaths": [
     "libs/api",
-    "node_modules"
+    "node_modules",
+    "storybook-static"
   ]
 }

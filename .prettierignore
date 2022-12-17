@@ -21,3 +21,4 @@
 *.graphqls.d.ts
 
 libs/api/
+storybook-static
