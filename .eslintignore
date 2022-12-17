@@ -22,4 +22,5 @@
 *.graphqls.d.ts
 .cache
 
-lib/api/
+libs/api/
+storybook-static

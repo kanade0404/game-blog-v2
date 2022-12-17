@@ -1,13 +1,14 @@
-import { useBlogQuery } from "../lib/api/query";
-import { initializeApollo } from "../lib/apollo";
+import { BlogDocument, useBlogQuery } from "../libs/api/query";
+import { addApolloState, initializeApollo } from "../libs/apolloClient";
 
-const Index = () => {
+export default function Index() {
   const { data, loading, error } = useBlogQuery();
   if (error) {
     console.error(error);
+    return <></>;
   }
   if (loading || !data) {
-    return <div></div>;
+    return <></>;
   }
   return (
     <div>
@@ -16,7 +17,7 @@ const Index = () => {
           <h1>{blog.title}</h1>
           <p>{blog.createdAt}</p>
           <p>{blog.updatedAt}</p>
-          tags:{" "}
+          tags:
           {blog.tag.map((t) => (
             <p key={t.id}>{t.name}</p>
           ))}
@@ -24,15 +25,15 @@ const Index = () => {
       ))}
     </div>
   );
-};
+}
 
 export async function getStaticProps() {
   const apolloClient = initializeApollo();
-  return {
-    props: {
-      initialApolloState: apolloClient.cache.extract(),
-    },
-  };
+  await apolloClient.query({
+    query: BlogDocument,
+  });
+  return addApolloState(apolloClient, {
+    props: {},
+    revalidate: 1,
+  });
 }
-
-export default Index;

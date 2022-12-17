@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ["plugin:react/recommended", "google", "prettier"],
+  extends: ["plugin:react/recommended", "google", "prettier", "plugin:storybook/recommended"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
@@ -22,13 +22,17 @@ module.exports = {
   rules: {
     "react/react-in-jsx-scope": "off",
     "require-jsdoc": "off",
+    "react/prop-types": "off",
     "react/no-unescaped-entities": 0,
     "import/order": [
       "error",
       {
         groups: ["index", "sibling", "parent", "internal", "external", "builtin", "object", "type"],
         pathGroupsExcludedImportTypes: ["react"],
-        alphabetize: { order: "asc", caseInsensitive: true },
+        alphabetize: {
+          order: "asc",
+          caseInsensitive: true,
+        },
       },
     ],
   },
