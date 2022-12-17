@@ -24,16 +24,13 @@ jobs:
     - run: yarn
     - run: yarn codegen
       env:
-        GRAPHQL_ENDPOINT: https://graphql.datocms.com
         API_TOKEN: ${{ secrets.NEXT_PUBLIC_API_TOKEN }}
     - run: yarn build
       env:
-        GRAPHQL_ENDPOINT: https://graphql.datocms.com
         API_TOKEN: ${{ secrets.NEXT_PUBLIC_API_TOKEN }}
     - run:
         yarn confirm
     - run:
         yarn test
       env:
-        GRAPHQL_ENDPOINT: https://graphql.datocms.com
         API_TOKEN: ${{ secrets.NEXT_PUBLIC_API_TOKEN }}
