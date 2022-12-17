@@ -21,7 +21,15 @@ jobs:
       with:
         node-version-file: ./.node-version
         cache: 'npm'
-    - run: yarn
+    - uses: actions/cache@v3
+        id: node_modules_cache_id
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+    - if: ${{ steps.node_modules_cache_id.outputs.cache-hit != 'true' }}
+      run: yarn
     - run: yarn codegen
       env:
         API_TOKEN: ${{ secrets.NEXT_PUBLIC_API_TOKEN }}
