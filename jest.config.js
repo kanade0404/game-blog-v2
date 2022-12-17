@@ -1,10 +1,10 @@
-module.exports = {
-  roots: ["<rootDir>"],
-  moduleFileExtensions: ["ts", "tsx", "js", "json", "jsx"],
-  testPathIgnorePatterns: ["<rootDir>[/\\\\](node_modules|.next)[/\\\\]"],
-  transformIgnorePatterns: ["[/\\\\]node_modules[/\\\\].+\\.(ts|tsx)$"],
-  transform: {
-    "^.+\\.(ts|tsx)$": "babel-jest",
-    "\\.graphql$": ["graphql-let/jestTransformer", { subsequentTransformer: "babel-jest" }],
-  },
+const nextJest = require("next/jest");
+const createJestConfig = nextJest({
+  dir: "./",
+});
+const customJestConfig = {
+  setupFilesAfterEnv: ["./jest.setup.ts"],
+  moduleDirectories: ["node_modules"],
+  testEnvironment: "jest-environment-jsdom",
 };
+module.exports = createJestConfig(customJestConfig);

@@ -1,13 +1,13 @@
 overwrite: true
 schema: schema.json
 generates:
-  lib/api/query.ts:
+  libs/api/query.ts:
     documents:
-      lib/schema/**/*.graphql
+      libs/schema/**/*.graphql
     plugins:
       - 'typescript'
       - 'typescript-operations'
-      - 'typescript-react-apollo'
+      - '@graphql-codegen/typescript-react-apollo'
     config:
       namingConvention:
         enumValues: change-case-all#upperCaseFirst

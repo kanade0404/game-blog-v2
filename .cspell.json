@@ -2,9 +2,13 @@
   "version": "0.2",
   "language": "en",
   "words": [
-    "Chakra"
+    "Chakra",
+    "Viewports",
+    "deepmerge"
   ],
   "ignorePaths": [
-    "lib/api"
+    "libs/api",
+    "node_modules",
+    "storybook-static"
   ]
 }

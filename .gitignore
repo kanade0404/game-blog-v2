@@ -38,5 +38,7 @@ yarn-error.log*
 *.graphql.d.ts
 *.graphqls.d.ts
 
-lib/api/
+libs/api/
 .env
+
+build-storybook.log
