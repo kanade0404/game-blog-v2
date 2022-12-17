@@ -6,8 +6,6 @@ name: Node.js CI
 on:
   push:
     branches: [ "master", "feat/**", "renovate/**", "dependabot/**" ]
-  pull_request:
-    branches: [ "master", "feat/**", "renovate/**", "dependabot/**" ]
 
 jobs:
   build:
