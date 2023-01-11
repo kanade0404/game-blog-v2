@@ -4,7 +4,7 @@
   "_id": "kanade.log@1.0.0",
   "dependencies": {
     "@apollo/client": "3.7.3",
-    "@chakra-ui/react": "2.4.6",
+    "@chakra-ui/react": "2.4.7",
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
     "@graphql-tools/load-files": "6.6.1",
