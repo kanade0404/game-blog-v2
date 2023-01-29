@@ -52,7 +52,7 @@
     "eslint-config-google": "0.14.0",
     "eslint-config-prettier": "8.6.0",
     "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-react": "7.32.1",
+    "eslint-plugin-react": "7.32.2",
     "eslint-plugin-storybook": "^0.6.8",
     "fixpack": "4.0.0",
     "husky": "8.0.3",
