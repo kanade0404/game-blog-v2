@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "_id": "kanade.log@1.0.0",
   "dependencies": {
-    "@apollo/client": "3.7.5",
+    "@apollo/client": "3.7.6",
     "@chakra-ui/react": "2.4.9",
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
