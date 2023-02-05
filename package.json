@@ -46,7 +46,7 @@
     "@typescript-eslint/eslint-plugin": "5.50.0",
     "@typescript-eslint/parser": "5.50.0",
     "chromatic": "^6.13.1",
-    "cspell": "6.21.0",
+    "cspell": "6.22.0",
     "dotenv": "^16.0.3",
     "eslint": "8.22.0",
     "eslint-config-google": "0.14.0",
