@@ -6178,7 +6178,16 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
-"@types/react@18.0.35", "@types/react@>=16":
+"@types/react@18.0.37":
+  version "18.0.37"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.37.tgz#7a784e2a8b8f83abb04dc6b9ed9c9b4c0aee9be7"
+  integrity sha512-4yaZZtkRN3ZIQD3KSEwkfcik8s0SWV+82dlJot1AbGYHCzJkWP3ENBY6wYeDRmKZ6HkrgoGAmR2HqdwYGp6OEw==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/react@>=16":
   version "18.0.35"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.35.tgz#192061cb1044fe01f2d3a94272cd35dd50502741"
   integrity sha512-6Laome31HpetaIUGFWl1VQ3mdSImwxtFZ39rh059a1MNnKGqBpC88J6NJ8n/Is3Qx7CefDGLgf/KhN/sYCf7ag==
@@ -10404,10 +10413,10 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
-framer-motion@10.12.2:
-  version "10.12.2"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-10.12.2.tgz#2948bf697bfc75aaf04177bb481996e1ca47781d"
-  integrity sha512-DD3Ieqy4pjmL0qBtfNMqnU/IONchUqnhHtgFtu0Nq5jw7bhkksD/Cs4cNhLYd1vs7iB8Q+WInxuBeMmzIoA5Xg==
+framer-motion@10.12.3:
+  version "10.12.3"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-10.12.3.tgz#f60a79fff3b9b9efb09ba73d34fe2d27b523a2d4"
+  integrity sha512-OQrfIMJrWrcnyQ+K3VkDboQHigCk8pqFjXLedbpl/V7P7X8d1DX/dK1/lefLx5hIcdnsmT1DQDpZBQGnYZGh1Q==
   dependencies:
     tslib "^2.4.0"
   optionalDependencies:
