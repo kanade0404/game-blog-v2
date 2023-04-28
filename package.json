@@ -5,8 +5,8 @@
   "dependencies": {
     "@apollo/client": "3.7.13",
     "@chakra-ui/react": "2.6.0",
-    "@emotion/react": "11.10.6",
-    "@emotion/styled": "11.10.6",
+    "@emotion/react": "11.10.8",
+    "@emotion/styled": "11.10.8",
     "@graphql-tools/load-files": "6.6.1",
     "@graphql-tools/merge": "8.4.1",
     "@graphql-tools/schema": "9.0.19",
