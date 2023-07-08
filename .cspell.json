@@ -2,13 +2,17 @@
   "version": "0.2",
   "language": "en",
   "words": [
-    "Chakra",
-    "Viewports",
-    "deepmerge"
+    "kanade",
+    "nextjs",
+    "clsx"
   ],
   "ignorePaths": [
-    "libs/api",
+    "lib/api",
     "node_modules",
-    "storybook-static"
+    "storybook-static",
+    "stories",
+    "schema.json",
+    "package.json",
+    "renovate.json"
   ]
 }

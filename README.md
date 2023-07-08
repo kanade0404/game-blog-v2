@@ -28,11 +28,11 @@ yarn && yarn dev
 ```shell
 tree -L 2 -d -I node_modules/ -I coverage/ -I storybook-static/
 .
-├── libs
+├── lib
 │   ├── api # GraphQL CodeGeneratorの生成コード
 │   ├── apolloClient # Apollo Client
 │   └── schema # GraphQL schema格納先
-├── pages # Next.jsのページ
+├── app # Next.jsのページ
 ├── stories # storybookのstory格納先
 │   └── assets # storyのassetsの格納先
 └── test # テストコードの格納先（一時的）

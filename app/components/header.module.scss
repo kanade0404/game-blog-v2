@@ -1,0 +1,39 @@
+.outer {
+  background-color: #333333;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--layout-font-color);
+  display: flex;
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
+}
+
+.inner {
+  justify-content: center;
+  display: flex;
+  margin-left: 285px;
+  @media (max-width: 767px) {
+    margin-left: 15px;
+  }
+}
+
+.margin {
+  margin: 15px;
+  @media (max-width: 767px) {
+    margin: 10px;
+  }
+}
+
+.name {
+  color: var(--layout-font-color);
+  text-decoration: none;
+}
+
+.category {
+  color: #5d5d5d;
+  text-decoration: none;
+  &.active {
+    color: var(--layout-font-color);
+  }
+}

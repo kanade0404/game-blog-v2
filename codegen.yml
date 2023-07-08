@@ -1,9 +1,9 @@
 overwrite: true
 schema: schema.json
 generates:
-  libs/api/query.ts:
+  lib/api/query.ts:
     documents:
-      libs/schema/**/*.graphql
+      lib/schema/**/*.graphql
     plugins:
       - 'typescript'
       - 'typescript-operations'

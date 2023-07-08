@@ -1,11 +1,9 @@
-module.exports = {
-  webpack(config, options) {
-    config.module.rules.push({
-      test: /\.ya?ml$/,
-      type: "json",
-      use: "yaml-loader",
-    });
-
-    return config;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  experimental: {
+    appDir: true,
   },
 };
+module.exports = nextConfig;

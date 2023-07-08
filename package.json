@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "_id": "kanade.log@1.0.0",
   "dependencies": {
-    "@apollo/client": "3.7.17",
+    "@apollo/client": "^3.7.17",
+    "@apollo/experimental-nextjs-app-support": "^0.3.2",
     "@chakra-ui/react": "2.7.1",
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
     "@graphql-tools/load-files": "7.0.0",
     "@graphql-tools/merge": "9.0.0",
     "@graphql-tools/schema": "10.0.0",
+    "clsx": "^1.2.1",
     "cross-fetch": "^4.0.0",
     "deepmerge": "^4.2.2",
     "framer-motion": "10.12.18",
@@ -18,7 +20,8 @@
     "lodash": "^4.17.21",
     "next": "^13.0.7",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sass": "^1.63.6"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "4.0.1",
@@ -64,6 +67,7 @@
     "prettier": "3.0.0",
     "react-test-renderer": "18.2.0",
     "ts-node": "^10.9.1",
+    "typed-scss-modules": "^7.1.1",
     "typescript": "5.1.6",
     "yaml-loader": "0.8.0"
   },
@@ -72,7 +76,9 @@
     "build": "yarn codegen && next build",
     "build-storybook": "build-storybook",
     "chromatic": "chromatic",
-    "codegen": "graphql-codegen --require dotenv/config -r ts-node/register -c codegen-json.yaml && graphql-codegen -r ts-node/register -c codegen.yml",
+    "codegen": "run-p codegen:*",
+    "codegen:gql": "graphql-codegen --require dotenv/config -r ts-node/register -c codegen-json.yaml && graphql-codegen -r ts-node/register -c codegen.yml",
+    "codegen:scss": "typed-scss-modules app",
     "confirm": "run-p confirm:*",
     "confirm:format": "prettier '*/**/*.{js,ts,tsx}'",
     "confirm:lint": "yarn eslint '*/**/*.{js,ts,tsx}'",
