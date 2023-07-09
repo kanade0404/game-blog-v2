@@ -26,9 +26,10 @@
   align-items: center;
   gap: 0 30px;
   @media (max-width: 680px) {
-    min-width: 340px;
+    width: 340px;
     padding-top: 0;
     padding-bottom: 0;
+    gap: 0 20px;
   }
 }
 .navWrapper {
