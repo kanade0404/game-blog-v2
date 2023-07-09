@@ -1,4 +1,6 @@
-export const parameters = {
+import { Preview } from "@storybook/react";
+
+const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
@@ -7,3 +9,7 @@ export const parameters = {
     },
   },
 };
+const preview: Preview = {
+  parameters: parameters,
+};
+export default preview;
