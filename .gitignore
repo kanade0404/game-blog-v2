@@ -40,7 +40,7 @@ yarn-error.log*
 
 lib/api/
 .env
-.env.local
 
 storybook-static/
 build-storybook.log
+*.module.scss.d.ts
