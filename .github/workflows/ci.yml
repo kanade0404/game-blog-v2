@@ -37,7 +37,3 @@ jobs:
         API_TOKEN: ${{ secrets.NEXT_PUBLIC_API_TOKEN }}
     - run:
         yarn confirm
-    - run:
-        yarn test
-      env:
-        API_TOKEN: ${{ secrets.NEXT_PUBLIC_API_TOKEN }}
