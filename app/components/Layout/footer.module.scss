@@ -1,0 +1,12 @@
+.footer {
+  background-color: #333333;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.font {
+  font-size: 15px;
+  color: var(--layout-font-color);
+}
