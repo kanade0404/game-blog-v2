@@ -1,0 +1,16 @@
+.content {
+  margin: 50px auto;
+  justify-content: center;
+  display: flex;
+  height: 100%;
+  @media (max-width: 680px) {
+    margin: 10px auto;
+  }
+}
+
+.contentInner {
+  width: 680px;
+  @media (max-width: 680px) {
+    width: 340px;
+  }
+}

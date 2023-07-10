@@ -1,0 +1,18 @@
+:root {
+    --font-inria-sans: 'Inria Sans', sans-serif;
+    --layout-font-color: #fdfdfd;
+    --content-width-pc: 680px;
+    --content-width-sp: 340px;
+
+    --breakpoint: 600px;
+
+}
+* {
+    font-family: var(--font-inria-sans);
+}
+html,
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}

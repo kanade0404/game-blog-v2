@@ -1,20 +1,20 @@
 query Blog {
-    allBlogModels(filter: {_status: {in: [updated, published]}}) {
+    allBlogModels(orderBy:[_publishedAt_DESC], filter: {_status: {eq:published}}) {
         id
         title
+        content
         _status
-        updatedAt
-        createdAt
+        _publishedAt
+        _seoMetaTags {
+            attributes
+            tag
+        }
         tag {
             ... on TagModelRecord {
                 id
                 name
                 slug
             }
-        }
-        category {
-            id
-            name
         }
     }
 }

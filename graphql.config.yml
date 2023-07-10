@@ -1,0 +1,8 @@
+schema: schema.json
+extensions:
+  endpoints:
+    DatoCMS Endpoint:
+      url: https://graphql.datocms.com
+      headers:
+        Authorization: Bearer ${DATOCMS_API_TOKEN}
+      introspect: false

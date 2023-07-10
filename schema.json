@@ -13,6 +13,22 @@
         "fields": null,
         "inputFields": [
           {
+            "name": "AND",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "BlogModelModelFilter",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "OR",
             "description": null,
             "type": {
@@ -402,6 +418,18 @@
             "deprecationReason": null
           },
           {
+            "name": "_editingUrl",
+            "description": "Editing URL",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "_firstPublishedAt",
             "description": null,
             "args": [],
@@ -745,6 +773,22 @@
         "fields": null,
         "inputFields": [
           {
+            "name": "AND",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "CategoryModelModelFilter",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "OR",
             "description": null,
             "type": {
@@ -1081,6 +1125,18 @@
                 "name": "DateTime",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "_editingUrl",
+            "description": "Editing URL",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -1454,6 +1510,22 @@
             "deprecationReason": null
           },
           {
+            "name": "cssRgb",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "green",
             "description": null,
             "args": [],
@@ -1673,6 +1745,18 @@
             "deprecationReason": null
           },
           {
+            "name": "_editingUrl",
+            "description": "Editing URL",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "_updatedAt",
             "description": null,
             "args": [],
@@ -1795,7 +1879,7 @@
               },
               {
                 "name": "quality",
-                "description": "JPEG quality (defaults to 70%)",
+                "description": "Image quality (defaults to 70%)",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -2225,6 +2309,18 @@
                   }
                 }
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "thumbhash",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -2361,6 +2457,18 @@
             "deprecationReason": null
           },
           {
+            "name": "_editingUrl",
+            "description": "Editing URL",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "_updatedAt",
             "description": null,
             "args": [],
@@ -2483,7 +2591,7 @@
               },
               {
                 "name": "quality",
-                "description": "JPEG quality (defaults to 70%)",
+                "description": "Image quality (defaults to 70%)",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -2913,6 +3021,18 @@
                   }
                 }
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "thumbhash",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -3162,6 +3282,18 @@
             "type": {
               "kind": "SCALAR",
               "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "bgRemove",
+            "description": "Background Removal\n\nRemoves background from image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/background-removal/bg-remove)",
+            "type": {
+              "kind": "SCALAR",
+              "name": "BooleanType",
               "ofType": null
             },
             "defaultValue": null,
@@ -3789,8 +3921,44 @@
             "deprecationReason": null
           },
           {
+            "name": "fps",
+            "description": "Frames Per Second\n\nSpecifies the framerate of the generated image.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "IntType",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "frame",
+            "description": "Frame Selection\n\nSpecifies the frame of an animated image to use.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "gam",
             "description": "Gamma\n\nAdjusts the gamma of the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/gam)",
+            "type": {
+              "kind": "SCALAR",
+              "name": "IntType",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "gifQ",
+            "description": "Animated Gif Quality\n\nDepends on: `fm=gif`",
             "type": {
               "kind": "SCALAR",
               "name": "IntType",
@@ -3873,6 +4041,18 @@
             "deprecationReason": null
           },
           {
+            "name": "interval",
+            "description": "Frame Interval\n\nDisplays every Nth frame starting with the first frame.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "IntType",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "invert",
             "description": "Invert\n\nInverts the colors on the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/invert)",
             "type": {
@@ -3890,6 +4070,18 @@
             "type": {
               "kind": "ENUM",
               "name": "ImgixParamsIptc",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "loop",
+            "description": "Animation Loop Count\n\nSpecifies the number of times an animated image should repeat. A value of 0 means infinite looping.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "IntType",
               "ofType": null
             },
             "defaultValue": null,
@@ -4337,6 +4529,18 @@
             "deprecationReason": null
           },
           {
+            "name": "reverse",
+            "description": "Reverse\n\nReverses the frame order on the source animation.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "BooleanType",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "rot",
             "description": "Rotation\n\nRotates an image by a specified number of degrees.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/rotation/rot)",
             "type": {
@@ -4390,6 +4594,18 @@
             "type": {
               "kind": "SCALAR",
               "name": "FloatType",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "skip",
+            "description": "Frame Skip\n\nSkips every Nth frame starting with the first frame.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "IntType",
               "ofType": null
             },
             "defaultValue": null,
@@ -6368,9 +6584,13 @@
               }
             ],
             "type": {
-              "kind": "OBJECT",
-              "name": "CollectionMetadata",
-              "ofType": null
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "CollectionMetadata",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -7175,6 +7395,18 @@
                 "name": "DateTime",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "_editingUrl",
+            "description": "Editing URL",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -8159,6 +8391,18 @@
             "deprecationReason": null
           },
           {
+            "name": "_editingUrl",
+            "description": "Editing URL",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "_firstPublishedAt",
             "description": null,
             "args": [],
@@ -8436,6 +8680,22 @@
         "description": null,
         "fields": null,
         "inputFields": [
+          {
+            "name": "AND",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "TagModelModelFilter",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
           {
             "name": "OR",
             "description": null,
@@ -8797,6 +9057,18 @@
                 "name": "DateTime",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "_editingUrl",
+            "description": "Editing URL",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -9710,6 +9982,22 @@
         "description": null,
         "fields": null,
         "inputFields": [
+          {
+            "name": "AND",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "UploadFilter",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
           {
             "name": "OR",
             "description": null,

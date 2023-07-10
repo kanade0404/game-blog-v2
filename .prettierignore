@@ -20,5 +20,5 @@
 *.graphql.d.ts
 *.graphqls.d.ts
 
-libs/api/
+lib/api/
 storybook-static

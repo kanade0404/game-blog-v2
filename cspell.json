@@ -1,0 +1,36 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "language": "en",
+  "dictionaryDefinitions": [
+    {
+      "name": "custom-dictionary",
+      "path": "./dictionary.txt",
+      "addWords": true
+    }
+  ],
+  "dictionaries": [
+    "typescript",
+    "html",
+    "css",
+    "javascript",
+    "node",
+    "json",
+    "less",
+    "markdown",
+    "scss",
+    "text",
+    "yaml",
+    "custom-dictionary"
+  ],
+  "ignorePaths": [
+    "lib/api",
+    "node_modules",
+    "storybook-static",
+    "stories",
+    "schema.json",
+    "package.json",
+    "renovate.json",
+    "coverage"
+  ]
+}

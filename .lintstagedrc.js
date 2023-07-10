@@ -9,7 +9,7 @@ module.exports = {
       .join(" ");
     return [
       `eslint ${relativePaths}`,
-      `prettier --write ${relativePaths}`,
+      `prettier --check ${relativePaths}`,
       `cspell ${relativePaths}`,
     ];
   },
