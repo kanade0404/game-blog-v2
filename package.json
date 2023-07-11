@@ -15,6 +15,8 @@
     "next": "^13.0.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-markdown": "^8.0.7",
+    "remark-gfm": "^3.0.1",
     "sass": "^1.63.6"
   },
   "devDependencies": {
@@ -29,9 +31,7 @@
     "@storybook/addon-links": "^7.0.0",
     "@storybook/addon-onboarding": "^1.0.4",
     "@storybook/blocks": "^7.1.0-beta.1",
-    "@storybook/builder-webpack5": "^7.0.0",
     "@storybook/cli": "^7.0.0",
-    "@storybook/manager-webpack5": "^6.5.14",
     "@storybook/nextjs": "^7.0.26",
     "@storybook/react": "^7.0.0",
     "@storybook/testing-library": "^0.2.0",

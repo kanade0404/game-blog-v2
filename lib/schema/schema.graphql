@@ -1,19 +1,48 @@
-query Blog {
+query BlogList {
     allBlogModels(orderBy:[_publishedAt_DESC], filter: {_status: {eq:published}}) {
         id
         title
-        content
         _status
         _publishedAt
+        category {
+            name
+        }
+        description {
+            description
+            image {
+                url
+                alt
+            }
+            title
+            twitterCard
+        }
         _seoMetaTags {
             attributes
             tag
+        }
+    }
+}
+query Blog($id: ItemId!) {
+    blogModel(filter: {id: {eq: $id}, _status: {eq: published}}) {
+        title
+        content(markdown: false)
+        _publishedAt
+        category {
+            name
+        }
+        description {
+            description
+            image {
+                url
+                alt
+            }
+            title
+            twitterCard
         }
         tag {
             ... on TagModelRecord {
                 id
                 name
-                slug
             }
         }
     }

@@ -1,9 +1,8 @@
 import Main from "./components/Main";
 
-import { ReactNode } from "react";
 import "./global.scss";
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="ja">
       <body>
