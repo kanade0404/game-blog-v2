@@ -1,6 +1,5 @@
 import styles from "./article.module.scss";
-import { BlogDocument, BlogQuery } from "../../lib/api/query";
-import { getClient } from "../../lib/apolloClient";
+import { getArticle } from "../../lib/apolloClient/getArticle";
 import { format, parseISO } from "date-fns";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -12,10 +11,7 @@ type Props = {
 };
 
 const Article = async ({ params }: Props) => {
-  const { data, loading, error } = await getClient().query<BlogQuery>({
-    query: BlogDocument,
-    variables: { id: params.id },
-  });
+  const { data, loading, error } = await getArticle(params.id);
   if (loading) return <p>Loading...</p>;
   const { title, content, tag, _publishedAt, category } = data.blogModel;
   return (

@@ -1,13 +1,10 @@
 import styles from "./article_list.module.scss";
-import { BlogListDocument, BlogListQuery } from "../../lib/api/query";
-import { getClient } from "../../lib/apolloClient";
+import { getArticleList } from "../../lib/apolloClient/getArticleList";
 import clsx from "clsx";
 import { format, parseISO } from "date-fns";
 
 const ArticleList = async () => {
-  const { data, loading, error } = await getClient().query<BlogListQuery>({
-    query: BlogListDocument,
-  });
+  const { data, loading, error } = await getArticleList();
   if (loading) return <p>Loading...</p>;
   return (
     <>
