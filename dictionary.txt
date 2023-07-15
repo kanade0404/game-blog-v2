@@ -2,3 +2,4 @@ autodocs
 clsx
 kanade
 nextjs
+webp

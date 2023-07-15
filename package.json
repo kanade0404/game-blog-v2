@@ -8,6 +8,9 @@
     "@graphql-tools/load-files": "7.0.0",
     "@graphql-tools/merge": "9.0.0",
     "@graphql-tools/schema": "10.0.0",
+    "@mdx-js/loader": "^2.3.0",
+    "@mdx-js/react": "^2.3.0",
+    "@next/mdx": "^13.4.10",
     "clsx": "^1.2.1",
     "date-fns": "^2.30.0",
     "graphql": "16.7.1",
@@ -17,7 +20,8 @@
     "react-dom": "18.2.0",
     "react-markdown": "^8.0.7",
     "remark-gfm": "^3.0.1",
-    "sass": "^1.63.6"
+    "sass": "^1.63.6",
+    "sharp": "^0.32.3"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "4.0.1",
@@ -39,6 +43,7 @@
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
     "@types/jest": "29.5.3",
+    "@types/mdx": "^2.0.5",
     "@types/mocha": "10.0.1",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",

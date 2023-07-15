@@ -22,8 +22,10 @@ query BlogList {
         }
     }
 }
+
 query Blog($id: ItemId!) {
     blogModel(filter: {id: {eq: $id}, _status: {eq: published}}) {
+        id
         title
         content(markdown: false)
         _publishedAt
