@@ -11,13 +11,13 @@
     {
       "groupName": "ESLint families",
       "extends": ["packages:eslint"],
-      "matchPackageNames": ["eslint"],
-      "allowedVersions": "<=8.22.0"
+      "matchPackageNames": ["eslint"]
     },
     {
       "groupName": "storybook families",
       "matchPackagePrefixes": [
-        "@storybook"
+        "@storybook",
+        "storybook"
       ]
     },
     {
@@ -26,6 +26,21 @@
         "@graphql-codegen",
         "graphql",
         "@graphql-tools"
+      ]
+    },
+    {
+      "groupName": "Testing families",
+      "matchPackagePrefixes": [
+        "@testing-library",
+        "jest",
+        "react-test-renderer"
+      ],
+      "matchPackageNames": [
+        "@types/jest",
+        "@types/mocha",
+        "@types/react",
+        "@types/react-dom",
+        "@types/react-test-renderer"
       ]
     }
   ]

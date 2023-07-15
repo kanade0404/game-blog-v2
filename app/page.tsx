@@ -1,9 +1,9 @@
-import Articles from "./components/Articles";
+import ArticleList from "./components/ArticleList";
 
 export default function Index() {
   return (
     <main>
-      <Articles />
+      <ArticleList />
     </main>
   );
 }

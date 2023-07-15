@@ -1,7 +1,9 @@
+import Profile from "../components/Profile";
+
 export default function Index() {
   return (
     <main>
-      <div>waiting...</div>
+      <Profile />
     </main>
   );
 }
