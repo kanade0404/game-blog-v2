@@ -1,3 +1,4 @@
+import Multiplex from "./Ad/Multiplex";
 import styles from "./article.module.scss";
 import Markdown from "./Markdown";
 import { getArticle } from "../../lib/apolloClient/getArticle";
@@ -29,6 +30,7 @@ const Article = async ({ params }: Props) => {
           <p key={t.id}>#{t.name}</p>
         ))}
       </div>
+      <Multiplex />
     </>
   );
 };
