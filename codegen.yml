@@ -11,3 +11,10 @@ generates:
     config:
       namingConvention:
         enumValues: change-case-all#upperCaseFirst
+      scalars:
+        ItemId: string
+        BooleanType: boolean
+        DateTime: string
+        FloatType: number
+        IntType: number
+        UploadId: string

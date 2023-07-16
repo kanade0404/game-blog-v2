@@ -1,17 +1,17 @@
 import styles from "./article_list.module.scss";
 import { getArticleList } from "../../lib/apolloClient/getArticleList";
+import { convertToYYYYMMdd } from "../../lib/time/convertToyyyyMMdd";
 import clsx from "clsx";
-import { format, parseISO } from "date-fns";
 
 const ArticleList = async () => {
   const { data, loading, error } = await getArticleList();
+  if (error) throw error;
   if (loading) return <p>Loading...</p>;
   return (
     <>
-      {error && <div>{error.message}</div>}
-      {data.allBlogModels.map((blog, key) => (
+      {data.allBlogModels.map(({ id, title, category, description, _publishedAt }, key) => (
         <article
-          key={blog.id}
+          key={id}
           className={clsx(
             styles.articles,
             key === 0 ? null : styles.mTop,
@@ -19,21 +19,15 @@ const ArticleList = async () => {
           )}
         >
           <div className={styles.meta}>
-            <p>{format(parseISO(blog._publishedAt), "yyyy. MM. dd")}</p>
-            <p>{blog.category.name}</p>
+            <p>{convertToYYYYMMdd(_publishedAt)}</p>
+            <p>{category.name}</p>
           </div>
           <h1>
-            <a className={styles.font} href={`/article/${blog.id}`}>
-              {blog.title}
+            <a className={styles.font} href={`/article/${id}`}>
+              {title}
             </a>
           </h1>
-          <p>
-            {
-              blog._seoMetaTags.find(
-                (tag) => tag.tag === "meta" && tag.attributes["name"] === "description",
-              ).attributes.content
-            }
-          </p>
+          <p>{description.description}</p>
         </article>
       ))}
     </>
