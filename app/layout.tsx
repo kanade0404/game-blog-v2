@@ -1,3 +1,4 @@
+import { Analytics } from "./components/Analytics";
 import Main from "./components/Main";
 
 import "./global.scss";
@@ -42,6 +43,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ja">
+      <Analytics />
       <body>
         <Main>{children}</Main>
       </body>
