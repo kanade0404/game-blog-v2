@@ -1,8 +1,7 @@
 import styles from "./article.module.scss";
+import Markdown from "./Markdown";
 import { getArticle } from "../../lib/apolloClient/getArticle";
-import { format, parseISO } from "date-fns";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import { convertToYYYYMMdd } from "../../lib/time/convertToyyyyMMdd";
 
 type Props = {
   params: {
@@ -12,18 +11,18 @@ type Props = {
 
 const Article = async ({ params }: Props) => {
   const { data, loading, error } = await getArticle(params.id);
+  if (error) throw error;
   if (loading) return <p>Loading...</p>;
   const { title, content, tag, _publishedAt, category } = data.blogModel;
   return (
     <>
-      {error && <div>{error.message}</div>}
       <article className={styles.article}>
         <div className={styles.meta}>
-          <p>{format(parseISO(_publishedAt), "yyyy. MM. dd")}</p>
+          <p>{convertToYYYYMMdd(_publishedAt)}</p>
           <p>{category.name}</p>
         </div>
         <h1>{title}</h1>
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+        <Markdown text={content} />
       </article>
       <div className={styles.tagWrapper}>
         {tag.map((t) => (

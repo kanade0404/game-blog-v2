@@ -1,9 +1,16 @@
-"use client";
+import ReactMarkdown from "react-markdown";
+
+const ProfText = `
+- work
+  - Software Engineer
+- like
+  - Programming
+  - Reading
+  - Game
+`;
 const ProfileText = () => (
   <div>
-    {import("./profile.mdx").then(({ default: Component }) => (
-      <Component />
-    ))}
+    <ReactMarkdown>{ProfText}</ReactMarkdown>
   </div>
 );
 

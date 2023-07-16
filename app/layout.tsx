@@ -1,9 +1,10 @@
 import Main from "./components/Main";
 
 import "./global.scss";
-const siteName = "kanade0404";
+const siteName = "kanade.log";
 const description = "主にゲームや麻雀についての感想・考察を書いています。";
 const url = "https://kanade0404.com";
+const author = "kanade0404";
 
 export const metadata = {
   title: {
@@ -23,18 +24,21 @@ export const metadata = {
     card: "summary_large_image",
     title: siteName,
     description,
-    site: "@kanade0404",
-    creator: "@kanade0404",
+    site: author,
+    creator: "author",
   },
-  // verification: {
-  //   google: "サーチコンソールのやつ",
-  // },
   alternates: {
     canonical: url,
   },
+  creator: author,
+  publisher: author,
+  formatDetection: {
+    telephone: false,
+    email: false,
+    address: false,
+  },
 };
 
-// 以下略
 export default function RootLayout({ children }) {
   return (
     <html lang="ja">
