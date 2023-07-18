@@ -40,9 +40,9 @@
     zen-observable-ts "^1.2.5"
 
 "@apollo/experimental-nextjs-app-support@^0.3.2":
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/@apollo/experimental-nextjs-app-support/-/experimental-nextjs-app-support-0.3.4.tgz#c6e44710cf975bc66b62615ba6017646817b9628"
-  integrity sha512-rzrZ9UoWa7LtqoCKHTg2umZEAZ5tpi5zUPU0MM4fO+o4h0wZU79WWmcoF6WNLPK8GeEPGlrnkPTnKPLXJ2y8+g==
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/@apollo/experimental-nextjs-app-support/-/experimental-nextjs-app-support-0.3.5.tgz#acef36accf925c1855146feb346867dcdf513330"
+  integrity sha512-GscLswdwNWMzklO63dvdKuWbulIy9ePxH5WL4sh7B7XJhNkbP00ApoBO8/rtAW+1zimg+UdxqyjRLXSWfaur7g==
   dependencies:
     superjson "^1.12.2"
     ts-invariant "^0.10.3"
@@ -14571,9 +14571,9 @@ styled-jsx@5.1.1:
     client-only "0.0.1"
 
 superjson@^1.12.2:
-  version "1.12.4"
-  resolved "https://registry.yarnpkg.com/superjson/-/superjson-1.12.4.tgz#cfea35b0d1eb0f12d8b185f1d871272555f5a61f"
-  integrity sha512-vkpPQAxdCg9SLfPv5GPC5fnGrui/WryktoN9O5+Zif/14QIMjw+RITf/5LbBh+9QpBFb3KNvJth+puz2H8o6GQ==
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/superjson/-/superjson-1.13.1.tgz#a0b6ab5d22876f6207fcb9d08b0cb2acad8ee5cd"
+  integrity sha512-AVH2eknm9DEd3qvxM4Sq+LTCkSXE2ssfh1t11MHMXyYXFQyQ1HLgVvV+guLTsaQnJU3gnaVo34TohHPulY/wLg==
   dependencies:
     copy-anything "^3.0.2"
 
