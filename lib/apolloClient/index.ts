@@ -12,5 +12,10 @@ export const { getClient } = registerApolloClient(() => {
       Authorization: `Bearer ${API_TOKEN}`,
     },
     cache: new NextSSRInMemoryCache(),
+    defaultOptions: {
+      watchQuery: {
+        fetchPolicy: "cache-and-network",
+      },
+    },
   });
 });
