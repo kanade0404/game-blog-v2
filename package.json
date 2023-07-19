@@ -9,7 +9,7 @@
     "@graphql-tools/merge": "9.0.0",
     "@graphql-tools/schema": "10.0.0",
     "@vercel/analytics": "^1.0.1",
-    "clsx": "^1.2.1",
+    "clsx": "^2.0.0",
     "date-fns": "^2.30.0",
     "graphql": "16.7.1",
     "graphql-tag": "^2.12.6",
