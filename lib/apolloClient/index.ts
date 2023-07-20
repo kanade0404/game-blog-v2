@@ -14,7 +14,7 @@ export const { getClient } = registerApolloClient(() => {
     cache: new NextSSRInMemoryCache(),
     defaultOptions: {
       watchQuery: {
-        fetchPolicy: "cache-and-network",
+        fetchPolicy: "no-cache",
       },
     },
   });
