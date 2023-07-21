@@ -1,21 +1,20 @@
 import styles from "./article_list.module.scss";
-import { getArticleList } from "../../lib/apolloClient/getArticleList";
+import { getArticleList } from "../../lib/graphql/getArticleList";
 import { convertToYYYYMMdd } from "../../lib/time/convertToyyyyMMdd";
 import clsx from "clsx";
 
 const ArticleList = async () => {
-  const { data, loading, error } = await getArticleList();
-  if (error) throw error;
-  if (loading) return <p>Loading...</p>;
+  const { allBlogModels } = await getArticleList();
+  if (!allBlogModels) return <p>Not Found</p>;
   return (
     <>
-      {data.allBlogModels.map(({ id, title, category, description, _publishedAt }, key) => (
+      {allBlogModels.map(({ id, title, category, description, _publishedAt }, key) => (
         <article
           key={id}
           className={clsx(
             styles.articles,
             key === 0 ? null : styles.mTop,
-            data.allBlogModels.length - 1 === key ? null : styles.border,
+            allBlogModels.length - 1 === key ? null : styles.border,
           )}
         >
           <div className={styles.meta}>
