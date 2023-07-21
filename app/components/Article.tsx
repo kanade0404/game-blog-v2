@@ -1,7 +1,7 @@
 import Multiplex from "./Ad/Multiplex";
 import styles from "./article.module.scss";
 import Markdown from "./Markdown";
-import { getArticle } from "../../lib/apolloClient/getArticle";
+import { getArticle } from "../../lib/graphql/getArticle";
 import { convertToYYYYMMdd } from "../../lib/time/convertToyyyyMMdd";
 
 type Props = {
@@ -11,10 +11,9 @@ type Props = {
 };
 
 const Article = async ({ params }: Props) => {
-  const { data, loading, error } = await getArticle(params.id);
-  if (error) throw error;
-  if (loading) return <p>Loading...</p>;
-  const { title, content, tag, _publishedAt, category } = data.blogModel;
+  const { blogModel } = await getArticle(params.id);
+  if (!blogModel) return <p>Not Found</p>;
+  const { title, content, tag, _publishedAt, category } = blogModel;
   return (
     <>
       <article className={styles.article}>
