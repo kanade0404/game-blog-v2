@@ -1,3 +1,6 @@
 import { format, parseISO } from "date-fns";
 
-export const convertToYYYYMMdd = (date: string) => format(parseISO(date), "yyyy. MM. dd");
+type DateString = string;
+type ConvertToYYYYMMdd = (date: DateString) => DateString;
+export const convertToYYYYMMdd: ConvertToYYYYMMdd = (date) =>
+  format(parseISO(date), "yyyy. MM. dd");
