@@ -1,0 +1,21 @@
+.articles {
+  padding-bottom: 50px;
+}
+.mTop {
+  margin-top: 50px;
+}
+.border {
+  border-bottom: solid #F5F5F5;
+}
+.meta {
+  display: flex;
+  gap: 0 30px;
+}
+.font {
+  text-decoration: none;
+  color: #000000;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
