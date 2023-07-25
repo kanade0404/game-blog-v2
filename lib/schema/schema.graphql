@@ -1,9 +1,9 @@
 query BlogList {
-    allBlogModels(orderBy:[_publishedAt_DESC], filter: {_status: {eq:published}}) {
+    allBlogModels(orderBy:[_firstPublishedAt_DESC], filter: {_status: {eq:published}}) {
         id
         title
         _status
-        _publishedAt
+        _firstPublishedAt
         category {
             name
         }
@@ -28,7 +28,7 @@ query Blog($id: ItemId!) {
         id
         title
         content(markdown: false)
-        _publishedAt
+        _firstPublishedAt
         category {
             name
         }

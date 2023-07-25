@@ -1,9 +1,10 @@
+$breakpoint-pc: 960px;
 .font {
   font-weight: bold;
-  font-size: 32px;
+  font-size: 20px;
   text-decoration: none;
-  @media (max-width: 680px) {
-    font-size: 20px;
+  @media screen and (min-width: $breakpoint-pc) {
+    font-size: 32px;
   }
 }
 
@@ -18,17 +19,18 @@
   background-color: #333333;
   display: flex;
   justify-content: center;
+  padding: 5px;
 }
 
 .siteHeaderWrapper {
-  width: 680px;
   display: flex;
   align-items: center;
+  max-width: var(--content-width-sp);
+  padding-top: 0;
+  padding-bottom: 0;
   gap: 0 30px;
-  @media (max-width: 680px) {
-    width: 340px;
-    padding-top: 0;
-    padding-bottom: 0;
+  @media screen and (min-width: $breakpoint-pc) {
+    min-width: var(--content-width-pc);
     gap: 0 20px;
   }
 }

@@ -1,8 +1,12 @@
 .article {
   padding-bottom: 50px;
+  width: var(--content-width-sp);
   img {
     object-fit: contain;
     max-width: 100%;
+  }
+  @media screen and (min-width: 960px) {
+    width: var(--content-width-pc);
   }
 }
 .meta {

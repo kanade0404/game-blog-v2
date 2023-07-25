@@ -1,4 +1,6 @@
 import { Preview } from "@storybook/react";
+import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
+import "../app/global.scss";
 
 const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -7,6 +9,11 @@ const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+  },
+  layout: "fullscreen",
+  viewport: {
+    viewports: INITIAL_VIEWPORTS,
+    defaultViewport: "responsive",
   },
 };
 const preview: Preview = {
