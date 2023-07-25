@@ -6,7 +6,7 @@ type Props = {
   height?: number;
   width?: number;
 };
-const SNS = ({ height = 50, width = 50 }: Props) => {
+const Index = ({ height = 50, width = 50 }: Props) => {
   return (
     <div className={styles.wrapper}>
       <GitHub width={width} height={height} />
@@ -14,4 +14,4 @@ const SNS = ({ height = 50, width = 50 }: Props) => {
     </div>
   );
 };
-export default SNS;
+export default Index;

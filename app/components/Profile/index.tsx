@@ -1,9 +1,9 @@
 import styles from "./profile.module.scss";
-import ProfileText from "./profileText";
+import ProfileText from "./ProfileText";
 import SNS from "./SNS";
 import Thumbnail from "./Thumbnail";
 
-const Profile = () => {
+const Index = () => {
   return (
     <div className={styles.wrapper}>
       <Thumbnail />
@@ -12,4 +12,4 @@ const Profile = () => {
     </div>
   );
 };
-export default Profile;
+export default Index;
