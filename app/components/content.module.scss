@@ -1,18 +1,19 @@
+$breakpoint-pc: 960px;
 .content {
-  margin: 50px auto;
+  margin: 10px auto;
   justify-content: center;
   display: flex;
   height: 100%;
-  @media (max-width: 680px) {
-    margin: 10px auto;
+  @media screen and (min-width: $breakpoint-pc) {
+    margin: 50px auto;
   }
 }
 
 .contentInner {
-  width: 680px;
+  width: var(--content-width-sp);
   display: flex;
   justify-content: center;
-  @media (max-width: 680px) {
-    width: 340px;
+  @media screen and (min-width: $breakpoint-pc) {
+    width: var(--content-width-pc);
   }
 }

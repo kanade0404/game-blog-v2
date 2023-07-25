@@ -7,3 +7,4 @@ Toyyyy
 gtag
 adsbygoogle
 autorelaxed
+viewports

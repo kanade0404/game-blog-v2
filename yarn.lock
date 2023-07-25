@@ -3487,7 +3487,7 @@
     "@storybook/preview-api" "7.1.0"
     "@storybook/theming" "7.1.0"
 
-"@storybook/addon-viewport@7.1.0":
+"@storybook/addon-viewport@7.1.0", "@storybook/addon-viewport@^7.1.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-7.1.0.tgz#3d5d1ec7892fe5624f0d98aadec834a6650fc2de"
   integrity sha512-dvaD11qp2AG8xc9LubkYqp0yW+5ybaqTOn2uwK4qDDbwypkL+uE9K8G+8tQGIvfQPFye3ggpuqRzStZHr/JbsQ==
@@ -6833,6 +6833,11 @@ dataloader@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/dataloader/-/dataloader-2.2.2.tgz#216dc509b5abe39d43a9b9d97e6e5e473dfbe3e0"
   integrity sha512-8YnDaaf7N3k/q5HnTJVuzSyLETjoZjVmHc4AeKAzOvKHEFQKcn64OKBfzHYtE9zGjctNM7V9I0MfnUVLpi7M5g==
+
+date-fns-tz@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/date-fns-tz/-/date-fns-tz-2.0.0.tgz#1b14c386cb8bc16fc56fe333d4fc34ae1d1099d5"
+  integrity sha512-OAtcLdB9vxSXTWHdT8b398ARImVwQMyjfYGkKD2zaGpHseG2UPHbHjXELReErZFxWdSLph3c2zOaaTyHfOhERQ==
 
 date-fns@^2.30.0:
   version "2.30.0"
