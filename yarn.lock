@@ -14640,9 +14640,9 @@ typed-array-length@^1.0.4:
     is-typed-array "^1.1.9"
 
 typed-scss-modules@^7.1.1:
-  version "7.1.3"
-  resolved "https://registry.yarnpkg.com/typed-scss-modules/-/typed-scss-modules-7.1.3.tgz#2ec0d63cf27849be48e2011afab754370bb71281"
-  integrity sha512-eXJw24HLIYvPmVDm77o9Vq9AdLOrx9cmd400suWE47ZnW7vsdqQ5LCWxHlW9+lBnpsOqD5kZcZDm5RLBG5oNMA==
+  version "7.1.4"
+  resolved "https://registry.yarnpkg.com/typed-scss-modules/-/typed-scss-modules-7.1.4.tgz#b2f9017b3d45c5014bd284ef3e4402d34337568f"
+  integrity sha512-7IjCBxxnNPV5iY1b6Vz2HufXku04iYF8EmWIPkqWtVlM6cX+azKbSVhIIGImQtJSgMWUsOwdlcs0HoqFcYKYsw==
   dependencies:
     bundle-require "^3.0.4"
     chalk "4.1.2"
