@@ -11485,9 +11485,9 @@ neo-async@^2.5.0, neo-async@^2.6.1, neo-async@^2.6.2:
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
 next-router-mock@^0.9.0:
-  version "0.9.7"
-  resolved "https://registry.yarnpkg.com/next-router-mock/-/next-router-mock-0.9.7.tgz#828e699fba6862e3a3defdb67803c3200a5ab699"
-  integrity sha512-y5ioLCIsdkJKwcoPnrUyocNEJT22RK4wKSg6LO0Q2XkBBvkYprEWy5FiCZt+CA8+qpfxpBlNca76F+glEohbRA==
+  version "0.9.8"
+  resolved "https://registry.yarnpkg.com/next-router-mock/-/next-router-mock-0.9.8.tgz#83f82bcd57baee46fc8653ea2f6a5c17177b4c8d"
+  integrity sha512-u9yzuLTYuBzarv1wfN2z+aC3iSr5nmvMIRnMXNq4c+Alyf4iXKOTnKG3dW1w6h3JW+qNRhTJV37weMsARALZpw==
 
 next@^13.4.10:
   version "13.4.13"
