@@ -7,6 +7,9 @@ const ProfText = `
   - Programming
   - Reading
   - Game
+    - Mahjong
+    - Pokemon
+    - eFootball 2024(PS5)
 `;
 const ProfileText = () => (
   <div>
