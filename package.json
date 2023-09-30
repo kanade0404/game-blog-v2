@@ -91,8 +91,8 @@
     "fix:format": "prettier '*/**/*.{js,ts,tsx}' --write",
     "fix:lint": "yarn eslint  --fix '*/**/*.{js,ts,tsx}'",
     "fix:pack": "fixpack",
-    "prepare": "husky install",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
+    "prepare": "husky install",
     "start": "NODE_ENV=production next start",
     "storybook": "storybook dev -p 6006",
     "test": "yarn codegen && jest --coverage"
