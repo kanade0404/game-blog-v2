@@ -9,9 +9,9 @@ const Footer = () => {
       </Link>
       <Link
         href="https://forms.gle/6yX1TU82PVUxg1Hc8"
-        className={styles.font}
         target="_blank"
         rel="noreferrer noopener"
+        className={styles.font}
       >
         お問い合わせ
       </Link>

@@ -1,3 +1,4 @@
+$breakpoint-pc: 960px;
 .footer {
   background-color: #333333;
   display: flex;
@@ -5,9 +6,19 @@
   position: sticky;
   top: 100vh;
   align-items: center;
-  gap: 0 30px;
+  padding: 15px 0;
+  gap: 15px 0;
+  flex-direction: column;
+  @media screen and (min-width: $breakpoint-pc) {
+    flex-direction: row;
+    gap: 0 30px;
+  }
 }
 .font {
   font-size: 15px;
   color: var(--layout-font-color);
+  margin: 0;
+  @media screen and (min-width: $breakpoint-pc) {
+    font-size: 15px;
+  }
 }
