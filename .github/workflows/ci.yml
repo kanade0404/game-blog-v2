@@ -4,7 +4,12 @@
 name: CI
 
 on:
-  push
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 env:
   API_TOKEN: ${{ secrets.API_TOKEN }}
