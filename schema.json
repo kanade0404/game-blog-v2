@@ -499,7 +499,7 @@
           },
           {
             "name": "_seoMetaTags",
-            "description": "SEO meta tags",
+            "description": "Generates SEO and Social card meta tags to be used in your frontend",
             "args": [
               {
                 "name": "locale",
@@ -1211,7 +1211,7 @@
           },
           {
             "name": "_seoMetaTags",
-            "description": "SEO meta tags",
+            "description": "Generates SEO and Social card meta tags to be used in your frontend",
             "args": [
               {
                 "name": "locale",
@@ -1746,7 +1746,7 @@
           },
           {
             "name": "_editingUrl",
-            "description": "Editing URL",
+            "description": "The DatoCMS URL where you can edit this entity. To use this field, you need to set a X-Base-Editing-Url header in the request",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2458,7 +2458,7 @@
           },
           {
             "name": "_editingUrl",
-            "description": "Editing URL",
+            "description": "The DatoCMS URL where you can edit this entity. To use this field, you need to set a X-Base-Editing-Url header in the request",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -7481,7 +7481,7 @@
           },
           {
             "name": "_seoMetaTags",
-            "description": "SEO meta tags",
+            "description": "Generates SEO and Social card meta tags to be used in your frontend",
             "args": [
               {
                 "name": "locale",
@@ -8472,7 +8472,7 @@
           },
           {
             "name": "_seoMetaTags",
-            "description": "SEO meta tags",
+            "description": "Generates SEO and Social card meta tags to be used in your frontend",
             "args": [
               {
                 "name": "locale",
@@ -9143,7 +9143,7 @@
           },
           {
             "name": "_seoMetaTags",
-            "description": "SEO meta tags",
+            "description": "Generates SEO and Social card meta tags to be used in your frontend",
             "args": [
               {
                 "name": "locale",

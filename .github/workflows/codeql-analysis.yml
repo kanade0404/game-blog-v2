@@ -14,13 +14,9 @@ name: "CodeQL"
 on:
   push:
     branches: [ "master" ]
-    paths-ignore:
-      - storybook-static/**
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ "master" ]
-    paths-ignore:
-      - storybook-static/**
   schedule:
     - cron: '20 12 * * 2'
 
