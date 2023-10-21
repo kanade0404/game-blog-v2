@@ -34,7 +34,6 @@ jobs:
           path: ${{ env.STORE_PATH }}
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: ${{ runner.os }}-pnpm-store-
-      - if: ${{ steps.node_modules_cache_id.outputs.cache-hit != 'true' }}
         run: pnpm i --frozen-lockfile
       - uses: chromaui/action@v1
         with:
