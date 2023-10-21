@@ -5,9 +5,11 @@ name: CI
 
 on:
   push
+
 env:
   API_TOKEN: ${{ secrets.API_TOKEN }}
   GRAPHQL_ENDPOINT: ${{ secrets.GRAPHQL_ENDPOINT }}
+
 jobs:
   build:
     runs-on: ubuntu-22.04
@@ -17,13 +19,22 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 18.16.1
+    - uses: pnpm/action-setup@v2
+      name: Install pnpm
+      with:
+        version: 8
+        run_install: false
+    - name: Get pnpm store directory
+      shell: bash
+      run: echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
     - uses: actions/cache@v3
       id: node_modules_cache_id
       env:
         cache-name: cache-node-modules
       with:
-        path: '**/node_modules'
+        path: ${{ env.STORE_PATH }}
         key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: ${{ runner.os }}-pnpm-store-
     - if: ${{ steps.node_modules_cache_id.outputs.cache-hit != 'true' }}
       run: pnpm i --frozen-lockfile
     - run: pnpm build
