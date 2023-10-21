@@ -3,10 +3,7 @@ pre-commit:
   commands:
     eslint:
       glob: "*.{js,ts,tsx}"
-      run: eslint {staged_files}
-    prettier:
-      glob: "*.{js,ts,tsx,css,scss,md,json,yml}"
-      run: prettier --write {staged_files}
+      run: pnpm eslint {staged_files}
     cspell:
-      glob: "*"
-      run: cspell {staged_files}
+      glob: "*.{js,ts,tsx}"
+      run: pnpm cspell {staged_files}
