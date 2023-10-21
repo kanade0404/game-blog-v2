@@ -28,8 +28,8 @@ jobs:
         path: '**/node_modules'
         key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
     - if: ${{ steps.node_modules_cache_id.outputs.cache-hit != 'true' }}
-      run: yarn install --frozen-lockfile
-    - run: yarn build
-    - run: yarn confirm
-    - run: yarn test
+      run: pnpm i --frozen-lockfile
+    - run: pnpm build
+    - run: pnpm confirm
+    - run: pnpm test
 
