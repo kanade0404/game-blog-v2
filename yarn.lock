@@ -11500,9 +11500,7 @@ next-sitemap@^4.2.3:
     minimist "^1.2.8"
 
 next@^14.0.0:
-  version "14.0.2"
-  resolved "https://registry.yarnpkg.com/next/-/next-14.0.2.tgz#02ba6a1656edf14d3913c7a3553026e9d6e083c7"
-  integrity sha512-jsAU2CkYS40GaQYOiLl9m93RTv2DA/tTJ0NRlmZIBIL87YwQ/xR8k796z7IqgM3jydI8G25dXvyYMC9VDIevIg==
+  version "14.0.3"
   dependencies:
     "@next/env" "14.0.2"
     "@swc/helpers" "0.5.2"
