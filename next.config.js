@@ -20,9 +20,6 @@ const sentryWebpackPluginOptions = {
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  experimental: {
-    appDir: true,
-  },
 };
 console.log("sentry");
 console.log(process.env.SENTRY_AUTH_TOKEN);
