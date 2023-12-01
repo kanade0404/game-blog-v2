@@ -152,8 +152,8 @@ devDependencies:
     specifier: 6.13.1
     version: 6.13.1(eslint@8.54.0)(typescript@5.3.2)
   chromatic:
-    specifier: ^9.0.0
-    version: 9.0.0
+    specifier: ^10.0.0
+    version: 10.0.0
   cspell:
     specifier: 8.1.0
     version: 8.1.0
@@ -7553,8 +7553,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /chromatic@9.0.0:
-    resolution: {integrity: sha512-PczbWYOfqsf/SM0yIzI3ZOpFznEyf9Fc96EkxoYkhztFaA9CEOcpA9nk8zpmNgPUQWmIWNyG7z4xEK40sApFzw==}
+  /chromatic@10.0.0:
+    resolution: {integrity: sha512-RLU/Y0FdYVnPJIhm/gG3CSJO1hKg2O/nvfutyWT88Tg2o4aIGqSrQKCBiAUAHKrQKpfF+9Dvn/oHRTPtRcinHA==}
     hasBin: true
     dev: true
 
