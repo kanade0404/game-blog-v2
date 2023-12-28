@@ -1,15 +1,15 @@
-import styles from "./profile.module.scss";
 import ProfileText from "./ProfileText";
 import SNS from "./SNS";
 import Thumbnail from "./Thumbnail";
+import styles from "./profile.module.scss";
 
 const Index = () => {
-  return (
-    <div className={styles.wrapper}>
-      <Thumbnail />
-      <ProfileText />
-      <SNS />
-    </div>
-  );
+	return (
+		<div className={styles.wrapper}>
+			<Thumbnail />
+			<ProfileText />
+			<SNS />
+		</div>
+	);
 };
 export default Index;

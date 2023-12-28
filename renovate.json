@@ -1,47 +1,35 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "github>kanade0404/renovate-config"
-  ],
-  "reviewers": [
-    "kanade0404",
-    "luvmini511"
-  ],
-  "packageRules": [
-    {
-      "groupName": "ESLint families",
-      "extends": ["packages:eslint"],
-      "matchPackageNames": ["eslint"]
-    },
-    {
-      "groupName": "storybook families",
-      "matchPackagePrefixes": [
-        "@storybook",
-        "storybook"
-      ]
-    },
-    {
-      "groupName": "GraphQL families",
-      "matchPackagePrefixes": [
-        "@graphql-codegen",
-        "graphql",
-        "@graphql-tools"
-      ]
-    },
-    {
-      "groupName": "Testing families",
-      "matchPackagePrefixes": [
-        "@testing-library",
-        "jest",
-        "react-test-renderer"
-      ],
-      "matchPackageNames": [
-        "@types/jest",
-        "@types/mocha",
-        "@types/react",
-        "@types/react-dom",
-        "@types/react-test-renderer"
-      ]
-    }
-  ]
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": ["github>kanade0404/renovate-config"],
+	"reviewers": ["kanade0404", "luvmini511"],
+	"packageRules": [
+		{
+			"groupName": "ESLint families",
+			"extends": ["packages:eslint"],
+			"matchPackageNames": ["eslint"]
+		},
+		{
+			"groupName": "storybook families",
+			"matchPackagePrefixes": ["@storybook", "storybook"]
+		},
+		{
+			"groupName": "GraphQL families",
+			"matchPackagePrefixes": ["@graphql-codegen", "graphql", "@graphql-tools"]
+		},
+		{
+			"groupName": "Testing families",
+			"matchPackagePrefixes": [
+				"@testing-library",
+				"jest",
+				"react-test-renderer"
+			],
+			"matchPackageNames": [
+				"@types/jest",
+				"@types/mocha",
+				"@types/react",
+				"@types/react-dom",
+				"@types/react-test-renderer"
+			]
+		}
+	]
 }
