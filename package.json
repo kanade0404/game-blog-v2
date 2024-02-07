@@ -50,7 +50,7 @@
     "@types/mocha": "10.0.6",
     "@types/node": "20.11.16",
     "@types/react": "18.2.55",
-    "@types/react-dom": "18.2.18",
+    "@types/react-dom": "18.2.19",
     "@types/react-test-renderer": "18.0.7",
     "chromatic": "^10.0.0",
     "cspell": "8.3.2",
