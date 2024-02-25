@@ -132,7 +132,7 @@ devDependencies:
     version: 29.5.12
   '@types/mdx':
     specifier: ^2.0.5
-    version: 2.0.9
+    version: 2.0.11
   '@types/mocha':
     specifier: 10.0.6
     version: 10.0.6
@@ -4199,7 +4199,7 @@ packages:
     peerDependencies:
       react: '>=16'
     dependencies:
-      '@types/mdx': 2.0.9
+      '@types/mdx': 2.0.11
       '@types/react': 18.2.58
       react: 18.2.0
     dev: true
@@ -6908,8 +6908,8 @@ packages:
       '@types/unist': 3.0.0
     dev: false
 
-  /@types/mdx@2.0.9:
-    resolution: {integrity: sha512-OKMdj17y8Cs+k1r0XFyp59ChSOwf8ODGtMQ4mnpfz5eFDk1aO41yN3pSKGuvVzmWAkFp37seubY1tzOVpwfWwg==}
+  /@types/mdx@2.0.11:
+    resolution: {integrity: sha512-HM5bwOaIQJIQbAYfax35HCKxx7a3KrK3nBtIqJgSOitivTD1y3oW9P3rxY9RkXYPUk7y/AjAohfHKmFpGE79zw==}
     dev: true
 
   /@types/mime-types@2.1.3:
