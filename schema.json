@@ -7906,6 +7906,18 @@
 						"deprecationReason": null
 					},
 					{
+						"name": "noIndex",
+						"description": null,
+						"args": [],
+						"type": {
+							"kind": "SCALAR",
+							"name": "BooleanType",
+							"ofType": null
+						},
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
 						"name": "title",
 						"description": null,
 						"args": [],
@@ -8081,6 +8093,18 @@
 									}
 								}
 							}
+						},
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "noIndex",
+						"description": null,
+						"args": [],
+						"type": {
+							"kind": "SCALAR",
+							"name": "BooleanType",
+							"ofType": null
 						},
 						"isDeprecated": false,
 						"deprecationReason": null
@@ -11312,6 +11336,136 @@
 				"description": null,
 				"fields": [
 					{
+						"name": "alt",
+						"description": null,
+						"args": [
+							{
+								"name": "fallbackLocales",
+								"description": "If you want to fallback to a default translation when a translation has not been found",
+								"type": {
+									"kind": "LIST",
+									"name": null,
+									"ofType": {
+										"kind": "NON_NULL",
+										"name": null,
+										"ofType": {
+											"kind": "ENUM",
+											"name": "SiteLocale",
+											"ofType": null
+										}
+									}
+								},
+								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "locale",
+								"description": "The locale to use to fetch the field's content",
+								"type": {
+									"kind": "ENUM",
+									"name": "SiteLocale",
+									"ofType": null
+								},
+								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							}
+						],
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "blurUpThumb",
+						"description": null,
+						"args": [
+							{
+								"name": "imgixParams",
+								"description": "Imgix transformations to apply to the image",
+								"type": {
+									"kind": "INPUT_OBJECT",
+									"name": "ImgixParams",
+									"ofType": null
+								},
+								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "punch",
+								"description": "Controls the \"punch\" value (~contrast) of the blurhash decoding algorithm (defaults to 1.0)",
+								"type": {
+									"kind": "NON_NULL",
+									"name": null,
+									"ofType": {
+										"kind": "SCALAR",
+										"name": "Float",
+										"ofType": null
+									}
+								},
+								"defaultValue": "1",
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "quality",
+								"description": "Image quality (defaults to 70%)",
+								"type": {
+									"kind": "NON_NULL",
+									"name": null,
+									"ofType": {
+										"kind": "SCALAR",
+										"name": "Int",
+										"ofType": null
+									}
+								},
+								"defaultValue": "70",
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "size",
+								"description": "Maximum image dimension (defaults to 24px)",
+								"type": {
+									"kind": "NON_NULL",
+									"name": null,
+									"ofType": {
+										"kind": "SCALAR",
+										"name": "Int",
+										"ofType": null
+									}
+								},
+								"defaultValue": "24",
+								"isDeprecated": false,
+								"deprecationReason": null
+							}
+						],
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "blurhash",
+						"description": null,
+						"args": [],
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
 						"name": "duration",
 						"description": null,
 						"args": [],
@@ -11331,6 +11485,22 @@
 							"kind": "SCALAR",
 							"name": "Int",
 							"ofType": null
+						},
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "height",
+						"description": null,
+						"args": [],
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "IntType",
+								"ofType": null
+							}
 						},
 						"isDeprecated": false,
 						"deprecationReason": null
@@ -11421,6 +11591,18 @@
 						"deprecationReason": null
 					},
 					{
+						"name": "thumbhash",
+						"description": null,
+						"args": [],
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
 						"name": "thumbnailUrl",
 						"description": null,
 						"args": [
@@ -11443,6 +11625,67 @@
 							"ofType": {
 								"kind": "SCALAR",
 								"name": "String",
+								"ofType": null
+							}
+						},
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "title",
+						"description": null,
+						"args": [
+							{
+								"name": "fallbackLocales",
+								"description": "If you want to fallback to a default translation when a translation has not been found",
+								"type": {
+									"kind": "LIST",
+									"name": null,
+									"ofType": {
+										"kind": "NON_NULL",
+										"name": null,
+										"ofType": {
+											"kind": "ENUM",
+											"name": "SiteLocale",
+											"ofType": null
+										}
+									}
+								},
+								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							},
+							{
+								"name": "locale",
+								"description": "The locale to use to fetch the field's content",
+								"type": {
+									"kind": "ENUM",
+									"name": "SiteLocale",
+									"ofType": null
+								},
+								"defaultValue": null,
+								"isDeprecated": false,
+								"deprecationReason": null
+							}
+						],
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "width",
+						"description": null,
+						"args": [],
+						"type": {
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "IntType",
 								"ofType": null
 							}
 						},
