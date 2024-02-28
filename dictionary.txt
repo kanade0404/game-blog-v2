@@ -10,3 +10,4 @@ autorelaxed
 viewports
 maxage
 biomejs
+chromaui
