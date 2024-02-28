@@ -7,4 +7,4 @@ pre-commit:
     cspell:
       glob: "*"
       exclude: "pnpm-lock.yaml"
-      run: pnpm cspell {staged_files}
+      run: pnpm cspell lint {staged_files}
