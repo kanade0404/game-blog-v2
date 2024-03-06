@@ -150,7 +150,7 @@ devDependencies:
     version: 18.0.7
   chromatic:
     specifier: ^11.0.0
-    version: 11.0.2
+    version: 11.0.3
   cspell:
     specifier: 8.6.0
     version: 8.6.0
@@ -7963,8 +7963,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /chromatic@11.0.2:
-    resolution: {integrity: sha512-jpDb5HlNZrJv1ohJmtlCH5Icf5dD485JXTCu4BWDJ4PxFMcywBFgBxEYW/TNKj9C6WxR85IKKq2DoVzZJTpJGw==}
+  /chromatic@11.0.3:
+    resolution: {integrity: sha512-zdOFWPoNAgzlfMlhCExcpsW/lMkwWccF2m9W3V7pddTWQMStXzs6FMjAxj+C3J+NBeBlcCyr9Jm6i/P3DMjZ7A==}
     hasBin: true
     peerDependencies:
       '@chromatic-com/cypress': ^0.5.2 || ^1.0.0
