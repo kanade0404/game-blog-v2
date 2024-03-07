@@ -21,8 +21,6 @@ const nextConfig = {
 	reactStrictMode: true,
 	swcMinify: true,
 };
-console.log("sentry");
-console.log(process.env.SENTRY_AUTH_TOKEN);
 module.exports = process.env.SENTRY_AUTH_TOKEN
 	? withSentryConfig(nextConfig, sentryWebpackPluginOptions)
 	: nextConfig;

@@ -13,7 +13,8 @@
 			"storybook-static/*",
 			"lib/api/*",
 			".husky",
-			"schema.json"
+			"schema.json",
+			"coverage"
 		]
 	}
 }
