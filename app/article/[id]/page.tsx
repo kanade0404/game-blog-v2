@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	if (!blogModel) return {};
 	const { description } = blogModel;
 	if (!description) return {};
-	const meta: Metadata = {
+	return {
 		title: description.title,
 		description: description.description,
 		openGraph: {
@@ -36,7 +36,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 				: undefined,
 		},
 	};
-	return meta;
 }
 export default function Index({ params }: Props) {
 	return (
