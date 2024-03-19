@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { getArticle } from "../../../lib/graphql/getArticle";
 import Article from "../../components/Article";
 

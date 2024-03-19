@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
-import { BlogQuery } from "../../../lib/api/query";
+import type { ReactNode } from "react";
+import type { BlogQuery } from "../../../lib/api/query";
 import { convertToYYYYMMdd } from "../../../lib/time/convertToyyyyMMdd";
 import Markdown from "../Markdown";
 import styles from "./article.module.scss";

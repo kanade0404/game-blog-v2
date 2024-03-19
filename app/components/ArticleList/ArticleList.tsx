@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { BlogListQuery } from "../../../lib/api/query";
+import type { BlogListQuery } from "../../../lib/api/query";
 import { convertToYYYYMMdd } from "../../../lib/time/convertToyyyyMMdd";
 import styles from "./article_list.module.scss";
 
