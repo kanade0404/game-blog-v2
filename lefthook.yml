@@ -1,9 +1,10 @@
 pre-commit:
   parallel: true
   commands:
-    eslint:
-      glob: "*.{js,ts,tsx}"
-      run: pnpm eslint {staged_files}
+    lint:
+      glob: "*.{js,ts,tsx,json}"
+      run: pnpm dlx @biomejs/biome check {staged_files}
     cspell:
-      glob: "*.{js,ts,tsx}"
-      run: pnpm cspell {staged_files}
+      glob: "*"
+      exclude: "(pnpm-lock.yaml|package.json)"
+      run: pnpm cspell lint {staged_files}

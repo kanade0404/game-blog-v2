@@ -8,3 +8,6 @@ gtag
 adsbygoogle
 autorelaxed
 viewports
+maxage
+biomejs
+chromaui

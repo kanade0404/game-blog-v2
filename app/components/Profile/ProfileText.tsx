@@ -12,9 +12,9 @@ const ProfText = `
     - eFootball 2024(PS5)
 `;
 const ProfileText = () => (
-  <div>
-    <ReactMarkdown>{ProfText}</ReactMarkdown>
-  </div>
+	<div>
+		<ReactMarkdown>{ProfText}</ReactMarkdown>
+	</div>
 );
 
 export default ProfileText;

@@ -1,7 +1,11 @@
-import { format, parseISO } from "date-fns";
-import utcToZonedTime from "date-fns-tz/utcToZonedTime";
+import { Temporal } from "@js-temporal/polyfill";
 
 type DateString = string;
 type ConvertToYYYYMMdd = (date: DateString) => DateString;
-export const convertToYYYYMMdd: ConvertToYYYYMMdd = (date) =>
-  format(utcToZonedTime(parseISO(date), "Asia/Tokyo"), "yyyy. MM. dd");
+export const convertToYYYYMMdd: ConvertToYYYYMMdd = (date) => {
+	const temporal = Temporal.PlainDate.from(date);
+	return `${temporal.year}. ${`${temporal.month}`.padStart(
+		2,
+		"0",
+	)}. ${`${temporal.day}`.padStart(2, "0")}`;
+};

@@ -22,7 +22,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18.16.1
+          node-version-file: 'package.json'
       - uses: pnpm/action-setup@v2
         name: Install pnpm
         with:
@@ -31,7 +31,7 @@ jobs:
       - name: Get pnpm store directory
         shell: bash
         run: echo "STORE_PATH=$(pnpm store path --silent)" >> "$GITHUB_ENV"
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         id: node_modules_cache_id
         env:
           cache-name: cache-node-modules
@@ -40,7 +40,7 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: ${{ runner.os }}-pnpm-store-
       - run: pnpm i --frozen-lockfile
-      - uses: chromaui/action@v1
+      - uses: chromaui/action@v11
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           exitZeroOnChanges: true

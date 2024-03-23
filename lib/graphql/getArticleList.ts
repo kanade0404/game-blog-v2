@@ -1,7 +1,7 @@
-import { graphQLClient } from "./index";
-import { BlogListDocument, BlogListQuery } from "../api/query";
 import { cache } from "react";
+import { BlogListDocument, type BlogListQuery } from "../api/query";
+import { graphQLClient } from "./index";
 
 export const getArticleList = cache(async () =>
-  graphQLClient.request<BlogListQuery>(BlogListDocument),
+	graphQLClient.request<BlogListQuery>(BlogListDocument),
 );
