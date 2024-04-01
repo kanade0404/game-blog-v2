@@ -15,7 +15,9 @@ const Article = ({ params: { blog, adElement } }: Props) => {
 		<>
 			<article className={styles.article}>
 				<div className={styles.meta}>
-					<p>{convertToYYYYMMdd(_firstPublishedAt)}</p>
+					<p>
+						{_firstPublishedAt ? convertToYYYYMMdd(_firstPublishedAt) : null}
+					</p>
 					<p>{category.name}</p>
 				</div>
 				<h1>{title}</h1>
