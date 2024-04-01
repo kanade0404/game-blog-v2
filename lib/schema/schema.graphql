@@ -23,8 +23,8 @@ query BlogList {
     }
 }
 
-query Blog($id: ItemId!) {
-    blogModel(filter: {id: {eq: $id}, _status: {eq: published}}) {
+query Blog($id: ItemId!, $status: ItemStatus!){
+    blogModel(filter: {id: {eq: $id}, _status: {eq: $status}}) {
         id
         title
         content(markdown: false)
