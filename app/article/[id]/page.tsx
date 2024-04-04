@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 				? {
 						url: description.image.url,
 						alt: description.image.alt,
-				  }
+					}
 				: undefined,
 		},
 		twitter: {
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 				? {
 						url: description.image.url,
 						alt: description.image.alt,
-				  }
+					}
 				: undefined,
 		},
 	};

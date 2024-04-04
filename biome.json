@@ -3,18 +3,17 @@
 	"organizeImports": {
 		"enabled": true
 	},
+	"files": {
+		"ignore": [".next", "storybook-static/*", "lib/api/*", ".husky", "coverage"]
+	},
 	"linter": {
 		"enabled": true,
 		"rules": {
 			"recommended": true
 		},
-		"ignore": [
-			".next",
-			"storybook-static/*",
-			"lib/api/*",
-			".husky",
-			"schema.json",
-			"coverage"
-		]
+		"ignore": ["schema.json"]
+	},
+	"formatter": {
+		"enabled": true
 	}
 }
