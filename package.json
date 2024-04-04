@@ -63,7 +63,7 @@
 		"ts-node": "^10.9.2",
 		"typed-scss-modules": "^8.0.0",
 		"typescript": "5.4.3",
-		"vitest": "^1.3.1"
+		"vitest": "1.0.4"
 	},
 	"engines": {
 		"node": ">=18.17.0"
@@ -88,6 +88,6 @@
 		"preinstall": "npx only-allow pnpm",
 		"start": "NODE_ENV=production next start",
 		"storybook": "storybook dev -p 6006",
-		"test": "pnpm run codegen && vitest run --coverage"
+		"test": "pnpm run codegen && vitest run"
 	}
 }
