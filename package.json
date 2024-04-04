@@ -88,6 +88,6 @@
 		"preinstall": "npx only-allow pnpm",
 		"start": "NODE_ENV=production next start",
 		"storybook": "storybook dev -p 6006",
-		"test": "pnpm run codegen && vitest run --coverage"
+		"test": "pnpm run codegen && vitest run"
 	}
 }
