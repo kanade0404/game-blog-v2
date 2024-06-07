@@ -6,5 +6,5 @@ pre-commit:
       run: pnpm dlx @biomejs/biome check {staged_files}
     cspell:
       glob: "*"
-      exclude: "(pnpm-lock.yaml|package.json)"
+      exclude: "(pnpm-lock.yaml|package.json|schema.json)"
       run: pnpm cspell lint {staged_files}
