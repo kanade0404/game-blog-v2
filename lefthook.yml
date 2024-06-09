@@ -7,4 +7,17 @@ pre-commit:
     cspell:
       glob: "*"
       exclude: "(pnpm-lock.yaml|package.json|schema.json)"
-      run: pnpm cspell lint {staged_files}
+      run: |
+        set -e
+        # cspell.jsonからignorePathsを取得
+        ignore_paths=$(jq -r '.ignorePaths | join(" ")' cspell.json)
+        # ステージングされたファイルを取得
+        staged_files=$(git diff --cached --name-only)
+        # ステージングされたファイルがignorePathsに含まれているかチェック
+        for file in $staged_files; do
+          if [[ ! " $ignore_paths " =~ " $file " ]]; then
+            # ignorePathsに含まれていないファイルがある場合、cspellを実行
+            pnpm cspell lint $staged_files
+            exit $?
+          fi
+        done
