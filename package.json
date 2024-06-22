@@ -10,7 +10,7 @@
 		"@sentry/nextjs": "^7.77.0",
 		"@vercel/analytics": "^1.0.1",
 		"clsx": "^2.0.0",
-		"graphql": "16.8.1",
+		"graphql": "16.8.2",
 		"graphql-request": "^6.1.0",
 		"graphql-tag": "^2.12.6",
 		"msw-storybook-addon": "^2.0.0",
