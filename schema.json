@@ -10,6 +10,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "BlogModelModelFilter",
 				"description": null,
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -245,6 +246,7 @@
 				"kind": "ENUM",
 				"name": "BlogModelModelOrderBy",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -400,6 +402,7 @@
 				"kind": "OBJECT",
 				"name": "BlogModelRecord",
 				"description": "Record of type Article (blog_model)",
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "_createdAt",
@@ -727,6 +730,7 @@
 				"kind": "SCALAR",
 				"name": "Boolean",
 				"description": "The `Boolean` scalar type represents `true` or `false`.",
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -737,6 +741,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "BooleanFilter",
 				"description": "Specifies how to filter Boolean fields",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -760,6 +765,7 @@
 				"kind": "SCALAR",
 				"name": "BooleanType",
 				"description": "Represents `true` or `false` values.",
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -770,6 +776,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "CategoryModelModelFilter",
 				"description": null,
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -957,6 +964,7 @@
 				"kind": "ENUM",
 				"name": "CategoryModelModelOrderBy",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -1112,6 +1120,7 @@
 				"kind": "OBJECT",
 				"name": "CategoryModelRecord",
 				"description": "Record of type Category (category_model)",
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "_createdAt",
@@ -1366,6 +1375,7 @@
 				"kind": "OBJECT",
 				"name": "CollectionMetadata",
 				"description": null,
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "count",
@@ -1393,6 +1403,7 @@
 				"kind": "ENUM",
 				"name": "ColorBucketType",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -1476,6 +1487,7 @@
 				"kind": "OBJECT",
 				"name": "ColorField",
 				"description": null,
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "alpha",
@@ -1583,6 +1595,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "CreatedAtFilter",
 				"description": "Specifies how to filter by creation datetime",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -1678,6 +1691,7 @@
 				"kind": "SCALAR",
 				"name": "CustomData",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -1688,6 +1702,7 @@
 				"kind": "SCALAR",
 				"name": "DateTime",
 				"description": "A ISO 8601 compliant datetime value",
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -1698,6 +1713,7 @@
 				"kind": "ENUM",
 				"name": "FaviconType",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -1727,6 +1743,7 @@
 				"kind": "OBJECT",
 				"name": "FileField",
 				"description": null,
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "_createdAt",
@@ -2439,6 +2456,7 @@
 				"kind": "INTERFACE",
 				"name": "FileFieldInterface",
 				"description": null,
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "_createdAt",
@@ -3151,6 +3169,7 @@
 				"kind": "SCALAR",
 				"name": "Float",
 				"description": "The `Float` scalar type represents signed double-precision fractional values as specified by [IEEE 754](https://en.wikipedia.org/wiki/IEEE_floating_point).",
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -3161,6 +3180,7 @@
 				"kind": "SCALAR",
 				"name": "FloatType",
 				"description": "Represents signed double-precision fractional values as specified by [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point).",
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -3171,6 +3191,7 @@
 				"kind": "OBJECT",
 				"name": "GlobalSeoField",
 				"description": null,
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "facebookPageUrl",
@@ -3242,6 +3263,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "ImgixParams",
 				"description": null,
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -5241,6 +5263,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsAuto",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -5276,6 +5299,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsBlendAlign",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -5323,6 +5347,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsBlendCrop",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -5364,6 +5389,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsBlendFit",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -5405,6 +5431,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsBlendMode",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -5512,6 +5539,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsBlendSize",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -5529,6 +5557,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsCh",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -5558,6 +5587,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsCrop",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -5617,6 +5647,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsCs",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -5652,6 +5683,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsFill",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -5693,6 +5725,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsFillGenPos",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -5740,6 +5773,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsFillGradientCs",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -5781,6 +5815,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsFillGradientLinearDirection",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -5816,6 +5851,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsFillGradientType",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -5839,6 +5875,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsFit",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -5904,6 +5941,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsFlip",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -5933,6 +5971,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsFm",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -6028,6 +6067,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsIptc",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -6051,6 +6091,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsMarkAlign",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -6098,6 +6139,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsMarkFit",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -6139,6 +6181,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsMarkTile",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -6156,6 +6199,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsPalette",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -6179,6 +6223,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsTransparency",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -6196,6 +6241,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsTrim",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -6219,6 +6265,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsTxtAlign",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -6266,6 +6313,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsTxtClip",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -6301,6 +6349,7 @@
 				"kind": "ENUM",
 				"name": "ImgixParamsTxtFit",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -6318,6 +6367,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "InUseFilter",
 				"description": "Specifies how to filter by usage",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -6341,6 +6391,7 @@
 				"kind": "SCALAR",
 				"name": "Int",
 				"description": "The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1.",
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -6351,6 +6402,7 @@
 				"kind": "SCALAR",
 				"name": "IntType",
 				"description": "Represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1.",
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -6361,6 +6413,7 @@
 				"kind": "SCALAR",
 				"name": "ItemId",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -6371,6 +6424,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "ItemIdFilter",
 				"description": "Specifies how to filter by ID",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -6438,6 +6492,7 @@
 				"kind": "ENUM",
 				"name": "ItemStatus",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -6467,6 +6522,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "LinkFilter",
 				"description": "Specifies how to filter Single-link fields",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -6546,6 +6602,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "LinksFilter",
 				"description": "Specifies how to filter Multiple-links fields",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -6633,6 +6690,7 @@
 				"kind": "SCALAR",
 				"name": "MetaTagAttributes",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -6643,6 +6701,7 @@
 				"kind": "ENUM",
 				"name": "MuxThumbnailFormatType",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -6672,6 +6731,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "OrientationFilter",
 				"description": "Specifies how to filter by image orientation",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -6707,6 +6767,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "PublishedAtFilter",
 				"description": "Specifies how to filter by publication datetime",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -6802,6 +6863,7 @@
 				"kind": "OBJECT",
 				"name": "Query",
 				"description": "The query root for this schema",
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "_allBlogModelsMeta",
@@ -7814,6 +7876,7 @@
 				"kind": "INTERFACE",
 				"name": "RecordInterface",
 				"description": null,
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "_createdAt",
@@ -8039,6 +8102,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "ResolutionFilter",
 				"description": "Specifies how to filter by upload type",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -8106,6 +8170,7 @@
 				"kind": "ENUM",
 				"name": "ResolutionType",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -8141,6 +8206,7 @@
 				"kind": "OBJECT",
 				"name": "ResponsiveImage",
 				"description": null,
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "alt",
@@ -8312,6 +8378,7 @@
 				"kind": "OBJECT",
 				"name": "SeoField",
 				"description": null,
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "description",
@@ -8383,6 +8450,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "SeoFilter",
 				"description": "Specifies how to filter SEO meta tags fields",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -8406,6 +8474,7 @@
 				"kind": "OBJECT",
 				"name": "Site",
 				"description": null,
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "favicon",
@@ -8551,6 +8620,7 @@
 				"kind": "ENUM",
 				"name": "SiteLocale",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -8574,6 +8644,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "StatusFilter",
 				"description": "Specifies how to filter by status",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -8641,6 +8712,7 @@
 				"kind": "SCALAR",
 				"name": "String",
 				"description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -8651,6 +8723,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "StringFilter",
 				"description": "Specifies how to filter Single-line string fields",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -8778,6 +8851,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "StringMatchesFilter",
 				"description": null,
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -8829,6 +8903,7 @@
 				"kind": "OBJECT",
 				"name": "StructuredTextAssetRecord",
 				"description": "Block of type Structured Text asset (structured_text_asset)",
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "_createdAt",
@@ -9083,6 +9158,7 @@
 				"kind": "OBJECT",
 				"name": "Tag",
 				"description": null,
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "attributes",
@@ -9134,6 +9210,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "TagModelModelFilter",
 				"description": null,
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -9333,6 +9410,7 @@
 				"kind": "ENUM",
 				"name": "TagModelModelOrderBy",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -9500,6 +9578,7 @@
 				"kind": "OBJECT",
 				"name": "TagModelRecord",
 				"description": "Record of type Tag (tag_model)",
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "_createdAt",
@@ -9766,6 +9845,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "TextFilter",
 				"description": "Specifies how to filter text fields",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -9837,6 +9917,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "TypeFilter",
 				"description": "Specifies how to filter by upload type",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -9904,6 +9985,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "UpdatedAtFilter",
 				"description": "Specifies how to filter by update datetime",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -9999,6 +10081,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "UploadAltFilter",
 				"description": "Specifies how to filter by default alt",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -10102,6 +10185,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "UploadAuthorFilter",
 				"description": "Specifies how to filter by auhtor",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -10149,6 +10233,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "UploadBasenameFilter",
 				"description": "Specifies how to filter by basename",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -10184,6 +10269,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "UploadColorsFilter",
 				"description": "Specifies how to filter by colors",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -10271,6 +10357,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "UploadCopyrightFilter",
 				"description": "Specifies how to filter by copyright",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -10318,6 +10405,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "UploadCreatedAtFilter",
 				"description": "Specifies how to filter by creation datetime",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -10401,6 +10489,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "UploadFilenameFilter",
 				"description": "Specifies how to filter by filename",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -10436,6 +10525,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "UploadFilter",
 				"description": null,
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -10755,6 +10845,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "UploadFormatFilter",
 				"description": "Specifies how to filter by format",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -10822,6 +10913,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "UploadHeightFilter",
 				"description": "Specifies how to filter by height",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -10905,6 +10997,7 @@
 				"kind": "SCALAR",
 				"name": "UploadId",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -10915,6 +11008,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "UploadIdFilter",
 				"description": "Specifies how to filter by ID",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -10982,6 +11076,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "UploadMd5Filter",
 				"description": "Specifies how to filter by MD5",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -11049,6 +11144,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "UploadMimeTypeFilter",
 				"description": "Specifies how to filter by mime type",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -11140,6 +11236,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "UploadNotesFilter",
 				"description": "Specifies how to filter by notes",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -11187,6 +11284,7 @@
 				"kind": "ENUM",
 				"name": "UploadOrderBy",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -11306,6 +11404,7 @@
 				"kind": "ENUM",
 				"name": "UploadOrientation",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -11335,6 +11434,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "UploadSizeFilter",
 				"description": "Specifies how to filter by size",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -11418,6 +11518,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "UploadTagsFilter",
 				"description": "Specifies how to filter by tags",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -11521,6 +11622,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "UploadTitleFilter",
 				"description": "Specifies how to filter by default title",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -11624,6 +11726,7 @@
 				"kind": "ENUM",
 				"name": "UploadType",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -11683,6 +11786,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "UploadUpdatedAtFilter",
 				"description": "Specifies how to filter by update datetime",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -11766,6 +11870,7 @@
 				"kind": "OBJECT",
 				"name": "UploadVideoField",
 				"description": null,
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "alt",
@@ -12134,6 +12239,7 @@
 				"kind": "INPUT_OBJECT",
 				"name": "UploadWidthFilter",
 				"description": "Specifies how to filter by width",
+				"isOneOf": false,
 				"fields": null,
 				"inputFields": [
 					{
@@ -12217,6 +12323,7 @@
 				"kind": "ENUM",
 				"name": "VideoMp4Res",
 				"description": null,
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -12246,6 +12353,7 @@
 				"kind": "OBJECT",
 				"name": "__Directive",
 				"description": "A Directive provides a way to describe alternate runtime execution and type validation behavior in a GraphQL document.\n\nIn some cases, you need to provide options to alter GraphQL's execution behavior in ways field arguments will not suffice, such as conditionally including or skipping a field. Directives provide this by describing additional information to the executor.",
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "name",
@@ -12362,6 +12470,7 @@
 				"kind": "ENUM",
 				"name": "__DirectiveLocation",
 				"description": "A Directive can be adjacent to many parts of the GraphQL language, a __DirectiveLocation describes one such possible adjacencies.",
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -12487,6 +12596,7 @@
 				"kind": "OBJECT",
 				"name": "__EnumValue",
 				"description": "One possible value for a given Enum. Enum values are unique values, not a placeholder for a string or numeric value. However an Enum value is returned in a JSON response as a string.",
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "name",
@@ -12554,6 +12664,7 @@
 				"kind": "OBJECT",
 				"name": "__Field",
 				"description": "Object and Interface types are described by a list of Fields, each of which has a name, potentially a list of arguments, and a return type.",
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "name",
@@ -12674,6 +12785,7 @@
 				"kind": "OBJECT",
 				"name": "__InputValue",
 				"description": "Arguments provided to Fields or Directives and the input fields of an InputObject are represented as Input Values which describe their type and optionally a default value.",
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "name",
@@ -12769,6 +12881,7 @@
 				"kind": "OBJECT",
 				"name": "__Schema",
 				"description": "A GraphQL Schema defines the capabilities of a GraphQL server. It exposes all available types and directives on the server, as well as the entry points for query, mutation, and subscription operations.",
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "description",
@@ -12880,6 +12993,7 @@
 				"kind": "OBJECT",
 				"name": "__Type",
 				"description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name, description and optional `specifiedByURL`, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.",
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "kind",
@@ -13083,6 +13197,18 @@
 						},
 						"isDeprecated": false,
 						"deprecationReason": null
+					},
+					{
+						"name": "isOneOf",
+						"description": null,
+						"args": [],
+						"type": {
+							"kind": "SCALAR",
+							"name": "Boolean",
+							"ofType": null
+						},
+						"isDeprecated": false,
+						"deprecationReason": null
 					}
 				],
 				"inputFields": null,
@@ -13094,6 +13220,7 @@
 				"kind": "ENUM",
 				"name": "__TypeKind",
 				"description": "An enum describing what kind of type a given `__Type` is.",
+				"isOneOf": null,
 				"fields": null,
 				"inputFields": null,
 				"interfaces": null,
@@ -13153,6 +13280,7 @@
 				"kind": "OBJECT",
 				"name": "focalPoint",
 				"description": null,
+				"isOneOf": null,
 				"fields": [
 					{
 						"name": "x",
