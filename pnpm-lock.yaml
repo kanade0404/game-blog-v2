@@ -118,13 +118,13 @@ importers:
         specifier: 0.2.2
         version: 0.2.2
       '@testing-library/jest-dom':
-        specifier: ^6.4.6
+        specifier: 6.4.6
         version: 6.4.6(vitest@1.6.0(@types/node@20.14.8)(jsdom@24.1.0)(sass@1.77.6)(terser@5.31.1))
       '@testing-library/react':
-        specifier: ^16.0.0
+        specifier: 16.0.0
         version: 16.0.0(@testing-library/dom@9.3.4)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@testing-library/user-event':
-        specifier: ^14.4.3
+        specifier: 14.5.2
         version: 14.5.2(@testing-library/dom@9.3.4)
       '@types/mdx':
         specifier: 2.0.13
@@ -142,7 +142,7 @@ importers:
         specifier: 18.3.0
         version: 18.3.0
       '@vitejs/plugin-react':
-        specifier: ^4.3.1
+        specifier: 4.3.1
         version: 4.3.1(vite@5.3.1(@types/node@20.14.8)(sass@1.77.6)(terser@5.31.1))
       '@vitest/coverage-v8':
         specifier: 1.6.0
@@ -3009,9 +3009,6 @@ packages:
 
   '@types/babel__template@7.4.4':
     resolution: {integrity: sha512-h/NUaSyG5EyxBIp8YRxo4RMe2/qQgvyowRwVMzhYhBCONbW8PUsg4lkFMrhgZhUe5z3L3MiLDuvyJ/CaPa2A8A==}
-
-  '@types/babel__traverse@7.20.5':
-    resolution: {integrity: sha512-WXCyOcRtH37HAUkpXhUduaxdm82b4GSlyTqajXviN4EfiuPgNYR109xMCKvpl6zPIpua0DGlMEDCq+g8EdoheQ==}
 
   '@types/babel__traverse@7.20.6':
     resolution: {integrity: sha512-r1bzfrm0tomOI8g1SzvCaQHo6Lcv6zu0EA+W2kHrt8dyrHQxGzBBL4kdkzIS+jBMV+EYcMAEAqXqYaLJq5rOZg==}
@@ -8748,7 +8745,7 @@ snapshots:
   '@babel/plugin-transform-react-jsx-source@7.24.1(@babel/core@7.24.7)':
     dependencies:
       '@babel/core': 7.24.7
-      '@babel/helper-plugin-utils': 7.24.0
+      '@babel/helper-plugin-utils': 7.24.7
 
   '@babel/plugin-transform-react-jsx@7.23.4(@babel/core@7.24.7)':
     dependencies:
@@ -11806,11 +11803,11 @@ snapshots:
 
   '@types/babel__core@7.20.5':
     dependencies:
-      '@babel/parser': 7.24.4
+      '@babel/parser': 7.24.7
       '@babel/types': 7.24.7
       '@types/babel__generator': 7.6.8
       '@types/babel__template': 7.4.4
-      '@types/babel__traverse': 7.20.5
+      '@types/babel__traverse': 7.20.6
 
   '@types/babel__generator@7.6.8':
     dependencies:
@@ -11819,10 +11816,6 @@ snapshots:
   '@types/babel__template@7.4.4':
     dependencies:
       '@babel/parser': 7.24.7
-      '@babel/types': 7.24.7
-
-  '@types/babel__traverse@7.20.5':
-    dependencies:
       '@babel/types': 7.24.7
 
   '@types/babel__traverse@7.20.6':
