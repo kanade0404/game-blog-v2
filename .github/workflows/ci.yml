@@ -27,7 +27,7 @@ jobs:
     - uses: pnpm/action-setup@v2
       name: Install pnpm
       with:
-        version: 8
+        version: 9.2
         run_install: false
     - name: Get pnpm store directory
       shell: bash
@@ -40,7 +40,7 @@ jobs:
         path: ${{ env.STORE_PATH }}
         key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
         restore-keys: ${{ runner.os }}-pnpm-store-
-    - run: pnpm i --frozen-lockfile
+    - run: pnpm i
     - run: pnpm build
     - run: pnpm confirm
     - run: pnpm test
