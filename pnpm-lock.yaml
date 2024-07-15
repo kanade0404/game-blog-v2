@@ -145,8 +145,8 @@ importers:
         specifier: 4.3.1
         version: 4.3.1(vite@5.3.1(@types/node@20.14.10)(sass@1.77.8)(terser@5.31.1))
       '@vitest/coverage-v8':
-        specifier: 2.0.2
-        version: 2.0.2(vitest@2.0.2(@types/node@20.14.10)(jsdom@24.1.0)(sass@1.77.8)(terser@5.31.1))
+        specifier: 2.0.3
+        version: 2.0.3(vitest@2.0.2(@types/node@20.14.10)(jsdom@24.1.0)(sass@1.77.8)(terser@5.31.1))
       chromatic:
         specifier: 11.5.5
         version: 11.5.5
@@ -2813,10 +2813,10 @@ packages:
     peerDependencies:
       vite: ^4.2.0 || ^5.0.0
 
-  '@vitest/coverage-v8@2.0.2':
-    resolution: {integrity: sha512-iA8eb4PMid3bMc++gfQSTvYE1QL//fC8pz+rKsTUDBFjdDiy/gH45hvpqyDu5K7FHhvgG0GNNCJzTMMSFKhoxg==}
+  '@vitest/coverage-v8@2.0.3':
+    resolution: {integrity: sha512-53d+6jXFdYbasXBmsL6qaGIfcY5eBQq0sP57AjdasOcSiGNj4qxkkpDKIitUNfjxcfAfUfQ8BD0OR2fSey64+g==}
     peerDependencies:
-      vitest: 2.0.2
+      vitest: 2.0.3
 
   '@vitest/expect@1.6.0':
     resolution: {integrity: sha512-ixEvFVQjycy/oNgHjqsL6AZCDduC+tflRluaHIzKIsdbzkLn2U/iBnVeJwB6HsIjQBdfMR8Z0tRxKUsvFJEeWQ==}
@@ -10643,7 +10643,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitest/coverage-v8@2.0.2(vitest@2.0.2(@types/node@20.14.10)(jsdom@24.1.0)(sass@1.77.8)(terser@5.31.1))':
+  '@vitest/coverage-v8@2.0.3(vitest@2.0.2(@types/node@20.14.10)(jsdom@24.1.0)(sass@1.77.8)(terser@5.31.1))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 0.2.3
