@@ -68,7 +68,7 @@
 	"engines": {
 		"node": "=20.16.0"
 	},
-	"packageManager": "pnpm@9.7.0",
+	"packageManager": "pnpm@9.7.1",
 	"private": true,
 	"scripts": {
 		"build": "pnpm run codegen && next build",
