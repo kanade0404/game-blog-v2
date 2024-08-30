@@ -4,7 +4,7 @@
 	"_id": "kanade.log@1.0.0",
 	"dependencies": {
 		"@graphql-tools/load-files": "7.0.0",
-		"@graphql-tools/merge": "9.0.6",
+		"@graphql-tools/merge": "9.0.7",
 		"@graphql-tools/schema": "10.0.6",
 		"@js-temporal/polyfill": "0.4.4",
 		"@sentry/nextjs": "8.27.0",
