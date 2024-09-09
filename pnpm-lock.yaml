@@ -40,7 +40,7 @@ importers:
         version: 2.12.6(graphql@16.9.0)
       msw-storybook-addon:
         specifier: 2.0.3
-        version: 2.0.3(msw@2.3.1(typescript@5.5.4))
+        version: 2.0.3(msw@2.3.1(typescript@5.6.2))
       next:
         specifier: 14.2.8
         version: 14.2.8(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.78.0)
@@ -71,7 +71,7 @@ importers:
         version: 1.8.3
       '@graphql-codegen/cli':
         specifier: 5.0.2
-        version: 5.0.2(@babel/core@7.24.7)(@types/node@20.16.5)(graphql@16.9.0)(typescript@5.5.4)
+        version: 5.0.2(@babel/core@7.24.7)(@types/node@20.16.5)(graphql@16.9.0)(typescript@5.6.2)
       '@graphql-codegen/introspection':
         specifier: 4.0.3
         version: 4.0.3(graphql@16.9.0)
@@ -110,10 +110,10 @@ importers:
         version: 8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7))
       '@storybook/nextjs':
         specifier: 8.2.9
-        version: 8.2.9(esbuild@0.14.54)(next@14.2.8(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.78.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.78.0)(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(type-fest@4.20.1)(typescript@5.5.4)(vitest@2.0.5(@types/node@20.16.5)(jsdom@25.0.0)(sass@1.78.0)(terser@5.31.1))(webpack-hot-middleware@2.26.1)(webpack@5.92.1(esbuild@0.14.54))
+        version: 8.2.9(esbuild@0.14.54)(next@14.2.8(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.78.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.78.0)(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(type-fest@4.20.1)(typescript@5.6.2)(vitest@2.0.5(@types/node@20.16.5)(jsdom@25.0.0)(sass@1.78.0)(terser@5.31.1))(webpack-hot-middleware@2.26.1)(webpack@5.92.1(esbuild@0.14.54))
       '@storybook/react':
         specifier: 8.2.9
-        version: 8.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(typescript@5.5.4)
+        version: 8.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(typescript@5.6.2)
       '@storybook/test':
         specifier: 8.2.9
         version: 8.2.9(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(vitest@2.0.5(@types/node@20.16.5)(jsdom@25.0.0)(sass@1.78.0)(terser@5.31.1))
@@ -176,13 +176,13 @@ importers:
         version: 8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7))
       ts-node:
         specifier: 10.9.2
-        version: 10.9.2(@types/node@20.16.5)(typescript@5.5.4)
+        version: 10.9.2(@types/node@20.16.5)(typescript@5.6.2)
       typed-scss-modules:
         specifier: 8.0.1
         version: 8.0.1(sass@1.78.0)
       typescript:
-        specifier: 5.5.4
-        version: 5.5.4
+        specifier: 5.6.2
+        version: 5.6.2
       vitest:
         specifier: 2.0.5
         version: 2.0.5(@types/node@20.16.5)(jsdom@25.0.0)(sass@1.78.0)(terser@5.31.1)
@@ -6767,8 +6767,8 @@ packages:
       sass:
         optional: true
 
-  typescript@5.5.4:
-    resolution: {integrity: sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==}
+  typescript@5.6.2:
+    resolution: {integrity: sha512-NW8ByodCSNCwZeghjN3o+JX5OFH0Ojg6sadjEKY4huZ52TqbJTJnDo5+Tw98lSy63NZvi4n+ez5m2u5d4PkZyw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -8522,7 +8522,7 @@ snapshots:
       graphql: 16.9.0
       tslib: 2.6.3
 
-  '@graphql-codegen/cli@5.0.2(@babel/core@7.24.7)(@types/node@20.16.5)(graphql@16.9.0)(typescript@5.5.4)':
+  '@graphql-codegen/cli@5.0.2(@babel/core@7.24.7)(@types/node@20.16.5)(graphql@16.9.0)(typescript@5.6.2)':
     dependencies:
       '@babel/generator': 7.23.0
       '@babel/template': 7.22.15
@@ -8542,11 +8542,11 @@ snapshots:
       '@graphql-tools/utils': 10.0.11(graphql@16.9.0)
       '@whatwg-node/fetch': 0.8.1(@types/node@20.16.5)
       chalk: 4.1.2
-      cosmiconfig: 8.3.6(typescript@5.5.4)
+      cosmiconfig: 8.3.6(typescript@5.6.2)
       debounce: 1.2.1
       detect-indent: 6.1.0
       graphql: 16.9.0
-      graphql-config: 5.0.2(@types/node@20.16.5)(graphql@16.9.0)(typescript@5.5.4)
+      graphql-config: 5.0.2(@types/node@20.16.5)(graphql@16.9.0)(typescript@5.6.2)
       inquirer: 8.2.4
       is-glob: 4.0.3
       jiti: 1.20.0
@@ -10056,7 +10056,7 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@storybook/builder-webpack5@8.2.9(esbuild@0.14.54)(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(typescript@5.5.4)':
+  '@storybook/builder-webpack5@8.2.9(esbuild@0.14.54)(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(typescript@5.6.2)':
     dependencies:
       '@storybook/core-webpack': 8.2.9(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))
       '@types/node': 18.19.39
@@ -10068,7 +10068,7 @@ snapshots:
       css-loader: 6.11.0(webpack@5.92.1(esbuild@0.14.54))
       es-module-lexer: 1.5.3
       express: 4.19.2
-      fork-ts-checker-webpack-plugin: 8.0.0(typescript@5.5.4)(webpack@5.92.1(esbuild@0.14.54))
+      fork-ts-checker-webpack-plugin: 8.0.0(typescript@5.6.2)(webpack@5.92.1(esbuild@0.14.54))
       fs-extra: 11.2.0
       html-webpack-plugin: 5.6.0(webpack@5.92.1(esbuild@0.14.54))
       magic-string: 0.30.10
@@ -10087,7 +10087,7 @@ snapshots:
       webpack-hot-middleware: 2.26.1
       webpack-virtual-modules: 0.6.2
     optionalDependencies:
-      typescript: 5.5.4
+      typescript: 5.6.2
     transitivePeerDependencies:
       - '@rspack/core'
       - '@swc/core'
@@ -10180,7 +10180,7 @@ snapshots:
     dependencies:
       storybook: 8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7))
 
-  '@storybook/nextjs@8.2.9(esbuild@0.14.54)(next@14.2.8(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.78.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.78.0)(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(type-fest@4.20.1)(typescript@5.5.4)(vitest@2.0.5(@types/node@20.16.5)(jsdom@25.0.0)(sass@1.78.0)(terser@5.31.1))(webpack-hot-middleware@2.26.1)(webpack@5.92.1(esbuild@0.14.54))':
+  '@storybook/nextjs@8.2.9(esbuild@0.14.54)(next@14.2.8(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.78.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.78.0)(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(type-fest@4.20.1)(typescript@5.6.2)(vitest@2.0.5(@types/node@20.16.5)(jsdom@25.0.0)(sass@1.78.0)(terser@5.31.1))(webpack-hot-middleware@2.26.1)(webpack@5.92.1(esbuild@0.14.54))':
     dependencies:
       '@babel/core': 7.24.7
       '@babel/plugin-syntax-bigint': 7.8.3(@babel/core@7.24.7)
@@ -10196,9 +10196,9 @@ snapshots:
       '@babel/preset-typescript': 7.24.1(@babel/core@7.24.7)
       '@babel/runtime': 7.24.7
       '@pmmmwh/react-refresh-webpack-plugin': 0.5.13(react-refresh@0.14.2)(type-fest@4.20.1)(webpack-hot-middleware@2.26.1)(webpack@5.92.1(esbuild@0.14.54))
-      '@storybook/builder-webpack5': 8.2.9(esbuild@0.14.54)(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(typescript@5.5.4)
-      '@storybook/preset-react-webpack': 8.2.9(esbuild@0.14.54)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(typescript@5.5.4)
-      '@storybook/react': 8.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(typescript@5.5.4)
+      '@storybook/builder-webpack5': 8.2.9(esbuild@0.14.54)(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(typescript@5.6.2)
+      '@storybook/preset-react-webpack': 8.2.9(esbuild@0.14.54)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(typescript@5.6.2)
+      '@storybook/react': 8.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(typescript@5.6.2)
       '@storybook/test': 8.2.9(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(vitest@2.0.5(@types/node@20.16.5)(jsdom@25.0.0)(sass@1.78.0)(terser@5.31.1))
       '@types/node': 18.19.39
       '@types/semver': 7.5.8
@@ -10210,9 +10210,9 @@ snapshots:
       loader-utils: 3.2.1
       next: 14.2.8(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.78.0)
       node-polyfill-webpack-plugin: 2.0.1(webpack@5.92.1(esbuild@0.14.54))
-      pnp-webpack-plugin: 1.7.0(typescript@5.5.4)
+      pnp-webpack-plugin: 1.7.0(typescript@5.6.2)
       postcss: 8.4.38
-      postcss-loader: 8.1.1(postcss@8.4.38)(typescript@5.5.4)(webpack@5.92.1(esbuild@0.14.54))
+      postcss-loader: 8.1.1(postcss@8.4.38)(typescript@5.6.2)(webpack@5.92.1(esbuild@0.14.54))
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       react-refresh: 0.14.2
@@ -10227,7 +10227,7 @@ snapshots:
       tsconfig-paths-webpack-plugin: 4.1.0
     optionalDependencies:
       sharp: 0.33.5
-      typescript: 5.5.4
+      typescript: 5.6.2
       webpack: 5.92.1(esbuild@0.14.54)
     transitivePeerDependencies:
       - '@jest/globals'
@@ -10253,11 +10253,11 @@ snapshots:
       - webpack-hot-middleware
       - webpack-plugin-serve
 
-  '@storybook/preset-react-webpack@8.2.9(esbuild@0.14.54)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(typescript@5.5.4)':
+  '@storybook/preset-react-webpack@8.2.9(esbuild@0.14.54)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(typescript@5.6.2)':
     dependencies:
       '@storybook/core-webpack': 8.2.9(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))
-      '@storybook/react': 8.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(typescript@5.5.4)
-      '@storybook/react-docgen-typescript-plugin': 1.0.6--canary.9.0c3f3b7.0(typescript@5.5.4)(webpack@5.92.1(esbuild@0.14.54))
+      '@storybook/react': 8.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(typescript@5.6.2)
+      '@storybook/react-docgen-typescript-plugin': 1.0.6--canary.9.0c3f3b7.0(typescript@5.6.2)(webpack@5.92.1(esbuild@0.14.54))
       '@types/node': 18.19.39
       '@types/semver': 7.5.8
       find-up: 5.0.0
@@ -10272,7 +10272,7 @@ snapshots:
       tsconfig-paths: 4.2.0
       webpack: 5.92.1(esbuild@0.14.54)
     optionalDependencies:
-      typescript: 5.5.4
+      typescript: 5.6.2
     transitivePeerDependencies:
       - '@swc/core'
       - esbuild
@@ -10284,16 +10284,16 @@ snapshots:
     dependencies:
       storybook: 8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7))
 
-  '@storybook/react-docgen-typescript-plugin@1.0.6--canary.9.0c3f3b7.0(typescript@5.5.4)(webpack@5.92.1(esbuild@0.14.54))':
+  '@storybook/react-docgen-typescript-plugin@1.0.6--canary.9.0c3f3b7.0(typescript@5.6.2)(webpack@5.92.1(esbuild@0.14.54))':
     dependencies:
       debug: 4.3.5
       endent: 2.1.0
       find-cache-dir: 3.3.2
       flat-cache: 3.2.0
       micromatch: 4.0.7
-      react-docgen-typescript: 2.2.2(typescript@5.5.4)
+      react-docgen-typescript: 2.2.2(typescript@5.6.2)
       tslib: 2.6.3
-      typescript: 5.5.4
+      typescript: 5.6.2
       webpack: 5.92.1(esbuild@0.14.54)
     transitivePeerDependencies:
       - supports-color
@@ -10304,7 +10304,7 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       storybook: 8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7))
 
-  '@storybook/react@8.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(typescript@5.5.4)':
+  '@storybook/react@8.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(typescript@5.6.2)':
     dependencies:
       '@storybook/components': 8.2.9(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))
       '@storybook/global': 5.0.0
@@ -10331,7 +10331,7 @@ snapshots:
       type-fest: 2.19.0
       util-deprecate: 1.0.2
     optionalDependencies:
-      typescript: 5.5.4
+      typescript: 5.6.2
 
   '@storybook/test@8.2.9(storybook@8.2.9(@babel/preset-env@7.24.7(@babel/core@7.24.7)))(vitest@2.0.5(@types/node@20.16.5)(jsdom@25.0.0)(sass@1.78.0)(terser@5.31.1))':
     dependencies:
@@ -11511,23 +11511,23 @@ snapshots:
       path-type: 4.0.0
       yaml: 1.10.2
 
-  cosmiconfig@8.3.6(typescript@5.5.4):
+  cosmiconfig@8.3.6(typescript@5.6.2):
     dependencies:
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       parse-json: 5.2.0
       path-type: 4.0.0
     optionalDependencies:
-      typescript: 5.5.4
+      typescript: 5.6.2
 
-  cosmiconfig@9.0.0(typescript@5.5.4):
+  cosmiconfig@9.0.0(typescript@5.6.2):
     dependencies:
       env-paths: 2.2.1
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       parse-json: 5.2.0
     optionalDependencies:
-      typescript: 5.5.4
+      typescript: 5.6.2
 
   create-ecdh@4.0.4:
     dependencies:
@@ -12312,7 +12312,7 @@ snapshots:
       cross-spawn: 7.0.3
       signal-exit: 4.1.0
 
-  fork-ts-checker-webpack-plugin@8.0.0(typescript@5.5.4)(webpack@5.92.1(esbuild@0.14.54)):
+  fork-ts-checker-webpack-plugin@8.0.0(typescript@5.6.2)(webpack@5.92.1(esbuild@0.14.54)):
     dependencies:
       '@babel/code-frame': 7.24.7
       chalk: 4.1.2
@@ -12326,7 +12326,7 @@ snapshots:
       schema-utils: 3.3.0
       semver: 7.6.3
       tapable: 2.2.1
-      typescript: 5.5.4
+      typescript: 5.6.2
       webpack: 5.92.1(esbuild@0.14.54)
 
   form-data@4.0.0:
@@ -12464,7 +12464,7 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
-  graphql-config@5.0.2(@types/node@20.16.5)(graphql@16.9.0)(typescript@5.5.4):
+  graphql-config@5.0.2(@types/node@20.16.5)(graphql@16.9.0)(typescript@5.6.2):
     dependencies:
       '@graphql-tools/graphql-file-loader': 8.0.0(graphql@16.9.0)
       '@graphql-tools/json-file-loader': 8.0.0(graphql@16.9.0)
@@ -12472,7 +12472,7 @@ snapshots:
       '@graphql-tools/merge': 9.0.7(graphql@16.9.0)
       '@graphql-tools/url-loader': 8.0.0(@types/node@20.16.5)(graphql@16.9.0)
       '@graphql-tools/utils': 10.2.1(graphql@16.9.0)
-      cosmiconfig: 8.3.6(typescript@5.5.4)
+      cosmiconfig: 8.3.6(typescript@5.6.2)
       graphql: 16.9.0
       jiti: 1.20.0
       minimatch: 4.2.3
@@ -13633,12 +13633,12 @@ snapshots:
 
   ms@2.1.3: {}
 
-  msw-storybook-addon@2.0.3(msw@2.3.1(typescript@5.5.4)):
+  msw-storybook-addon@2.0.3(msw@2.3.1(typescript@5.6.2)):
     dependencies:
       is-node-process: 1.2.0
-      msw: 2.3.1(typescript@5.5.4)
+      msw: 2.3.1(typescript@5.6.2)
 
-  msw@2.3.1(typescript@5.5.4):
+  msw@2.3.1(typescript@5.6.2):
     dependencies:
       '@bundled-es-modules/cookie': 2.0.0
       '@bundled-es-modules/statuses': 1.0.1
@@ -13658,7 +13658,7 @@ snapshots:
       type-fest: 4.20.1
       yargs: 17.7.2
     optionalDependencies:
-      typescript: 5.5.4
+      typescript: 5.6.2
 
   mute-stream@0.0.8: {}
 
@@ -14050,9 +14050,9 @@ snapshots:
     dependencies:
       find-up: 6.3.0
 
-  pnp-webpack-plugin@1.7.0(typescript@5.5.4):
+  pnp-webpack-plugin@1.7.0(typescript@5.6.2):
     dependencies:
-      ts-pnp: 1.2.0(typescript@5.5.4)
+      ts-pnp: 1.2.0(typescript@5.6.2)
     transitivePeerDependencies:
       - typescript
 
@@ -14062,9 +14062,9 @@ snapshots:
 
   possible-typed-array-names@1.0.0: {}
 
-  postcss-loader@8.1.1(postcss@8.4.38)(typescript@5.5.4)(webpack@5.92.1(esbuild@0.14.54)):
+  postcss-loader@8.1.1(postcss@8.4.38)(typescript@5.6.2)(webpack@5.92.1(esbuild@0.14.54)):
     dependencies:
-      cosmiconfig: 9.0.0(typescript@5.5.4)
+      cosmiconfig: 9.0.0(typescript@5.6.2)
       jiti: 1.21.6
       postcss: 8.4.38
       semver: 7.6.3
@@ -14258,9 +14258,9 @@ snapshots:
       react: 18.3.1
       tween-functions: 1.2.0
 
-  react-docgen-typescript@2.2.2(typescript@5.5.4):
+  react-docgen-typescript@2.2.2(typescript@5.6.2):
     dependencies:
-      typescript: 5.5.4
+      typescript: 5.6.2
 
   react-docgen@7.0.3:
     dependencies:
@@ -15059,7 +15059,7 @@ snapshots:
 
   ts-log@2.2.4: {}
 
-  ts-node@10.9.2(@types/node@20.16.5)(typescript@5.5.4):
+  ts-node@10.9.2(@types/node@20.16.5)(typescript@5.6.2):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.9
@@ -15073,13 +15073,13 @@ snapshots:
       create-require: 1.1.1
       diff: 4.0.2
       make-error: 1.3.6
-      typescript: 5.5.4
+      typescript: 5.6.2
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
-  ts-pnp@1.2.0(typescript@5.5.4):
+  ts-pnp@1.2.0(typescript@5.6.2):
     optionalDependencies:
-      typescript: 5.5.4
+      typescript: 5.6.2
 
   ts-toolbelt@9.6.0: {}
 
@@ -15141,7 +15141,7 @@ snapshots:
     optionalDependencies:
       sass: 1.78.0
 
-  typescript@5.5.4: {}
+  typescript@5.6.2: {}
 
   ua-parser-js@0.7.33: {}
 
