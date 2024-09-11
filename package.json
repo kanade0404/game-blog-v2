@@ -51,7 +51,7 @@
 		"@types/react-test-renderer": "18.3.0",
 		"@vitejs/plugin-react": "4.3.1",
 		"@vitest/coverage-v8": "2.0.5",
-		"chromatic": "11.8.0",
+		"chromatic": "11.9.0",
 		"cspell": "8.14.2",
 		"dotenv": "16.4.5",
 		"fixpack": "4.0.0",
