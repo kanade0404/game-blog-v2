@@ -63,7 +63,7 @@
 		"ts-node": "10.9.2",
 		"typed-scss-modules": "8.0.1",
 		"typescript": "5.6.2",
-		"vitest": "2.1.0"
+		"vitest": "2.1.1"
 	},
 	"engines": {
 		"node": "=20.17.0"
