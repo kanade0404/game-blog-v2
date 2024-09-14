@@ -57,7 +57,7 @@
 		"fixpack": "4.0.0",
 		"jsdom": "25.0.0",
 		"next-router-mock": "0.9.13",
-		"npm-run-all2": "6.2.2",
+		"npm-run-all2": "6.2.3",
 		"react-test-renderer": "18.3.1",
 		"storybook": "8.3.0",
 		"ts-node": "10.9.2",
