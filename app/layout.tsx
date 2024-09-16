@@ -1,6 +1,8 @@
 import { Analytics } from "./components/Analytics";
 import Main from "./components/Main";
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 import "./global.scss";
 const siteName = "kanade.log";
 const description = "主にゲームや麻雀についての感想・考察を書いています。";
@@ -53,6 +55,7 @@ export default function RootLayout({ children }) {
 			<Analytics />
 			<body>
 				<Main>{children}</Main>
+				<SpeedInsights />
 			</body>
 		</html>
 	);

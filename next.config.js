@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const { withSentryConfig } = require("@sentry/nextjs");
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+	enabled: process.env.ANALYZE === "true",
+});
 const sentryWebpackPluginOptions = {
 	// Additional config options for the Sentry webpack plugin. Keep in mind that
 	// the following options are set automatically, and overriding them is not
@@ -22,5 +25,5 @@ const nextConfig = {
 	swcMinify: true,
 };
 module.exports = process.env.SENTRY_AUTH_TOKEN
-	? withSentryConfig(nextConfig, sentryWebpackPluginOptions)
-	: nextConfig;
+	? withBundleAnalyzer(withSentryConfig(nextConfig, sentryWebpackPluginOptions))
+	: withBundleAnalyzer(nextConfig);
