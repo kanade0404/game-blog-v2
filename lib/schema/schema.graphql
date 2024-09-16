@@ -1,51 +1,54 @@
 query BlogList {
-    allBlogModels(orderBy:[_firstPublishedAt_DESC], filter: {_status: {eq:published}}) {
-        id
-        title
-        _status
-        _firstPublishedAt
-        category {
-            name
-        }
-        description {
-            description
-            image {
-                url
-                alt
-            }
-            title
-            twitterCard
-        }
-        _seoMetaTags {
-            attributes
-            tag
-        }
-    }
+	allBlogModels(
+		orderBy: [_firstPublishedAt_DESC]
+		filter: { _status: { eq: published } }
+	) {
+		id
+		title
+		_status
+		_firstPublishedAt
+		category {
+			name
+		}
+		description {
+			description
+			image {
+				url
+				alt
+			}
+			title
+			twitterCard
+		}
+		_seoMetaTags {
+			attributes
+			tag
+		}
+	}
 }
 
-query Blog($id: ItemId!, $status: ItemStatus!){
-    blogModel(filter: {id: {eq: $id}, _status: {eq: $status}}) {
-        id
-        title
-        content(markdown: false)
-        _firstPublishedAt
-        category {
-            name
-        }
-        description {
-            description
-            image {
-                url
-                alt
-            }
-            title
-            twitterCard
-        }
-        tag {
-            ... on TagModelRecord {
-                id
-                name
-            }
-        }
-    }
+query Blog($id: ItemId!, $status: ItemStatus!) {
+	blogModel(filter: { id: { eq: $id }, _status: { eq: $status } }) {
+		id
+		title
+		content(markdown: false)
+		_firstPublishedAt
+		category {
+			name
+		}
+		description {
+			description
+			image {
+				url
+				alt
+			}
+			title
+			twitterCard
+		}
+		tag {
+			... on TagModelRecord {
+				id
+				name
+			}
+		}
+	}
 }
