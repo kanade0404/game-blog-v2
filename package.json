@@ -64,7 +64,7 @@
 		"storybook": "8.3.5",
 		"ts-node": "10.9.2",
 		"typed-scss-modules": "8.0.1",
-		"typescript": "5.6.2",
+		"typescript": "5.6.3",
 		"vitest": "2.1.2"
 	},
 	"engines": {
