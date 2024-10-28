@@ -151,8 +151,8 @@ importers:
         specifier: 4.3.3
         version: 4.3.3(vite@5.4.10(@types/node@20.17.1)(sass@1.80.4)(terser@5.31.1))
       '@vitest/coverage-v8':
-        specifier: 2.1.3
-        version: 2.1.3(vitest@2.1.3(@types/node@20.17.1)(jsdom@25.0.1)(msw@2.3.1(typescript@5.6.3))(sass@1.80.4)(terser@5.31.1))
+        specifier: 2.1.4
+        version: 2.1.4(vitest@2.1.3(@types/node@20.17.1)(jsdom@25.0.1)(msw@2.3.1(typescript@5.6.3))(sass@1.80.4)(terser@5.31.1))
       chromatic:
         specifier: 11.16.1
         version: 11.16.1
@@ -2920,11 +2920,11 @@ packages:
     peerDependencies:
       vite: ^4.2.0 || ^5.0.0
 
-  '@vitest/coverage-v8@2.1.3':
-    resolution: {integrity: sha512-2OJ3c7UPoFSmBZwqD2VEkUw6A/tzPF0LmW0ZZhhB8PFxuc+9IBG/FaSM+RLEenc7ljzFvGN+G0nGQoZnh7sy2A==}
+  '@vitest/coverage-v8@2.1.4':
+    resolution: {integrity: sha512-FPKQuJfR6VTfcNMcGpqInmtJuVXFSCd9HQltYncfR01AzXhLucMEtQ5SinPdZxsT5x/5BK7I5qFJ5/ApGCmyTQ==}
     peerDependencies:
-      '@vitest/browser': 2.1.3
-      vitest: 2.1.3
+      '@vitest/browser': 2.1.4
+      vitest: 2.1.4
     peerDependenciesMeta:
       '@vitest/browser':
         optional: true
@@ -5157,12 +5157,15 @@ packages:
   magic-string@0.30.11:
     resolution: {integrity: sha512-+Wri9p0QHMy+545hKww7YAu5NyzF8iomPL/RQazugQ9+Ez4Ic3mERMd8ZTX5rfK944j+560ZJi8iAwgak1Ac7A==}
 
+  magic-string@0.30.12:
+    resolution: {integrity: sha512-Ea8I3sQMVXr8JhN4z+H/d8zwo+tYDgHE9+5G4Wnrwhs0gaK9fXTKx0Tw5Xwsd/bCPTTZNRAdpyzvoeORe9LYpw==}
+
   magic-string@0.30.8:
     resolution: {integrity: sha512-ISQTe55T2ao7XtlAStud6qwYPZjE4GK1S/BeVPus4jrq6JuOnQ00YKQC581RWhR122W7msZV263KzVeLoqidyQ==}
     engines: {node: '>=12'}
 
-  magicast@0.3.4:
-    resolution: {integrity: sha512-TyDF/Pn36bBji9rWKHlZe+PZb6Mx5V8IHCSxk7X4aljM4e/vyDvZZYwHewdVaqiA0nb3ghfHU/6AUpDxWoER2Q==}
+  magicast@0.3.5:
+    resolution: {integrity: sha512-L0WhttDl+2BOsybvEOLK7fW3UA0OQ0IQ2d6Zl2x/a6vVRs3bAY0ECOSHHeL5jD+SbOpOCUEi0y1DgHEn9Qn1AQ==}
 
   make-dir@2.1.0:
     resolution: {integrity: sha512-LS9X+dc8KLxXCb8dni79fLIIUA5VyZoyjSMCwTluaXA0o27cCK0bhXkpgw+sTXVpPy/lSO57ilRixqk0vDmtRA==}
@@ -10717,7 +10720,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitest/coverage-v8@2.1.3(vitest@2.1.3(@types/node@20.17.1)(jsdom@25.0.1)(msw@2.3.1(typescript@5.6.3))(sass@1.80.4)(terser@5.31.1))':
+  '@vitest/coverage-v8@2.1.4(vitest@2.1.3(@types/node@20.17.1)(jsdom@25.0.1)(msw@2.3.1(typescript@5.6.3))(sass@1.80.4)(terser@5.31.1))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 0.2.3
@@ -10726,8 +10729,8 @@ snapshots:
       istanbul-lib-report: 3.0.1
       istanbul-lib-source-maps: 5.0.6
       istanbul-reports: 3.1.7
-      magic-string: 0.30.11
-      magicast: 0.3.4
+      magic-string: 0.30.12
+      magicast: 0.3.5
       std-env: 3.7.0
       test-exclude: 7.0.1
       tinyrainbow: 1.2.0
@@ -13211,15 +13214,19 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
 
+  magic-string@0.30.12:
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.5.0
+
   magic-string@0.30.8:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  magicast@0.3.4:
+  magicast@0.3.5:
     dependencies:
       '@babel/parser': 7.25.6
       '@babel/types': 7.25.6
-      source-map-js: 1.2.0
+      source-map-js: 1.2.1
 
   make-dir@2.1.0:
     dependencies:
