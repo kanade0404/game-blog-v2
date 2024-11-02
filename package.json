@@ -12,7 +12,7 @@
 		"@vercel/speed-insights": "1.0.14",
 		"clsx": "2.1.1",
 		"graphql": "16.9.0",
-		"graphql-request": "7.1.1",
+		"graphql-request": "7.1.2",
 		"graphql-tag": "2.12.6",
 		"msw-storybook-addon": "2.0.3",
 		"next": "14.2.16",
