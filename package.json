@@ -30,7 +30,7 @@
 		"@graphql-codegen/introspection": "4.0.3",
 		"@graphql-codegen/typescript": "4.1.2",
 		"@graphql-codegen/typescript-graphql-request": "6.2.0",
-		"@graphql-codegen/typescript-operations": "4.3.1",
+		"@graphql-codegen/typescript-operations": "4.4.0",
 		"@next/bundle-analyzer": "14.2.18",
 		"@storybook/addon-actions": "8.4.5",
 		"@storybook/addon-essentials": "8.4.5",
@@ -64,7 +64,7 @@
 		"storybook": "8.4.5",
 		"ts-node": "10.9.2",
 		"typed-scss-modules": "8.0.1",
-		"typescript": "5.6.3",
+		"typescript": "5.7.2",
 		"vitest": "2.1.5"
 	},
 	"engines": {
