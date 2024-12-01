@@ -3,7 +3,6 @@ clsx
 kanade
 nextjs
 webp
-Toyyyy
 gtag
 adsbygoogle
 autorelaxed
@@ -11,3 +10,9 @@ viewports
 maxage
 biomejs
 chromaui
+sakata
+seiya
+datocms
+urlset
+sitemapindex
+toyyyy

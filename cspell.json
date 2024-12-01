@@ -32,6 +32,8 @@
 		"package.json",
 		"pnpm-lock.yaml",
 		"renovate.json",
-		"coverage"
+		"coverage",
+		"*.svg",
+		".gitignore"
 	]
 }

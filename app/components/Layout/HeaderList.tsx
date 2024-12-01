@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import styles from "./header.module.scss";
+import styles from "./header.module.css";
 
 export default function HeaderList() {
 	const pathname = usePathname();

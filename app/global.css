@@ -1,0 +1,36 @@
+:root {
+	--font-inria-sans: "Inria Sans", sans-serif;
+	--layout-font-color: #fdfdfd;
+	--content-width-pc: 680px;
+	--content-width-sp: 320px;
+
+	--breakpoint: 600px;
+	--breakpoint-pc: 960px;
+}
+* {
+	font-family: var(--font-inria-sans), sans-serif;
+}
+html,
+body {
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+table {
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+	border-spacing: 0;
+	thead {
+		color: #ffffff;
+	}
+	th {
+		padding: 10px;
+		background-color: #5d5d5d;
+		border: solid 1px #5d5d5d;
+	}
+	td {
+		padding: 10px;
+		border: solid 1px #778ca3;
+	}
+}

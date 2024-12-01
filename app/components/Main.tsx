@@ -2,7 +2,7 @@ import Content from "./Content";
 import Footer from "./Layout/Footer";
 import Header from "./Layout/Header";
 
-import styles from "./main.module.scss";
+import styles from "./main.module.css";
 
 const Main = ({ children }) => (
 	<div className={styles.container}>

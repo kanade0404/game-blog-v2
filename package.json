@@ -20,9 +20,7 @@
 		"react": "18.3.1",
 		"react-dom": "18.3.1",
 		"react-markdown": "9.0.1",
-		"remark-gfm": "4.0.0",
-		"sass": "1.81.0",
-		"sharp": "0.33.5"
+		"remark-gfm": "4.0.0"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
@@ -63,7 +61,7 @@
 		"react-test-renderer": "18.3.1",
 		"storybook": "8.4.6",
 		"ts-node": "10.9.2",
-		"typed-scss-modules": "8.0.1",
+		"typed-css-modules": "^0.9.1",
 		"typescript": "5.7.2",
 		"vitest": "2.1.6"
 	},
@@ -73,13 +71,13 @@
 	"packageManager": "pnpm@9.14.4",
 	"private": true,
 	"scripts": {
-		"analyze": "ANALYZE=true pnpm build",
+		"analyze": "ANALYZE=true NODE_ENV=production pnpm build",
 		"build": "pnpm run codegen && next build",
 		"build-storybook": "storybook build",
 		"chromatic": "chromatic",
 		"codegen": "run-p codegen:*",
 		"codegen:gql": "graphql-codegen --require dotenv/config -r ts-node/register -c codegen-json.yaml && graphql-codegen -r ts-node/register -c codegen.yml",
-		"codegen:scss": "typed-scss-modules app",
+		"codegen:scss": "tcm app",
 		"confirm": "run-p confirm:*",
 		"confirm:lint": "pnpm dlx @biomejs/biome lint .",
 		"confirm:spell": "cspell lint '*/**/*.{js,ts,tsx}'",

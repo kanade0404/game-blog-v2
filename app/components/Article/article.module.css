@@ -1,0 +1,16 @@
+.article {
+	padding-bottom: 50px;
+	width: var(--content-width-sp);
+	@media screen and (min-width: 960px) {
+		width: var(--content-width-pc);
+	}
+}
+.meta {
+	display: flex;
+	gap: 0 30px;
+}
+.tagWrapper {
+	display: flex;
+	gap: 0 15px;
+	flex-wrap: wrap;
+}
