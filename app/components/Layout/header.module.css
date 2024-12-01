@@ -1,26 +1,11 @@
-.font {
-	font-weight: bold;
-	font-size: 20px;
-	text-decoration: none;
-	@media screen and (min-width: var(--breakpoint-pc)) {
-		font-size: 32px;
-	}
-}
-
-.fontActive {
-	color: var(--layout-font-color);
-}
-.fontInactive {
-	color: #5d5d5d;
-}
-
 .siteHeader {
 	background-color: #333333;
 	display: flex;
 	justify-content: center;
 	padding: 5px;
+	container-type: inline-size;
 }
-
+/* コンテナの定義 */
 .siteHeaderWrapper {
 	display: flex;
 	align-items: center;
@@ -28,11 +13,37 @@
 	padding-top: 0;
 	padding-bottom: 0;
 	gap: 0 30px;
-	@media screen and (min-width: var(--breakpoint-pc)) {
+}
+
+/* .siteHeaderWrapperに対するコンテナクエリ */
+@container (min-width: 950px) {
+	.siteHeaderWrapper {
 		min-width: var(--content-width-pc);
 		gap: 0 20px;
 	}
 }
+
+.font {
+	font-weight: bold;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+/* .fontに対するコンテナクエリ */
+@container (min-width: 950px) {
+	.font {
+		font-size: 32px;
+	}
+}
+
+.fontActive {
+	color: var(--layout-font-color);
+}
+
+.fontInactive {
+	color: #5d5d5d;
+}
+
 .navWrapper {
 	display: flex;
 	padding: 0;

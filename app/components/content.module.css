@@ -1,19 +1,16 @@
 .content {
-	--breakpoint-pc: 960px;
-	margin: 10px auto;
 	justify-content: center;
 	display: flex;
 	height: 100%;
-	@media screen and (min-width: var(--breakpoint-pc)) {
-		margin: 50px auto;
-	}
+	container-type: inline-size;
 }
 
 .contentInner {
 	width: var(--content-width-sp);
-	display: flex;
-	justify-content: center;
-	@media screen and (min-width: var(--breakpoint-pc)) {
+}
+
+@container (min-width: 960px) {
+	.contentInner {
 		width: var(--content-width-pc);
 	}
 }

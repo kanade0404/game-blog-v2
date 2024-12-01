@@ -83,7 +83,7 @@
 		"confirm:spell": "cspell lint '*/**/*.{js,ts,tsx}'",
 		"dev": "pnpm run codegen && next",
 		"fix": "run-s fix:*",
-		"fix:format": "pnpm dlx @biomejs/biome check --apply .",
+		"fix:format": "pnpm dlx @biomejs/biome check --write .",
 		"fix:pack": "fixpack",
 		"postbuild": "next-sitemap --config next-sitemap.config.js",
 		"preinstall": "npx only-allow pnpm",

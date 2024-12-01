@@ -1,7 +1,11 @@
 .article {
 	padding-bottom: 50px;
 	width: var(--content-width-sp);
-	@media screen and (min-width: 960px) {
+	container-type: inline-size;
+}
+
+@container (min-width: 960px) {
+	.article {
 		width: var(--content-width-pc);
 	}
 }

@@ -8,7 +8,7 @@
 	padding: 15px 0;
 	gap: 15px 0;
 	flex-direction: column;
-	@media screen and (min-width: var(--breakpoint-pc)) {
+	@media screen and (min-width: 960px) {
 		flex-direction: row;
 		gap: 0 30px;
 	}
@@ -17,7 +17,4 @@
 	font-size: 15px;
 	color: var(--layout-font-color);
 	margin: 0;
-	@media screen and (min-width: var(--breakpoint-pc)) {
-		font-size: 15px;
-	}
 }
