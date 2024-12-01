@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import HeaderList from "./HeaderList";
-import styles from "./header.module.scss";
+import styles from "./header.module.css";
 
 const Header = () => {
 	return (

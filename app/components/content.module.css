@@ -1,0 +1,16 @@
+.content {
+	justify-content: center;
+	display: flex;
+	height: 100%;
+	container-type: inline-size;
+}
+
+.contentInner {
+	width: var(--content-width-sp);
+}
+
+@container (min-width: 960px) {
+	.contentInner {
+		width: var(--content-width-pc);
+	}
+}

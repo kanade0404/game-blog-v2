@@ -4,7 +4,7 @@ import { BlogDocument, type BlogQuery, ItemStatus } from "../api/query";
 import { graphQLClient } from "./index";
 
 export const getArticle = cache(async (id: string) => {
-	const { isEnabled } = draftMode();
+	const { isEnabled } = await draftMode();
 	if (isEnabled) {
 		graphQLClient.setHeader("X-Include-Drafts", "true");
 		return graphQLClient.request<BlogQuery>(BlogDocument, {

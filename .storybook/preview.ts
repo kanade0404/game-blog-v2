@@ -1,6 +1,6 @@
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import type { Preview } from "@storybook/react";
-import "../app/global.scss";
+import "../app/global.css";
 
 const parameters = {
 	actions: { argTypesRegex: "^on[A-Z].*" },

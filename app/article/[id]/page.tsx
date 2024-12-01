@@ -3,13 +3,13 @@ import { getArticle } from "../../../lib/graphql/getArticle";
 import Article from "../../components/Article";
 
 type Props = {
-	params: {
+	params: Promise<{
 		id: string;
-	};
+	}>;
 };
 export const dynamic = "force-dynamic";
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-	const { blogModel } = await getArticle(params.id);
+	const { blogModel } = await getArticle((await params).id);
 	if (!blogModel) return {};
 	const { description } = blogModel;
 	if (!description) return {};
@@ -37,10 +37,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		},
 	};
 }
-export default function Index({ params }: Props) {
+export default async function Index({ params }: Props) {
 	return (
 		<main>
-			<Article params={params} />
+			<Article params={await params} />
 		</main>
 	);
 }
