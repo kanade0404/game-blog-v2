@@ -1,6 +1,6 @@
 import GitHub from "./GitHub";
 import Twitter from "./Twitter";
-import styles from "./sns.module.scss";
+import styles from "./sns.module.css";
 
 type Props = {
 	height?: number;

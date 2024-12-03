@@ -1,0 +1,20 @@
+.footer {
+	background-color: #333333;
+	display: flex;
+	justify-content: center;
+	position: sticky;
+	top: 100vh;
+	align-items: center;
+	padding: 15px 0;
+	gap: 15px 0;
+	flex-direction: column;
+	@media screen and (min-width: 960px) {
+		flex-direction: row;
+		gap: 0 30px;
+	}
+}
+.font {
+	font-size: 15px;
+	color: var(--layout-font-color);
+	margin: 0;
+}

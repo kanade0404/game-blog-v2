@@ -43,5 +43,5 @@ lib/api/
 
 storybook-static/
 build-storybook.log
-*.module.scss.d.ts
+*.css.d.ts
 public

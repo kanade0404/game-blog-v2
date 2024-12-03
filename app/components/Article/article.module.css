@@ -1,0 +1,20 @@
+.article {
+	padding-bottom: 50px;
+	width: var(--content-width-sp);
+	container-type: inline-size;
+}
+
+@container (min-width: 960px) {
+	.article {
+		width: var(--content-width-pc);
+	}
+}
+.meta {
+	display: flex;
+	gap: 0 30px;
+}
+.tagWrapper {
+	display: flex;
+	gap: 0 15px;
+	flex-wrap: wrap;
+}
