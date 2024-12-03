@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import type { BlogListQuery } from "../../../lib/api/query";
 import { convertToYYYYMMdd } from "../../../lib/time/convertToyyyyMMdd";
-import styles from "./article_list.module.scss";
+import styles from "./article_list.module.css";
 
 type Props = {
 	blogs: BlogListQuery["allBlogModels"];

@@ -1,7 +1,7 @@
 import ProfileText from "./ProfileText";
 import SNS from "./SNS";
 import Thumbnail from "./Thumbnail";
-import styles from "./profile.module.scss";
+import styles from "./profile.module.css";
 
 const Index = () => {
 	return (

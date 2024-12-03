@@ -23,7 +23,6 @@ const sentryWebpackPluginOptions = {
 };
 const nextConfig = {
 	reactStrictMode: true,
-	swcMinify: true,
 };
 module.exports = process.env.SENTRY_AUTH_TOKEN
 	? withBundleAnalyzer(withSentryConfig(nextConfig, sentryWebpackPluginOptions))

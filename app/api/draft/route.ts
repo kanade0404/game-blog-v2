@@ -14,6 +14,6 @@ export async function GET(req: Request) {
 	if (!recordID) {
 		return new Response("No slug provided", { status: 400 });
 	}
-	draftMode().enable();
+	(await draftMode()).enable();
 	return redirect(`/article/${recordID}`);
 }

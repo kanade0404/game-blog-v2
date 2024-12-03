@@ -3,7 +3,7 @@ import Main from "./components/Main";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-import "./global.scss";
+import "./global.css";
 const siteName = "kanade.log";
 const description = "主にゲームや麻雀についての感想・考察を書いています。";
 const url = "https://kanade0404.com";
