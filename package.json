@@ -52,7 +52,7 @@
 		"@vitejs/plugin-react": "4.3.4",
 		"@vitest/coverage-v8": "2.1.8",
 		"chromatic": "11.22.2",
-		"cspell": "8.17.1",
+		"cspell": "8.17.2",
 		"dotenv": "16.4.7",
 		"fixpack": "4.0.0",
 		"jsdom": "26.0.0",
