@@ -50,7 +50,7 @@
 		"@types/react-dom": "19.0.3",
 		"@types/react-test-renderer": "19.0.0",
 		"@vitejs/plugin-react": "4.3.4",
-		"@vitest/coverage-v8": "3.0.2",
+		"@vitest/coverage-v8": "3.0.3",
 		"chromatic": "11.25.0",
 		"cspell": "8.17.2",
 		"dotenv": "16.4.7",
