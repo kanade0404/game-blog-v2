@@ -43,7 +43,7 @@
 		"@storybook/test": "8.5.0",
 		"@testing-library/jest-dom": "6.6.3",
 		"@testing-library/react": "16.2.0",
-		"@testing-library/user-event": "14.6.0",
+		"@testing-library/user-event": "14.6.1",
 		"@types/mdx": "2.0.13",
 		"@types/node": "22.10.7",
 		"@types/react": "19.0.7",
@@ -63,7 +63,7 @@
 		"ts-node": "10.9.2",
 		"typed-css-modules": "0.9.1",
 		"typescript": "5.7.3",
-		"vitest": "3.0.2"
+		"vitest": "3.0.3"
 	},
 	"engines": {
 		"node": "=22.13.1"
