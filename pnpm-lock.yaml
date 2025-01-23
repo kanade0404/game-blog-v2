@@ -58,7 +58,7 @@ importers:
         version: 19.0.0(react@19.0.0)
       react-markdown:
         specifier: 9.0.3
-        version: 9.0.3(@types/react@19.0.7)(react@19.0.0)
+        version: 9.0.3(@types/react@19.0.8)(react@19.0.0)
       remark-gfm:
         specifier: 4.0.0
         version: 4.0.0
@@ -89,7 +89,7 @@ importers:
         version: 8.5.1(storybook@8.5.1(prettier@3.3.2))
       '@storybook/addon-essentials':
         specifier: 8.5.1
-        version: 8.5.1(@types/react@19.0.7)(storybook@8.5.1(prettier@3.3.2))
+        version: 8.5.1(@types/react@19.0.8)(storybook@8.5.1(prettier@3.3.2))
       '@storybook/addon-interactions':
         specifier: 8.5.1
         version: 8.5.1(storybook@8.5.1(prettier@3.3.2))
@@ -122,7 +122,7 @@ importers:
         version: 6.6.3
       '@testing-library/react':
         specifier: 16.2.0
-        version: 16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.3(@types/react@19.0.7))(@types/react@19.0.7)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        version: 16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.3(@types/react@19.0.8))(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@testing-library/user-event':
         specifier: 14.6.1
         version: 14.6.1(@testing-library/dom@10.4.0)
@@ -133,11 +133,11 @@ importers:
         specifier: 22.10.9
         version: 22.10.9
       '@types/react':
-        specifier: 19.0.7
-        version: 19.0.7
+        specifier: 19.0.8
+        version: 19.0.8
       '@types/react-dom':
         specifier: 19.0.3
-        version: 19.0.3(@types/react@19.0.7)
+        version: 19.0.3(@types/react@19.0.8)
       '@types/react-test-renderer':
         specifier: 19.0.0
         version: 19.0.0
@@ -2868,8 +2868,8 @@ packages:
   '@types/react-test-renderer@19.0.0':
     resolution: {integrity: sha512-qDVnNybqFm2eZKJ4jD34EvRd6VHD67KjgnWaEMM0Id9L22EpWe3nOSVKHWL1XWRCxUWe3lhXwlEeCKD1BlJCQA==}
 
-  '@types/react@19.0.7':
-    resolution: {integrity: sha512-MoFsEJKkAtZCrC1r6CM8U22GzhG7u2Wir8ons/aCKH6MBdD1ibV24zOSSkdZVUKqN5i396zG5VKLYZ3yaUZdLA==}
+  '@types/react@19.0.8':
+    resolution: {integrity: sha512-9P/o1IGdfmQxrujGbIMDyYaaCykhLKc0NGCtYcECNUr9UAaDe4gwvV9bR6tvd5Br1SG0j+PBpbKr2UYY8CwqSw==}
 
   '@types/resolve@1.20.6':
     resolution: {integrity: sha512-A4STmOXPhMUtHH+S6ymgE2GiBSMqf4oTvcQZMcHzokuTLVYzXTB8ttjcgxOVaAp2lGwEdzZ0J+cRbbeevQj1UQ==}
@@ -9026,10 +9026,10 @@ snapshots:
 
   '@kamilkisiela/fast-url-parser@1.1.4': {}
 
-  '@mdx-js/react@3.0.1(@types/react@19.0.7)(react@18.3.1)':
+  '@mdx-js/react@3.0.1(@types/react@19.0.8)(react@18.3.1)':
     dependencies:
       '@types/mdx': 2.0.13
-      '@types/react': 19.0.7
+      '@types/react': 19.0.8
       react: 18.3.1
 
   '@mswjs/cookies@1.1.1': {}
@@ -9735,9 +9735,9 @@ snapshots:
       storybook: 8.5.1(prettier@3.3.2)
       ts-dedent: 2.2.0
 
-  '@storybook/addon-docs@8.5.1(@types/react@19.0.7)(storybook@8.5.1(prettier@3.3.2))':
+  '@storybook/addon-docs@8.5.1(@types/react@19.0.8)(storybook@8.5.1(prettier@3.3.2))':
     dependencies:
-      '@mdx-js/react': 3.0.1(@types/react@19.0.7)(react@18.3.1)
+      '@mdx-js/react': 3.0.1(@types/react@19.0.8)(react@18.3.1)
       '@storybook/blocks': 8.5.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.5.1(prettier@3.3.2))
       '@storybook/csf-plugin': 8.5.1(storybook@8.5.1(prettier@3.3.2))
       '@storybook/react-dom-shim': 8.5.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.5.1(prettier@3.3.2))
@@ -9748,12 +9748,12 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
-  '@storybook/addon-essentials@8.5.1(@types/react@19.0.7)(storybook@8.5.1(prettier@3.3.2))':
+  '@storybook/addon-essentials@8.5.1(@types/react@19.0.8)(storybook@8.5.1(prettier@3.3.2))':
     dependencies:
       '@storybook/addon-actions': 8.5.1(storybook@8.5.1(prettier@3.3.2))
       '@storybook/addon-backgrounds': 8.5.1(storybook@8.5.1(prettier@3.3.2))
       '@storybook/addon-controls': 8.5.1(storybook@8.5.1(prettier@3.3.2))
-      '@storybook/addon-docs': 8.5.1(@types/react@19.0.7)(storybook@8.5.1(prettier@3.3.2))
+      '@storybook/addon-docs': 8.5.1(@types/react@19.0.8)(storybook@8.5.1(prettier@3.3.2))
       '@storybook/addon-highlight': 8.5.1(storybook@8.5.1(prettier@3.3.2))
       '@storybook/addon-measure': 8.5.1(storybook@8.5.1(prettier@3.3.2))
       '@storybook/addon-outline': 8.5.1(storybook@8.5.1(prettier@3.3.2))
@@ -10166,15 +10166,15 @@ snapshots:
       lodash: 4.17.21
       redent: 3.0.0
 
-  '@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.3(@types/react@19.0.7))(@types/react@19.0.7)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@testing-library/react@16.2.0(@testing-library/dom@10.4.0)(@types/react-dom@19.0.3(@types/react@19.0.8))(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@babel/runtime': 7.24.7
       '@testing-library/dom': 10.4.0
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
     optionalDependencies:
-      '@types/react': 19.0.7
-      '@types/react-dom': 19.0.3(@types/react@19.0.7)
+      '@types/react': 19.0.8
+      '@types/react-dom': 19.0.3(@types/react@19.0.8)
 
   '@testing-library/user-event@14.5.2(@testing-library/dom@10.4.0)':
     dependencies:
@@ -10285,15 +10285,15 @@ snapshots:
       pg-protocol: 1.6.1
       pg-types: 2.2.0
 
-  '@types/react-dom@19.0.3(@types/react@19.0.7)':
+  '@types/react-dom@19.0.3(@types/react@19.0.8)':
     dependencies:
-      '@types/react': 19.0.7
+      '@types/react': 19.0.8
 
   '@types/react-test-renderer@19.0.0':
     dependencies:
-      '@types/react': 19.0.7
+      '@types/react': 19.0.8
 
-  '@types/react@19.0.7':
+  '@types/react@19.0.8':
     dependencies:
       csstype: 3.1.2
 
@@ -13654,10 +13654,10 @@ snapshots:
 
   react-is@19.0.0: {}
 
-  react-markdown@9.0.3(@types/react@19.0.7)(react@19.0.0):
+  react-markdown@9.0.3(@types/react@19.0.8)(react@19.0.0):
     dependencies:
       '@types/hast': 3.0.4
-      '@types/react': 19.0.7
+      '@types/react': 19.0.8
       devlop: 1.1.0
       hast-util-to-jsx-runtime: 2.3.0
       html-url-attributes: 3.0.0
