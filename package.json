@@ -28,7 +28,7 @@
 		"@graphql-codegen/introspection": "4.0.3",
 		"@graphql-codegen/typescript": "4.1.6",
 		"@graphql-codegen/typescript-graphql-request": "6.2.0",
-		"@graphql-codegen/typescript-operations": "4.5.1",
+		"@graphql-codegen/typescript-operations": "4.6.0",
 		"@next/bundle-analyzer": "15.2.4",
 		"@storybook/addon-actions": "8.6.10",
 		"@storybook/addon-essentials": "8.6.10",
