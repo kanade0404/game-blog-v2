@@ -55,7 +55,7 @@
 		"cspell": "8.18.1",
 		"dotenv": "16.5.0",
 		"fixpack": "4.0.0",
-		"jsdom": "26.0.0",
+		"jsdom": "26.1.0",
 		"next-router-mock": "0.9.13",
 		"npm-run-all2": "7.0.2",
 		"react-test-renderer": "19.1.0",
