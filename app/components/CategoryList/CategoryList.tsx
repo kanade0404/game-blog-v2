@@ -29,17 +29,17 @@ const CategoryList = ({ categories }: Props) => {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>カテゴリー</h2>
-      <div className="scrollContainer">
+      <div className={styles.scrollContainer}>
         <ul className={styles.list}>
           {/* All Categories option */}
           <li 
             key="all-categories" 
-            className={`${styles.item} ${isHomePage ? "active" : ''}`}
+            className={`${styles.item} ${isHomePage ? styles.active : ''}`}
             id={isHomePage ? 'current-category' : undefined}
           >
             <Link 
               href="/" 
-              className={`${styles.link} ${isHomePage ? "activeLink" : ''}`}
+              className={`${styles.link} ${isHomePage ? styles.activeLink : ''}`}
             >
               すべて
             </Link>
@@ -50,12 +50,12 @@ const CategoryList = ({ categories }: Props) => {
             return (
               <li 
                 key={category.id} 
-                className={`${styles.item} ${isActive ? "active" : ''}`}
+                className={`${styles.item} ${isActive ? styles.active : ''}`}
                 id={isActive ? 'current-category' : undefined}
               >
                 <Link 
                   href={`/category/${category.id}`} 
-                  className={`${styles.link} ${isActive ? "activeLink" : ''}`}
+                  className={`${styles.link} ${isActive ? styles.activeLink : ''}`}
                 >
                   {category.name || 'カテゴリー'}
                 </Link>

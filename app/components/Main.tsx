@@ -15,9 +15,9 @@ const Main = ({ children }) => {
 	return (
 		<div className={styles.container}>
 			<Header />
-			<div className="pageLayout">
+			<div className={styles.pageLayout}>
 				{!isArticlePage && (
-					<div className="sidebar">
+					<div className={styles.sidebar}>
 						<CategoryList />
 					</div>
 				)}
