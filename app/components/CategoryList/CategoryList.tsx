@@ -4,7 +4,7 @@ import styles from "./categoryList.module.css";
 type Props = {
   categories: {
     id: string;
-    name: string;
+    name?: string;
   }[];
 };
 
@@ -16,7 +16,7 @@ const CategoryList = ({ categories }: Props) => {
         {categories.map((category) => (
           <li key={category.id} className={styles.item}>
             <Link href={`/category/${category.id}`} className={styles.link}>
-              {category.name}
+              {category.name || 'カテゴリー'}
             </Link>
           </li>
         ))}
