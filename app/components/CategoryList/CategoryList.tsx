@@ -26,6 +26,19 @@ const CategoryList = ({ categories }: Props) => {
     }
   }, [pathname]);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setCurrentCategoryId(prev => {
+        if (pathname.startsWith('/category/')) {
+          return pathname.split('/')[2];
+        }
+        return prev;
+      });
+    }, 0);
+    
+    return () => clearTimeout(timer);
+  }, [pathname]);
+
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>カテゴリー</h2>
