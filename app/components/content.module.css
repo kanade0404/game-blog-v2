@@ -1,16 +1,17 @@
 .content {
-	justify-content: center;
 	display: flex;
 	height: 100%;
-	container-type: inline-size;
+	width: 100%;
 }
 
 .contentInner {
-	width: var(--content-width-sp);
+	width: 100%;
+	padding: 1rem;
 }
 
-@container (min-width: 960px) {
+@media screen and (min-width: 960px) {
 	.contentInner {
-		width: var(--content-width-pc);
+		flex-grow: 1;
+		max-width: 900px;
 	}
 }

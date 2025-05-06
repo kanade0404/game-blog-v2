@@ -8,6 +8,7 @@ query BlogList {
 		_status
 		_firstPublishedAt
 		category {
+			id
 			name
 		}
 		description {
@@ -33,6 +34,7 @@ query Blog($id: ItemId!, $status: ItemStatus!) {
 		content(markdown: false)
 		_firstPublishedAt
 		category {
+			id
 			name
 		}
 		description {
