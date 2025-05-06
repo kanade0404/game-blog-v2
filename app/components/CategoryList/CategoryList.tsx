@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import styles from "./categoryList.module.css";
 
 type Props = {
@@ -9,18 +10,35 @@ type Props = {
 };
 
 const CategoryList = ({ categories }: Props) => {
+  const pathname = usePathname();
+  const currentCategoryId = pathname.startsWith('/category/') 
+    ? pathname.split('/')[2] 
+    : null;
+
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>カテゴリー</h2>
-      <ul className={styles.list}>
-        {categories.map((category) => (
-          <li key={category.id} className={styles.item}>
-            <Link href={`/category/${category.id}`} className={styles.link}>
-              {category.name || 'カテゴリー'}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <div className="scrollContainer">
+        <ul className={styles.list}>
+          {categories.map((category) => {
+            const isActive = category.id === currentCategoryId;
+            return (
+              <li 
+                key={category.id} 
+                className={`${styles.item} ${isActive ? 'active' : ''}`}
+                id={isActive ? 'current-category' : undefined}
+              >
+                <Link 
+                  href={`/category/${category.id}`} 
+                  className={`${styles.link} ${isActive ? 'activeLink' : ''}`}
+                >
+                  {category.name || 'カテゴリー'}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 };
