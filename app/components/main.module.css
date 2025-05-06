@@ -13,7 +13,7 @@
 
 .sidebar {
 	width: 100%;
-	padding: 1rem;
+	padding: 1rem 0;
 }
 
 @media screen and (min-width: 960px) {
@@ -23,9 +23,9 @@
 		margin: 0 auto;
 	}
 	
-	.sidebar {
-		width: 250px;
-		flex-shrink: 0;
-		padding: 1rem 0 1rem 1rem;
-	}
+.sidebar {
+	width: 250px;
+	flex-shrink: 0;
+	padding: 1rem 0;
+}
 }

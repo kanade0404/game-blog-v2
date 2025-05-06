@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./categoryList.module.css";
 
@@ -13,9 +14,16 @@ type Props = {
 
 const CategoryList = ({ categories }: Props) => {
   const pathname = usePathname();
-  const currentCategoryId = pathname.startsWith('/category/') 
-    ? pathname.split('/')[2] 
-    : null;
+  const [currentCategoryId, setCurrentCategoryId] = useState<string | null>(null);
+  
+  useEffect(() => {
+    if (pathname.startsWith('/category/')) {
+      const categoryId = pathname.split('/')[2];
+      setCurrentCategoryId(categoryId);
+    } else {
+      setCurrentCategoryId(null);
+    }
+  }, [pathname]);
 
   return (
     <div className={styles.container}>
