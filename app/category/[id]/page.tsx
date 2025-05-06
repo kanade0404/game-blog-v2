@@ -4,17 +4,16 @@ import { getCategoryList } from "../../../lib/graphql/getCategoryList";
 import ArticleList from "../../components/ArticleList/ArticleList";
 import styles from "./category.module.css";
 
-type Params = {
-  id: string;
-};
-
 type Props = {
-  params: Params;
+  params: Promise<{
+    id: string;
+  }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { allCategoryModels } = await getCategoryList();
-  const category = allCategoryModels?.find((cat) => cat.id === params.id);
+  const resolvedParams = await params;
+  const category = allCategoryModels?.find((cat) => cat.id === resolvedParams.id);
   
   if (!category) return {};
   
@@ -27,13 +26,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function CategoryPage({ params }: Props) {
   const { allBlogModels } = await getArticleList();
   const { allCategoryModels } = await getCategoryList();
+  const resolvedParams = await params;
   
-  const category = allCategoryModels?.find((cat) => cat.id === params.id);
+  const category = allCategoryModels?.find((cat) => cat.id === resolvedParams.id);
   
   if (!category) return <p>カテゴリーが見つかりませんでした。</p>;
   
   const filteredBlogs = allBlogModels?.filter(
-    (blog) => blog.category?.id === params.id
+    (blog) => blog.category?.id === resolvedParams.id
   );
   
   if (!filteredBlogs || filteredBlogs.length === 0) {
