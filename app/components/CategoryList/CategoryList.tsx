@@ -26,19 +26,6 @@ const CategoryList = ({ categories }: Props) => {
     }
   }, [pathname]);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setCurrentCategoryId(prev => {
-        if (pathname.startsWith('/category/')) {
-          return pathname.split('/')[2];
-        }
-        return prev;
-      });
-    }, 0);
-    
-    return () => clearTimeout(timer);
-  }, [pathname]);
-
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>カテゴリー</h2>
@@ -59,7 +46,7 @@ const CategoryList = ({ categories }: Props) => {
           </li>
           
           {categories.map((category) => {
-            const isActive = category.id === currentCategoryId;
+            const isActive = pathname.includes(`/category/${category.id}`);
             return (
               <li 
                 key={category.id} 
