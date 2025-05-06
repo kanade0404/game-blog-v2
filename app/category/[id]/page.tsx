@@ -4,13 +4,12 @@ import { getCategoryList } from "../../../lib/graphql/getCategoryList";
 import ArticleList from "../../components/ArticleList/ArticleList";
 import styles from "./category.module.css";
 
-type CategoryParams = {
+type Params = {
   id: string;
 };
 
 type Props = {
-  params: CategoryParams;
-  searchParams: Record<string, string | string[] | undefined>;
+  params: Params;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
