@@ -2,11 +2,12 @@ import { Suspense } from "react";
 import ArticleList from "./components/ArticleList";
 import Loading from "./loading";
 
-export default function Index({
-	searchParams,
-}: {
-	searchParams: { [key: string]: string | string[] | undefined };
-}) {
+interface PageProps {
+  params: { slug?: string };
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
+
+export default function Index({ searchParams = {} }: PageProps) {
 	const categoryId = typeof searchParams.category_id === 'string' ? searchParams.category_id : undefined;
 	
 	return (
