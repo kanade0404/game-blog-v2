@@ -1,6 +1,8 @@
 import clsx from "clsx";
+import { Suspense } from "react";
 import HeaderList from "./HeaderList";
 import styles from "./header.module.css";
+import Loading from "../../loading";
 
 const Header = () => {
 	return (
@@ -9,7 +11,9 @@ const Header = () => {
 				<a className={clsx(styles.font, styles.fontActive)} href="/">
 					kanade.log
 				</a>
-				<HeaderList />
+				<Suspense fallback={<Loading />}>
+					<HeaderList />
+				</Suspense>
 			</div>
 		</header>
 	);
