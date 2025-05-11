@@ -1,6 +1,6 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 import Content from "./Content";
 import CategoryList from "./CategoryList";
@@ -11,7 +11,7 @@ import Loading from "../loading";
 import styles from "./main.module.css";
 
 const Main = ({ children }) => {
-	const params = useSearchParams()
+	const pathname = usePathname();
 	const isArticlePage = pathname?.startsWith('/article/');
 
 	return (
