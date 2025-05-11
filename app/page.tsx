@@ -1,10 +1,11 @@
 import { Suspense } from "react";
+import { ReadonlyURLSearchParams } from "next/navigation";
 import ArticleList from "./components/ArticleList";
 import Loading from "./loading";
 
 type PageProps = {
   params: { slug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: Record<string, string | string[] | undefined>;
 };
 
 export default function Index({ searchParams }: PageProps) {
