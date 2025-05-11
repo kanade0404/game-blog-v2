@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import styles from "./categoryList.module.css";
 
 type Props = {
@@ -14,17 +14,18 @@ type Props = {
 
 const CategoryList = ({ categories }: Props) => {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const categoryIdParam = searchParams.get('category_id');
   const [currentCategoryId, setCurrentCategoryId] = useState<string | null>(null);
-  const isHomePage = pathname === '/' || (!pathname.startsWith('/category/') && !pathname.startsWith('/article/'));
+  const isHomePage = pathname === '/' && !categoryIdParam;
   
   useEffect(() => {
-    if (pathname.startsWith('/category/')) {
-      const categoryId = pathname.split('/')[2];
-      setCurrentCategoryId(categoryId);
+    if (categoryIdParam) {
+      setCurrentCategoryId(categoryIdParam);
     } else {
       setCurrentCategoryId(null);
     }
-  }, [pathname]);
+  }, [categoryIdParam]);
 
   return (
     <div className={styles.container}>
@@ -46,7 +47,7 @@ const CategoryList = ({ categories }: Props) => {
           </li>
           
           {categories.map((category) => {
-            const isActive = pathname.includes(`/category/${category.id}`);
+            const isActive = categoryIdParam === category.id;
             return (
               <li 
                 key={category.id} 
@@ -54,7 +55,7 @@ const CategoryList = ({ categories }: Props) => {
                 id={isActive ? 'current-category' : undefined}
               >
                 <Link 
-                  href={`/category/${category.id}`} 
+                  href={`/?category_id=${category.id}`} 
                   className={`${styles.link} ${isActive ? styles.activeLink : ''}`}
                 >
                   {category.name || 'カテゴリー'}

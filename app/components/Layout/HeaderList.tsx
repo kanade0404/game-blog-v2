@@ -2,11 +2,14 @@
 
 import clsx from "clsx";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import styles from "./header.module.css";
 
 export default function HeaderList() {
 	const pathname = usePathname();
+	const searchParams = useSearchParams();
+	const isBlogActive = pathname === "/" || pathname.startsWith("/article");
+	
 	return (
 		<nav>
 			<ul className={styles.navWrapper}>
@@ -15,9 +18,7 @@ export default function HeaderList() {
 						href="/"
 						className={clsx(
 							styles.font,
-							pathname === "/" || pathname.startsWith("/article")
-								? styles.fontActive
-								: styles.fontInactive,
+							isBlogActive ? styles.fontActive : styles.fontInactive,
 						)}
 					>
 						Blog
