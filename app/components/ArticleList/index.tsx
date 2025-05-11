@@ -3,23 +3,24 @@ import { getArticleList } from "../../../lib/graphql/getArticleList";
 import { getCategoryBlogList } from "../../../lib/graphql/getCategoryBlogList";
 import Loading from "../../loading";
 import ArticleList from "./ArticleList";
+import type { BlogListQuery } from "../../../lib/api/query";
 
 type Props = {
 	categoryId?: string;
 };
 
 const Index = async ({ categoryId }: Props) => {
-	let allBlogModels;
+	let allBlogModels: BlogListQuery["allBlogModels"] = [];
 	
 	if (categoryId) {
 		const result = await getCategoryBlogList(categoryId);
-		allBlogModels = result.allBlogModels;
+		allBlogModels = result.allBlogModels || [];
 	} else {
 		const result = await getArticleList();
-		allBlogModels = result.allBlogModels;
+		allBlogModels = result.allBlogModels || [];
 	}
 	
-	if (!allBlogModels) return <p>Not Found</p>;
+	if (!allBlogModels || allBlogModels.length === 0) return <p>Not Found</p>;
 	
 	return (
 		<Suspense fallback={<Loading />}>
