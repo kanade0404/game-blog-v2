@@ -1,10 +1,12 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import { Suspense } from "react";
 import Content from "./Content";
 import CategoryList from "./CategoryList";
 import Footer from "./Layout/Footer";
 import Header from "./Layout/Header";
+import Loading from "../loading";
 
 import styles from "./main.module.css";
 
@@ -18,7 +20,9 @@ const Main = ({ children }) => {
 			<div className={styles.pageLayout}>
 				{!isArticlePage && (
 					<div className={styles.sidebar}>
-						<CategoryList />
+						<Suspense fallback={<Loading />}>
+							<CategoryList />
+						</Suspense>
 					</div>
 				)}
 				<Content>{children}</Content>
