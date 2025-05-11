@@ -1,10 +1,6 @@
 import ArticleList from "./components/ArticleList";
 import type { ReadonlyURLSearchParams } from "next/navigation";
 
-interface PageProps {
-  searchParams: ReadonlyURLSearchParams;
-}
-
 export default async function Index({
 	searchParams,
   }: {
