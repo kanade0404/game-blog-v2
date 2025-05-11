@@ -1,23 +1,18 @@
-import { Suspense } from "react";
 import ArticleList from "./components/ArticleList";
-import CategoryList from "./components/CategoryList";
-import Loading from "./loading";
-import { pageLayout, sidebar } from "./page.module.css";
+import type { ReadonlyURLSearchParams } from "next/navigation";
 
 interface PageProps {
-	searchParams: Promise<{ category_id: string | null }>;
+	searchParams: ReadonlyURLSearchParams;
 }
 
-export default async function Index({ searchParams }: PageProps) {
-	const category_id = (await searchParams).category_id;
+export default async function Index({
+	searchParams,
+}: {
+	searchParams: Promise<{ [key: string]: string | undefined }>
+}) {
+	const { category_id } = await searchParams;
+	const categoryIdParam: string | null = category_id || null;
 	return (
-		<div className={pageLayout}>
-			<div className={sidebar}>
-				<Suspense fallback={<Loading />}>
-					<CategoryList />
-				</Suspense>
-			</div>
-			<ArticleList categoryId={category_id} />
-		</div>
+		<ArticleList categoryId={categoryIdParam} />
 	);
 }

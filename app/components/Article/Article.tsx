@@ -4,14 +4,28 @@ import { convertToYYYYMMdd } from "../../../lib/time/convertToyyyyMMdd";
 import Markdown from "../Markdown";
 import "../../styles/article/page.css";
 import styles from "./article.module.css";
+
+type TagType = {
+	id: string;
+	name?: string | null;
+};
+
 type Props = {
 	params: {
 		blog: BlogQuery["blogModel"];
 		adElement: ReactNode;
 	};
 };
+
 const Article = ({ params: { blog, adElement } }: Props) => {
-	const { title, content, _firstPublishedAt, category, tag } = blog;
+	if (!blog) return <p>記事が見つかりません</p>;
+	
+	const title = blog.title || '';
+	const content = blog.content || '';
+	const _firstPublishedAt = blog._firstPublishedAt || '';
+	const category = blog.category || { name: '' };
+	const tag = blog.tag || [];
+	
 	return (
 		<>
 			<article className={styles.article}>
