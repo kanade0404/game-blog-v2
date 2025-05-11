@@ -1,9 +1,11 @@
 import { GraphQLClient } from "graphql-request";
 
-export const graphQLClient = new GraphQLClient(process.env.GRAPHQL_ENDPOINT, {
+const endpoint = process.env.GRAPHQL_ENDPOINT || "https://graphql.datocms.com";
+
+export const graphQLClient = new GraphQLClient(endpoint, {
 	credentials: "include",
 	mode: "cors",
 	headers: {
-		Authorization: `Bearer ${process.env.API_TOKEN}`,
+		Authorization: `Bearer ${process.env.API_TOKEN || ""}`,
 	},
 });

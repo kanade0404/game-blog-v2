@@ -48,7 +48,7 @@ export default async function Index({ params }: Props) {
 	
 	return (
 		<main>
-			<Article params={{ blog: blogModel, adElement: null }} />
+			<Article params={{ id }} />
 		</main>
 	);
 }
