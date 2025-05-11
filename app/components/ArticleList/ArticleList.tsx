@@ -25,7 +25,7 @@ const Article = ({ params: { blog, key, len } }: ArticleProps) => (
 		)}
 	>
 		<div className={styles.meta}>
-			<p>{convertToYYYYMMdd(blog._firstPublishedAt)}</p>
+			<p>{blog._firstPublishedAt ? convertToYYYYMMdd(blog._firstPublishedAt) : ''}</p>
 			<p>{blog.category?.name}</p>
 		</div>
 		<h1>
