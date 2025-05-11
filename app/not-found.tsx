@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
-export default function NotFound() {
+"use client";
+const NotFoundClient = () => {
   return (
     <div style={{ 
       display: 'flex', 
@@ -26,5 +27,13 @@ export default function NotFound() {
         ホームに戻る
       </a>
     </div>
+  );
+};
+
+export default function NotFound() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <NotFoundClient />
+    </Suspense>
   );
 }
