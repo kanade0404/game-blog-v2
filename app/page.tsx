@@ -1,5 +1,5 @@
 import ArticleList from "./components/ArticleList";
-import { ReadonlyURLSearchParams} from "next/navigation"
+import type { ReadonlyURLSearchParams } from "next/navigation";
 
 interface PageProps {
   searchParams: ReadonlyURLSearchParams;
