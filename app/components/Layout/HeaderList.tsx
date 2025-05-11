@@ -2,12 +2,11 @@
 
 import clsx from "clsx";
 import Link from "next/link";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import styles from "./header.module.css";
 
 export default function HeaderList() {
 	const pathname = usePathname();
-	const searchParams = useSearchParams();
 	const isBlogActive = pathname === "/" || pathname.startsWith("/article");
 	
 	return (
