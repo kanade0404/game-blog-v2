@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { getArticle } from "../../../lib/graphql/getArticle";
 import Article from "../../components/Article";
 
@@ -20,27 +21,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 			images: description.image
 				? {
 						url: description.image.url,
-						alt: description.image.alt,
+						alt: description.image.alt || undefined,
 					}
 				: undefined,
 		},
 		twitter: {
 			card: "summary_large_image",
-			title: description.title,
-			description: description.description,
+			title: description.title || undefined,
+			description: description.description || undefined,
 			images: description.image
 				? {
 						url: description.image.url,
-						alt: description.image.alt,
+						alt: description.image.alt || undefined,
 					}
 				: undefined,
 		},
 	};
 }
 export default async function Index({ params }: Props) {
+	const { id } = await params;
+	const { blogModel } = await getArticle(id);
+	
+	if (!blogModel) {
+		notFound();
+	}
+	
 	return (
 		<main>
-			<Article params={await params} />
+			<Article params={{ blog: blogModel, adElement: null }} />
 		</main>
 	);
 }
