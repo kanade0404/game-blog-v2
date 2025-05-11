@@ -1,7 +1,7 @@
-import React, { Suspense } from 'react';
+import React from 'react';
+import Link from 'next/link';
 
-"use client";
-const NotFoundClient = () => {
+export default function NotFound() {
   return (
     <div style={{ 
       display: 'flex', 
@@ -14,7 +14,7 @@ const NotFoundClient = () => {
     }}>
       <h1 style={{ fontSize: '2rem', marginBottom: '1rem' }}>404 - ページが見つかりません</h1>
       <p style={{ marginBottom: '2rem' }}>お探しのページは存在しないか、移動した可能性があります。</p>
-      <a 
+      <Link 
         href="/" 
         style={{ 
           padding: '10px 20px', 
@@ -25,15 +25,7 @@ const NotFoundClient = () => {
         }}
       >
         ホームに戻る
-      </a>
+      </Link>
     </div>
-  );
-};
-
-export default function NotFound() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <NotFoundClient />
-    </Suspense>
   );
 }

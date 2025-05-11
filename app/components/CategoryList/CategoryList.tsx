@@ -18,7 +18,7 @@ const CategoryList = ({ categories }: Props) => {
   const categoryIdParam = searchParams.get('category_id');
   const [currentCategoryId, setCurrentCategoryId] = useState<string | null>(null);
   const isHomePage = pathname === '/' && !categoryIdParam;
-  
+
   useEffect(() => {
     if (categoryIdParam) {
       setCurrentCategoryId(categoryIdParam);
@@ -33,29 +33,29 @@ const CategoryList = ({ categories }: Props) => {
       <div className={styles.scrollContainer}>
         <ul className={styles.list}>
           {/* All Categories option */}
-          <li 
-            key="all-categories" 
+          <li
+            key="all-categories"
             className={`${styles.item} ${isHomePage ? styles.active : ''}`}
             id={isHomePage ? 'current-category' : undefined}
           >
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               className={`${styles.link} ${isHomePage ? styles.activeLink : ''}`}
             >
               すべて
             </Link>
           </li>
-          
+
           {categories.map((category) => {
             const isActive = categoryIdParam === category.id;
             return (
-              <li 
-                key={category.id} 
+              <li
+                key={category.id}
                 className={`${styles.item} ${isActive ? styles.active : ''}`}
                 id={isActive ? 'current-category' : undefined}
               >
-                <Link 
-                  href={`/?category_id=${category.id}`} 
+                <Link
+                  href={`/?category_id=${category.id}`}
                   className={`${styles.link} ${isActive ? styles.activeLink : ''}`}
                 >
                   {category.name || 'カテゴリー'}
