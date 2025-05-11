@@ -8,7 +8,7 @@ import styles from "./header.module.css";
 export default function HeaderList() {
 	const pathname = usePathname();
 	const isBlogActive = pathname === "/" || pathname.startsWith("/article");
-	
+
 	return (
 		<nav>
 			<ul className={styles.navWrapper}>

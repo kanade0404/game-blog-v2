@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Analytics } from "./components/Analytics";
 import Main from "./components/Main";
 
@@ -42,7 +43,7 @@ export const metadata = {
 	},
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang="ja">
 			<head>
