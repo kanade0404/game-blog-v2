@@ -1,28 +1,28 @@
 query CategoryBlogList($categoryId: ItemId!) {
-  allBlogModels(
-    orderBy: [_firstPublishedAt_DESC]
-    filter: { _status: { eq: published }, category: { eq: $categoryId } }
-  ) {
-    id
-    title
-    _status
-    _firstPublishedAt
-    category {
-      id
-      name
-    }
-    description {
-      description
-      image {
-        url
-        alt
-      }
-      title
-      twitterCard
-    }
-    _seoMetaTags {
-      attributes
-      tag
-    }
-  }
+	allBlogModels(
+		orderBy: [_firstPublishedAt_DESC]
+		filter: { _status: { eq: published }, category: { eq: $categoryId } }
+	) {
+		id
+		title
+		_status
+		_firstPublishedAt
+		category {
+			id
+			name
+		}
+		description {
+			description
+			image {
+				url
+				alt
+			}
+			title
+			twitterCard
+		}
+		_seoMetaTags {
+			attributes
+			tag
+		}
+	}
 }
