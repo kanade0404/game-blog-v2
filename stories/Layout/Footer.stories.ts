@@ -1,5 +1,5 @@
-import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import type { Meta, StoryObj } from "@storybook/react";
+import { INITIAL_VIEWPORTS } from "storybook/internal/viewport";
 import Footer from "../../app/components/Layout/Footer";
 const meta: Meta<typeof Footer> = {
 	title: "Component/Layout/Footer",

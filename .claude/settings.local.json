@@ -1,0 +1,19 @@
+{
+	"permissions": {
+		"allow": [
+			"WebFetch(domain:storybook.js.org)",
+			"Bash(node:*)",
+			"Bash(npx storybook@latest upgrade:*)",
+			"Bash(npx storybook@latest:*)",
+			"Bash(pnpm install:*)",
+			"Bash(pnpm build-storybook:*)",
+			"Bash(pnpm chromatic:*)",
+			"Bash(pnpm test:*)",
+			"Bash(pnpm confirm:lint:*)",
+			"Bash(pnpm build:*)",
+			"Bash(pnpm confirm:spell:*)",
+			"Bash(pnpm fix:format:*)"
+		],
+		"deny": []
+	}
+}

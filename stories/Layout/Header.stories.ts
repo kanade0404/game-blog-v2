@@ -1,5 +1,5 @@
-import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import type { Meta, StoryObj } from "@storybook/react";
+import { INITIAL_VIEWPORTS } from "storybook/internal/viewport";
 import Header from "../../app/components/Layout/Header";
 const meta: Meta<typeof Header> = {
 	title: "Component/Layout/Header",

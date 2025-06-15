@@ -1,5 +1,5 @@
-import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import type { Meta, StoryObj } from "@storybook/react";
+import { INITIAL_VIEWPORTS } from "storybook/internal/viewport";
 import SNS from "../../app/components/Profile/SNS";
 const meta: Meta<typeof SNS> = {
 	title: "Component/Profile/SNS",

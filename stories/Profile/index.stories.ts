@@ -1,5 +1,5 @@
-import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import type { Meta, StoryObj } from "@storybook/react";
+import { INITIAL_VIEWPORTS } from "storybook/internal/viewport";
 import Index from "../../app/components/Profile";
 const meta: Meta<typeof Index> = {
 	title: "Component/Profile",

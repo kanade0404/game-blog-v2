@@ -1,5 +1,5 @@
-import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
-import type { Preview } from "@storybook/react";
+import type { Preview } from "@storybook/nextjs";
+import { INITIAL_VIEWPORTS } from "storybook/internal/viewport";
 import "../app/global.css";
 
 const parameters = {

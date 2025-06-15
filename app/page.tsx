@@ -1,9 +1,13 @@
+import { Suspense } from "react";
 import ArticleList from "./components/ArticleList";
+import Loading from "./loading";
 
 export default function Index() {
 	return (
 		<main>
-			<ArticleList />
+			<Suspense fallback={<Loading />}>
+				<ArticleList />
+			</Suspense>
 		</main>
 	);
 }

@@ -1,8 +1,8 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import Content from "./Content";
 import CategoryList from "./CategoryList";
+import Content from "./Content";
 import Footer from "./Layout/Footer";
 import Header from "./Layout/Header";
 
@@ -10,8 +10,8 @@ import styles from "./main.module.css";
 
 const Main = ({ children }) => {
 	const pathname = usePathname();
-	const isArticlePage = pathname?.startsWith('/article/');
-	
+	const isArticlePage = pathname?.startsWith("/article/");
+
 	return (
 		<div className={styles.container}>
 			<Header />

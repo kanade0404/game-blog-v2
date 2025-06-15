@@ -1,7 +1,8 @@
 {
 	"__schema": {
 		"queryType": {
-			"name": "Query"
+			"name": "Query",
+			"kind": "OBJECT"
 		},
 		"mutationType": null,
 		"subscriptionType": null,
@@ -437,9 +438,13 @@
 						"description": null,
 						"args": [],
 						"type": {
-							"kind": "SCALAR",
-							"name": "DateTime",
-							"ofType": null
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "DateTime",
+								"ofType": null
+							}
 						},
 						"isDeprecated": false,
 						"deprecationReason": null
@@ -493,9 +498,13 @@
 						"description": null,
 						"args": [],
 						"type": {
-							"kind": "SCALAR",
-							"name": "DateTime",
-							"ofType": null
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "DateTime",
+								"ofType": null
+							}
 						},
 						"isDeprecated": false,
 						"deprecationReason": null
@@ -1155,9 +1164,13 @@
 						"description": null,
 						"args": [],
 						"type": {
-							"kind": "SCALAR",
-							"name": "DateTime",
-							"ofType": null
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "DateTime",
+								"ofType": null
+							}
 						},
 						"isDeprecated": false,
 						"deprecationReason": null
@@ -1211,9 +1224,13 @@
 						"description": null,
 						"args": [],
 						"type": {
-							"kind": "SCALAR",
-							"name": "DateTime",
-							"ofType": null
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "DateTime",
+								"ofType": null
+							}
 						},
 						"isDeprecated": false,
 						"deprecationReason": null
@@ -3268,7 +3285,7 @@
 				"inputFields": [
 					{
 						"name": "ar",
-						"description": "Aspect Ratio\n\nSpecifies an aspect ratio to maintain when resizing and cropping the image\n\nDepends on: `fit=crop`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/size/ar)",
+						"description": "Aspect Ratio\n\nSpecifies an aspect ratio to maintain when resizing and cropping the image\n\nDepends on: `fit=crop`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/size/aspect-ratio)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -3280,7 +3297,7 @@
 					},
 					{
 						"name": "auto",
-						"description": "Automatic\n\nApplies automatic enhancements to images.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/auto)",
+						"description": "Automatic\n\nApplies automatic enhancements to images.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/automatic)",
 						"type": {
 							"kind": "LIST",
 							"name": null,
@@ -3300,7 +3317,7 @@
 					},
 					{
 						"name": "bg",
-						"description": "Background Color\n\nColors the background of padded and partially-transparent images.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/bg)",
+						"description": "Background Color\n\nColors the background of padded and partially-transparent images.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/fill/background-color)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -3312,7 +3329,7 @@
 					},
 					{
 						"name": "bgRemove",
-						"description": "Background Removal\n\nRemoves background from image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/background/bg-remove)",
+						"description": "Background Removal\n\nRemoves background from image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/background/background-removal)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "BooleanType",
@@ -3324,7 +3341,39 @@
 					},
 					{
 						"name": "bgRemoveFallback",
-						"description": "Background Removal Fallback\n\nOverrides default fallback behavior for bg-remove failures.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/background/bg-remove)",
+						"description": "Background Removal Fallback\n\nOverrides default fallback behavior for bg-remove failures.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/background/background-removal-fallback)",
+						"type": {
+							"kind": "SCALAR",
+							"name": "BooleanType",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "bgRemoveFgType",
+						"description": "Background Removal Foreground Type\n\nSpecifies the image foreground type for background removal.\n\nDepends on: `bg-remove=true`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/background/background-removal-foreground-type)",
+						"type": {
+							"kind": "LIST",
+							"name": null,
+							"ofType": {
+								"kind": "NON_NULL",
+								"name": null,
+								"ofType": {
+									"kind": "ENUM",
+									"name": "ImgixParamsBgRemoveFgType",
+									"ofType": null
+								}
+							}
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "bgRemoveSemiTransparency",
+						"description": "Background Removal Semi Transparency\n\nEnables background removal while retaining semi-transparent areas.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/background/background-removal-semi-transparency)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "BooleanType",
@@ -3336,7 +3385,7 @@
 					},
 					{
 						"name": "bgReplace",
-						"description": "Background Replacement\n\nReplaces background from image using a string based prompt.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/background/bg-replace)",
+						"description": "Background Replacement\n\nReplaces background from image using a string based prompt.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/background/background-replacement)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -3348,7 +3397,7 @@
 					},
 					{
 						"name": "bgReplaceFallback",
-						"description": "Background Removal Fallback\n\nOverrides default fallback behavior for bg-replace failures.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/background/bg-replace)",
+						"description": "Background Replace Fallback\n\nOverrides default fallback behavior for bg-replace failures.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/background/background-replace-fallback)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "BooleanType",
@@ -3360,7 +3409,7 @@
 					},
 					{
 						"name": "bgReplaceNegPrompt",
-						"description": "Background Replacement Negative Prompt\n\nProvides a negative text suggestion for background replacement.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/background/bg-replace-neg-prompt)",
+						"description": "Background Replacement Negative Prompt\n\nProvides a negative text suggestion for background replacement.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/background/background-replacement-negative-prompt)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -3372,7 +3421,7 @@
 					},
 					{
 						"name": "blend",
-						"description": "Blend\n\nSpecifies the location of the blend image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend)",
+						"description": "Blend\n\nSpecifies the location of the blend image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/blending/blend)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -3384,7 +3433,7 @@
 					},
 					{
 						"name": "blendAlign",
-						"description": "Blend Align\n\nChanges the blend alignment relative to the parent image.\n\nDepends on: `blend`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-align)",
+						"description": "Blend Align\n\nChanges the blend alignment relative to the parent image.\n\nDepends on: `blend`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/blending/blend-align)",
 						"type": {
 							"kind": "LIST",
 							"name": null,
@@ -3404,7 +3453,7 @@
 					},
 					{
 						"name": "blendAlpha",
-						"description": "Blend Alpha\n\nChanges the alpha of the blend image.\n\nDepends on: `blend`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-alpha)",
+						"description": "Blend Alpha\n\nChanges the alpha of the blend image.\n\nDepends on: `blend`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/blending/blend-alpha)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -3416,7 +3465,7 @@
 					},
 					{
 						"name": "blendColor",
-						"description": "Blend Color\n\nSpecifies a color to use when applying the blend.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-color)",
+						"description": "Blend Color\n\nSpecifies a color to use when applying the blend.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/blending/blend-color)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -3428,7 +3477,7 @@
 					},
 					{
 						"name": "blendCrop",
-						"description": "Blend Crop\n\nSpecifies the type of crop for blend images.\n\nDepends on: `blend`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-crop)",
+						"description": "Blend Crop\n\nSpecifies the type of crop for blend images.\n\nDepends on: `blend`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/blending/blend-crop)",
 						"type": {
 							"kind": "LIST",
 							"name": null,
@@ -3448,7 +3497,7 @@
 					},
 					{
 						"name": "blendFit",
-						"description": "Blend Fit\n\nSpecifies the fit mode for blend images.\n\nDepends on: `blend`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-fit)",
+						"description": "Blend Fit\n\nSpecifies the fit mode for blend images.\n\nDepends on: `blend`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/blending/blend-fit)",
 						"type": {
 							"kind": "ENUM",
 							"name": "ImgixParamsBlendFit",
@@ -3460,7 +3509,7 @@
 					},
 					{
 						"name": "blendH",
-						"description": "Blend Height\n\nAdjusts the height of the blend image.\n\nDepends on: `blend`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-h)",
+						"description": "Blend Height\n\nAdjusts the height of the blend image.\n\nDepends on: `blend`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/blending/blend-height)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "FloatType",
@@ -3472,7 +3521,7 @@
 					},
 					{
 						"name": "blendMode",
-						"description": "Blend Mode\n\nSets the blend mode for a blend image.\n\nDepends on: `blend`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-mode)",
+						"description": "Blend Mode\n\nSets the blend mode for a blend image.\n\nDepends on: `blend`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/blending/blend-mode)",
 						"type": {
 							"kind": "ENUM",
 							"name": "ImgixParamsBlendMode",
@@ -3484,7 +3533,7 @@
 					},
 					{
 						"name": "blendPad",
-						"description": "Blend Padding\n\nApplies padding to the blend image.\n\nDepends on: `blend`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-pad)",
+						"description": "Blend Padding\n\nApplies padding to the blend image.\n\nDepends on: `blend`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/blending/blend-padding)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -3496,7 +3545,7 @@
 					},
 					{
 						"name": "blendSize",
-						"description": "Blend Size\n\nAdjusts the size of the blend image.\n\nDepends on: `blend`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-size)",
+						"description": "Blend Size\n\nAdjusts the size of the blend image.\n\nDepends on: `blend`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/blending/blend-size)",
 						"type": {
 							"kind": "ENUM",
 							"name": "ImgixParamsBlendSize",
@@ -3508,7 +3557,7 @@
 					},
 					{
 						"name": "blendW",
-						"description": "Blend Width\n\nAdjusts the width of the blend image.\n\nDepends on: `blend`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-w)",
+						"description": "Blend Width\n\nAdjusts the width of the blend image.\n\nDepends on: `blend`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/blending/blend-width)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "FloatType",
@@ -3520,7 +3569,7 @@
 					},
 					{
 						"name": "blendX",
-						"description": "Blend X Position\n\nAdjusts the x-offset of the blend image relative to its parent.\n\nDepends on: `blend`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-x)",
+						"description": "Blend X Position\n\nAdjusts the x-offset of the blend image relative to its parent.\n\nDepends on: `blend`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/blending/blend-x-position)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -3532,7 +3581,7 @@
 					},
 					{
 						"name": "blendY",
-						"description": "Blend Y Position\n\nAdjusts the y-offset of the blend image relative to its parent.\n\nDepends on: `blend`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/blending/blend-y)",
+						"description": "Blend Y Position\n\nAdjusts the y-offset of the blend image relative to its parent.\n\nDepends on: `blend`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/blending/blend-y-position)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -3544,7 +3593,7 @@
 					},
 					{
 						"name": "blur",
-						"description": "Gaussian Blur\n\nApplies a gaussian blur to an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/stylize/blur)",
+						"description": "Gaussian Blur\n\nApplies a gaussian blur to an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/stylize/gaussian-blur)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -3556,7 +3605,7 @@
 					},
 					{
 						"name": "border",
-						"description": "Border Size & Color\n\nApplies a border to an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/border)",
+						"description": "Border Size & Color\n\nApplies a border to an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/size)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -3568,7 +3617,7 @@
 					},
 					{
 						"name": "borderBottom",
-						"description": "Border Bottom\n\nSets bottom border of an image.\n\nDepends on: `border`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/border-bottom)",
+						"description": "Border Bottom\n\nSets bottom border of an image.\n\nDepends on: `border`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/border-and-padding/border-bottom)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -3580,7 +3629,7 @@
 					},
 					{
 						"name": "borderLeft",
-						"description": "Border Left\n\nSets left border of an image.\n\nDepends on: `border`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/border-left)",
+						"description": "Border Left\n\nSets left border of an image.\n\nDepends on: `border`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/border-and-padding/border-left)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -3592,7 +3641,7 @@
 					},
 					{
 						"name": "borderRadius",
-						"description": "Outer Border Radius\n\nSets the outer radius of the image's border in pixels.\n\nDepends on: `border`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/border-radius)",
+						"description": "Outer Border Radius\n\nSets the outer radius of the image's border in pixels.\n\nDepends on: `border`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/border-and-padding/outer-border-radius)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -3604,7 +3653,7 @@
 					},
 					{
 						"name": "borderRadiusInner",
-						"description": "Inner Border Radius\n\nSets the inner radius of the image's border in pixels.\n\nDepends on: `border`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/border-radius-inner)",
+						"description": "Inner Border Radius\n\nSets the inner radius of the image's border in pixels.\n\nDepends on: `border`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/border-and-padding/inner-border-radius)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -3616,7 +3665,7 @@
 					},
 					{
 						"name": "borderRight",
-						"description": "Border Right\n\nSets right border of an image.\n\nDepends on: `border`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/border-right)",
+						"description": "Border Right\n\nSets right border of an image.\n\nDepends on: `border`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/border-and-padding/border-right)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -3628,7 +3677,7 @@
 					},
 					{
 						"name": "borderTop",
-						"description": "Border Top\n\nSets top border of an image.\n\nDepends on: `border`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/border-top)",
+						"description": "Border Top\n\nSets top border of an image.\n\nDepends on: `border`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/border-and-padding/border-top)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -3640,7 +3689,7 @@
 					},
 					{
 						"name": "bri",
-						"description": "Brightness\n\nAdjusts the brightness of the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/bri)",
+						"description": "Brightness\n\nAdjusts the brightness of the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/adjustment/brightness)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -3652,7 +3701,7 @@
 					},
 					{
 						"name": "ch",
-						"description": "Client Hints\n\nSets one or more Client-Hints headers\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/format/ch)",
+						"description": "Client Hints\n\nSets one or more Client-Hints headers\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/format/client-hints)",
 						"type": {
 							"kind": "LIST",
 							"name": null,
@@ -3672,7 +3721,7 @@
 					},
 					{
 						"name": "chromasub",
-						"description": "Chroma Subsampling\n\nSpecifies the output chroma subsampling rate.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/format/chromasub)",
+						"description": "Chroma Subsampling\n\nSpecifies the output chroma subsampling rate.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/format/chroma-subsampling)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -3684,7 +3733,7 @@
 					},
 					{
 						"name": "colorquant",
-						"description": "Color Quantization\n\nLimits the number of unique colors in an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/format/colorquant)",
+						"description": "Color Quantization\n\nLimits the number of unique colors in an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/format/color-quantization)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -3696,7 +3745,7 @@
 					},
 					{
 						"name": "colors",
-						"description": "Palette Color Count\n\nSpecifies how many colors to include in a palette-extraction response.\n\nDepends on: `palette`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/color-palette/colors)",
+						"description": "Palette Color Count\n\nSpecifies how many colors to include in a palette-extraction response.\n\nDepends on: `palette`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/color-palette/palette-color-count)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -3708,7 +3757,7 @@
 					},
 					{
 						"name": "con",
-						"description": "Contrast\n\nAdjusts the contrast of the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/con)",
+						"description": "Contrast\n\nAdjusts the contrast of the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/adjustment/contrast)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -3720,7 +3769,7 @@
 					},
 					{
 						"name": "cornerRadius",
-						"description": "Mask Corner Radius\n\nSpecifies the radius value for a rounded corner mask.\n\nDepends on: `mask=corners`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/mask/corner-radius)",
+						"description": "Mask Corner Radius\n\nSpecifies the radius value for a rounded corner mask.\n\nDepends on: `mask=corners`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/mask-image/mask-corner-radius)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -3732,7 +3781,7 @@
 					},
 					{
 						"name": "crop",
-						"description": "Crop Mode\n\nSpecifies how to crop an image.\n\nDepends on: `fit=crop`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/size/crop)",
+						"description": "Crop Mode\n\nSpecifies how to crop an image.\n\nDepends on: `fit=crop`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/size/crop-mode)",
 						"type": {
 							"kind": "LIST",
 							"name": null,
@@ -3752,7 +3801,7 @@
 					},
 					{
 						"name": "cs",
-						"description": "Color Space\n\nSpecifies the color space of the output image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/format/cs)",
+						"description": "Color Space\n\nSpecifies the color space of the output image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/format/color-space)",
 						"type": {
 							"kind": "ENUM",
 							"name": "ImgixParamsCs",
@@ -3764,7 +3813,7 @@
 					},
 					{
 						"name": "dl",
-						"description": "Download\n\nForces a URL to use send-file in its response.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/format/dl)",
+						"description": "Download\n\nForces a URL to use send-file in its response.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/format/download)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -3776,7 +3825,7 @@
 					},
 					{
 						"name": "dpi",
-						"description": "Dots Per Inch\n\nSets the DPI value in the EXIF header.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/format/dpi)",
+						"description": "Dots Per Inch\n\nSets the DPI value in the EXIF header.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/format/dots-per-inch)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -3788,7 +3837,7 @@
 					},
 					{
 						"name": "dpr",
-						"description": "Device Pixel Ratio\n\nAdjusts the device-pixel ratio of the output image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/dpr)",
+						"description": "Device Pixel Ratio\n\nAdjusts the device-pixel ratio of the output image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/device-pixel-ratio)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "FloatType",
@@ -3800,7 +3849,7 @@
 					},
 					{
 						"name": "duotone",
-						"description": "Duotone\n\nApplies a duotone effect to the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/stylize/duotone)",
+						"description": "Duotone\n\nApplies a duotone effect to the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/stylize/duotone)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -3812,7 +3861,7 @@
 					},
 					{
 						"name": "duotoneAlpha",
-						"description": "Duotone Alpha\n\nChanges the alpha of the duotone effect atop the source image.\n\nDepends on: `duotone`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/stylize/duotone-alpha)",
+						"description": "Duotone Alpha\n\nChanges the alpha of the duotone effect atop the source image.\n\nDepends on: `duotone`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/stylize/duotone-alpha)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -3824,7 +3873,7 @@
 					},
 					{
 						"name": "exp",
-						"description": "Exposure\n\nAdjusts the exposure of the output image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/exp)",
+						"description": "Exposure\n\nAdjusts the exposure of the output image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/adjustment/exposure)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -3836,7 +3885,31 @@
 					},
 					{
 						"name": "expires",
-						"description": "Url Expiration Timestamp\n\nA Unix timestamp specifying a UTC time. Requests made to this URL after that time will output a 404 status code.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/expires)",
+						"description": "Url Expiration Timestamp\n\nA Unix timestamp specifying a UTC time. Requests made to this URL after that time will output a 404 status code.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/expiration)",
+						"type": {
+							"kind": "SCALAR",
+							"name": "IntType",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "faceBlur",
+						"description": "Face Blur\n\nSpecifies the amount of blur to apply to detected faces. Defaults to 0.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/face-detection/face-blur)",
+						"type": {
+							"kind": "SCALAR",
+							"name": "IntType",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "facePixel",
+						"description": "Face Pixelation\n\nSpecifies the pixelation amount of the face.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/face-detection/face-pixelation)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -3848,7 +3921,7 @@
 					},
 					{
 						"name": "faceindex",
-						"description": "Face Index\n\nSelects a face to crop to.\n\nDepends on: `fit=facearea`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/face-detection/faceindex)",
+						"description": "Face Index\n\nSelects a face to crop to.\n\nDepends on: `fit=facearea`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/face-detection/face-index)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -3860,7 +3933,7 @@
 					},
 					{
 						"name": "facepad",
-						"description": "Face Padding\n\nAdjusts padding around a selected face.\n\nDepends on: `fit=facearea`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/face-detection/facepad)",
+						"description": "Face Padding\n\nAdjusts padding around a selected face.\n\nDepends on: `fit=facearea`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/face-detection/face-padding)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "FloatType",
@@ -3872,7 +3945,7 @@
 					},
 					{
 						"name": "faces",
-						"description": "Json Face Data\n\nSpecifies that face data should be included in output when combined with `fm=json`.\n\nDepends on: `fm=json`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/face-detection/faces)",
+						"description": "Json Face Data\n\nSpecifies that face data should be included in output when combined with `fm=json`.\n\nDepends on: `fm=json`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/face-detection/json-face-data)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -3884,7 +3957,7 @@
 					},
 					{
 						"name": "fill",
-						"description": "Fill Mode\n\nDetermines how to fill in additional space created by the fit setting\n\nDepends on: `fit`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/fill/fill)",
+						"description": "Fill Mode\n\nDetermines how to fill in additional space created by the fit setting\n\nDepends on: `fit`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/fill/fill-mode)",
 						"type": {
 							"kind": "ENUM",
 							"name": "ImgixParamsFill",
@@ -3896,7 +3969,7 @@
 					},
 					{
 						"name": "fillColor",
-						"description": "Fill Color\n\nSets the fill color for images with additional space created by the fit setting\n\nDepends on: `fill=solid`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/fill/fill-color)",
+						"description": "Fill Color\n\nSets the fill color for images with additional space created by the fit setting\n\nDepends on: `fill=solid`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/fill/fill-color)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -3908,7 +3981,7 @@
 					},
 					{
 						"name": "fillGenFallback",
-						"description": "Fill Generative Fallback\n\nSets the fallback behavior for generative fill.\n\nDepends on: `fit=fill`, `fill=gen`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/fill/fill-gen-fallback)",
+						"description": "Fill Generative Fallback\n\nSets the fallback behavior for generative fill.\n\nDepends on: `fit=fill`, `fill=gen`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/fill/fill-generative-fallback)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "BooleanType",
@@ -3920,7 +3993,7 @@
 					},
 					{
 						"name": "fillGenNegPrompt",
-						"description": "Fill Generative Negative Prompt\n\nProvides a negative text suggestion to the generative fill parameter. Used to reduce the probability of a subject, detail, or object appearing in generative output.\n\nDepends on: `fit=fill`, `fill=gen`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/fill/fill-gen-neg-prompt)",
+						"description": "Fill Generative Negative Prompt\n\nProvides a negative text suggestion to the generative fill parameter. Used to reduce the probability of a subject, detail, or object appearing in generative output.\n\nDepends on: `fit=fill`, `fill=gen`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/fill/fill-generative-negative-prompt)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -3932,7 +4005,7 @@
 					},
 					{
 						"name": "fillGenPos",
-						"description": "Fill Generative Position\n\nSets the position of the Origin Image in relation to the generative fill.\n\nDepends on: `fit=fill`, `fill=gen`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/fill/fill-gen-pos)",
+						"description": "Fill Generative Position\n\nSets the position of the Origin Image in relation to the generative fill.\n\nDepends on: `fit=fill`, `fill=gen`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/fill/fill-generative-position)",
 						"type": {
 							"kind": "LIST",
 							"name": null,
@@ -3952,7 +4025,7 @@
 					},
 					{
 						"name": "fillGenPrompt",
-						"description": "Fill Generative Prompt\n\nProvides a text suggestion to the generative fill parameter.\n\nDepends on: `fit=fill`, `fill=gen`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/fill/fill-gen-prompt)",
+						"description": "Fill Generative Prompt\n\nProvides a text suggestion to the generative fill parameter.\n\nDepends on: `fit=fill`, `fill=gen`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/fill/fill-generative-prompt)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -3964,7 +4037,7 @@
 					},
 					{
 						"name": "fillGenSeed",
-						"description": "Fill Generative Seed\n\nSets the generative seed value. Used to generate similar outputs from different prompts.\n\nDepends on: `fit=fill`, `fill=gen`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/fill/fill-gen-seed)",
+						"description": "Fill Generative Seed\n\nSets the generative seed value. Used to generate similar outputs from different prompts.\n\nDepends on: `fit=fill`, `fill=gen`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/fill/fill-generative-seed)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -3976,7 +4049,7 @@
 					},
 					{
 						"name": "fillGradientCs",
-						"description": "Fill Gradient Color Space\n\nDefines the color space as linear, sRGB, Oklab, HSL, or LCH for gradient color interpolation\n\nDepends on: `fit=fill`, `fill=gradient`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/fill/fill-gradient-cs)",
+						"description": "Fill Gradient Color Space\n\nDefines the color space as linear, sRGB, Oklab, HSL, or LCH for gradient color interpolation\n\nDepends on: `fit=fill`, `fill=gradient`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/fill/fill-gradient-color-space)",
 						"type": {
 							"kind": "ENUM",
 							"name": "ImgixParamsFillGradientCs",
@@ -3988,7 +4061,7 @@
 					},
 					{
 						"name": "fillGradientLinear",
-						"description": "Fill Gradient Linear\n\nBlends a gradient between two colors, {color1} and {color2}, along a straight path\n\nDepends on: `fit=fill`, `fill=gradient`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/fill/fill-gradient-linear)",
+						"description": "Fill Gradient Linear\n\nBlends a gradient between two colors, {color1} and {color2}, along a straight path\n\nDepends on: `fit=fill`, `fill=gradient`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/fill/fill-gradient-linear)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -4000,7 +4073,7 @@
 					},
 					{
 						"name": "fillGradientLinearDirection",
-						"description": "Fill Gradient Linear Direction\n\nThe fill-gradient-linear-direction specifies the gradient's direction, flowing towards the bottom, top, right, or left\n\nDepends on: `fit=fill`, `fill=gen`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/fill/fill-gradient-linear-direction)",
+						"description": "Fill Gradient Linear Direction\n\nThe fill-gradient-linear-direction specifies the gradient's direction, flowing towards the bottom, top, right, or left\n\nDepends on: `fit=fill`, `fill=gen`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/fill/fill-gradient-linear-direction)",
 						"type": {
 							"kind": "LIST",
 							"name": null,
@@ -4020,7 +4093,7 @@
 					},
 					{
 						"name": "fillGradientRadial",
-						"description": "Fill Gradient Radial\n\nThe fill-gradient-radial parameter creates a circular gradient transitioning from a central color (Color1) to an outer color (Color2)\n\nDepends on: `fit=fill`, `fill=gradient`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/fill/fill-gradient-radial)",
+						"description": "Fill Gradient Radial\n\nThe fill-gradient-radial parameter creates a circular gradient transitioning from a central color (Color1) to an outer color (Color2)\n\nDepends on: `fit=fill`, `fill=gradient`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/fill/fill-gradient-radial)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -4032,7 +4105,7 @@
 					},
 					{
 						"name": "fillGradientRadialRadius",
-						"description": "Fill Gradient Radial Radius\n\nParameter defines the radial gradient's radius as pixels or a percentage (0.0-1.0) of the image's smallest dimension\n\nDepends on: `fit=fill`, `fill=gradient`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/fill/fill-gradient-radial-radius)",
+						"description": "Fill Gradient Radial Radius\n\nParameter defines the radial gradient's radius as pixels or a percentage (0.0-1.0) of the image's smallest dimension\n\nDepends on: `fit=fill`, `fill=gradient`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/fill/fill-gradient-radial-radius)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -4044,7 +4117,7 @@
 					},
 					{
 						"name": "fillGradientRadialX",
-						"description": "Fill Gradient Radial X\n\nSpecifies the location of the radial gradient's center along the x-axis, using either a pixel value or a floating point percentage (ranging from 0.0 to 1.0) of the image's width\n\nDepends on: `fit=fill`, `fill=gradient`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/fill/fill-gradient-radial-x)",
+						"description": "Fill Gradient Radial X\n\nSpecifies the location of the radial gradient's center along the x-axis, using either a pixel value or a floating point percentage (ranging from 0.0 to 1.0) of the image's width\n\nDepends on: `fit=fill`, `fill=gradient`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/fill/fill-gradient-radial-x)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "FloatType",
@@ -4056,7 +4129,7 @@
 					},
 					{
 						"name": "fillGradientRadialY",
-						"description": "Fill Gradient Radial Y\n\nParameter sets the radial gradient's center on the y-axis, using pixels or a 0.0 to 1.0 percentage of the image's height\n\nDepends on: `fit=fill`, `fill=gradient`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/fill/fill-gradient-radial-y)",
+						"description": "Fill Gradient Radial Y\n\nParameter sets the radial gradient's center on the y-axis, using pixels or a 0.0 to 1.0 percentage of the image's height\n\nDepends on: `fit=fill`, `fill=gradient`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/fill/fill-gradient-radial-y)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "FloatType",
@@ -4068,7 +4141,7 @@
 					},
 					{
 						"name": "fillGradientType",
-						"description": "Fill Gradient Type\n\nSpecifies if a gradient is radial (circular) or linear (straight)\n\nDepends on: `fit=fill`, `fill=gradient`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/fill/fill-gradient-type)",
+						"description": "Fill Gradient Type\n\nSpecifies if a gradient is radial (circular) or linear (straight)\n\nDepends on: `fit=fill`, `fill=gradient`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/fill/fill-gradient-type)",
 						"type": {
 							"kind": "ENUM",
 							"name": "ImgixParamsFillGradientType",
@@ -4080,7 +4153,7 @@
 					},
 					{
 						"name": "fit",
-						"description": "Resize Fit Mode\n\nSpecifies how to map the source image to the output image dimensions.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/size/fit)",
+						"description": "Resize Fit Mode\n\nSpecifies how to map the source image to the output image dimensions.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/size/resize-fit-mode)",
 						"type": {
 							"kind": "ENUM",
 							"name": "ImgixParamsFit",
@@ -4092,7 +4165,7 @@
 					},
 					{
 						"name": "flip",
-						"description": "Flip Axis\n\nFlips an image on a specified axis.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/rotation/flip)",
+						"description": "Flip Axis\n\nFlips an image on a specified axis.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/rotation/flip-axis)",
 						"type": {
 							"kind": "ENUM",
 							"name": "ImgixParamsFlip",
@@ -4104,7 +4177,7 @@
 					},
 					{
 						"name": "fm",
-						"description": "Output Format\n\nChanges the format of the output image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/format/fm)",
+						"description": "Output Format\n\nChanges the format of the output image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/format/output-format)",
 						"type": {
 							"kind": "ENUM",
 							"name": "ImgixParamsFm",
@@ -4116,7 +4189,7 @@
 					},
 					{
 						"name": "fpDebug",
-						"description": "Focal Point Debug\n\nDisplays crosshairs identifying the location of the set focal point\n\nDepends on: `fit=crop`, `crop=focalpoint`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/focalpoint-crop/fp-debug)",
+						"description": "Focal Point Debug\n\nDisplays crosshairs identifying the location of the set focal point\n\nDepends on: `fit=crop`, `crop=focalpoint`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/focal-point-crop/focal-point-debug)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "BooleanType",
@@ -4128,7 +4201,7 @@
 					},
 					{
 						"name": "fpX",
-						"description": "Focal Point X Position\n\nSets the relative horizontal value for the focal point of an image\n\nDepends on: `fit=crop`, `crop=focalpoint`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/focalpoint-crop/fp-x)",
+						"description": "Focal Point X Position\n\nSets the relative horizontal value for the focal point of an image\n\nDepends on: `fit=crop`, `crop=focalpoint`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/focal-point-crop/focal-point-x-position)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "FloatType",
@@ -4140,7 +4213,7 @@
 					},
 					{
 						"name": "fpY",
-						"description": "Focal Point Y Position\n\nSets the relative vertical value for the focal point of an image\n\nDepends on: `fit=crop`, `crop=focalpoint`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/focalpoint-crop/fp-y)",
+						"description": "Focal Point Y Position\n\nSets the relative vertical value for the focal point of an image\n\nDepends on: `fit=crop`, `crop=focalpoint`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/focal-point-crop/focal-point-y-position)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "FloatType",
@@ -4152,7 +4225,7 @@
 					},
 					{
 						"name": "fpZ",
-						"description": "Focal Point Zoom\n\nSets the relative zoom value for the focal point of an image\n\nDepends on: `fit=crop`, `crop=focalpoint`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/focalpoint-crop/fp-z)",
+						"description": "Focal Point Zoom\n\nSets the relative zoom value for the focal point of an image\n\nDepends on: `fit=crop`, `crop=focalpoint`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/focal-point-crop/focal-point-zoom)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "FloatType",
@@ -4164,7 +4237,7 @@
 					},
 					{
 						"name": "fps",
-						"description": "Frames Per Second\n\nSpecifies the framerate of the generated image.",
+						"description": "Frames Per Second\n\nSpecifies the framerate of the generated image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/animation/frames-per-second)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4176,7 +4249,7 @@
 					},
 					{
 						"name": "frame",
-						"description": "Frame Selection\n\nSpecifies the frame of an animated image to use.",
+						"description": "Frame Selection\n\nSpecifies the frame of an animated image to use.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/animation/frame-selection)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -4188,7 +4261,7 @@
 					},
 					{
 						"name": "gam",
-						"description": "Gamma\n\nAdjusts the gamma of the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/gam)",
+						"description": "Gamma\n\nAdjusts the gamma of the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/adjustment/gamma)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4200,7 +4273,7 @@
 					},
 					{
 						"name": "gifQ",
-						"description": "Animated Gif Quality\n\nSpecifies the quality of the animated gif. The higher the value, the better more compression is applied.\n\nDepends on: `fm=gif`",
+						"description": "Animated Gif Quality\n\nSpecifies the quality of the animated gif. The higher the value, the better more compression is applied.\n\nDepends on: `fm=gif`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/animation/animated-gif-quality)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4212,7 +4285,7 @@
 					},
 					{
 						"name": "gridColors",
-						"description": "Grid Colors\n\nSets grid colors for the transparency checkerboard grid.\n\nDepends on: `transparency`",
+						"description": "Grid Colors\n\nSets grid colors for the transparency checkerboard grid.\n\nDepends on: `transparency`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/fill/grid-colors)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -4224,7 +4297,7 @@
 					},
 					{
 						"name": "gridSize",
-						"description": "Grid Size\n\nSets grid size for the transparency checkerboard grid.\n\nDepends on: `transparency`",
+						"description": "Grid Size\n\nSets grid size for the transparency checkerboard grid.\n\nDepends on: `transparency`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/fill/grid-size)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4236,7 +4309,7 @@
 					},
 					{
 						"name": "h",
-						"description": "Image Height\n\nAdjusts the height of the output image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/size/h)",
+						"description": "Image Height\n\nAdjusts the height of the output image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/size/image-height)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "FloatType",
@@ -4248,7 +4321,7 @@
 					},
 					{
 						"name": "high",
-						"description": "Highlight\n\nAdjusts the highlights of the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/high)",
+						"description": "Highlight\n\nAdjusts the highlights of the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/adjustment/highlight)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4260,7 +4333,7 @@
 					},
 					{
 						"name": "htn",
-						"description": "Halftone\n\nApplies a half-tone effect to the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/stylize/htn)",
+						"description": "Halftone\n\nApplies a half-tone effect to the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/stylize/halftone)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4272,7 +4345,7 @@
 					},
 					{
 						"name": "hue",
-						"description": "Hue Shift\n\nAdjusts the hue of the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/hue)",
+						"description": "Hue Shift\n\nAdjusts the hue of the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/adjustment/hue-shift)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4284,7 +4357,7 @@
 					},
 					{
 						"name": "interval",
-						"description": "Frame Interval\n\nDisplays every Nth frame starting with the first frame.",
+						"description": "Frame Interval\n\nDisplays every Nth frame starting with the first frame.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/animation/frame-interval)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4296,7 +4369,7 @@
 					},
 					{
 						"name": "invert",
-						"description": "Invert\n\nInverts the colors on the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/invert)",
+						"description": "Invert\n\nInverts the colors on the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/adjustment/invert)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "BooleanType",
@@ -4308,7 +4381,7 @@
 					},
 					{
 						"name": "iptc",
-						"description": "Iptc Passthrough\n\nDetermine if IPTC data should be passed for JPEG images.",
+						"description": "Iptc Passthrough\n\nDetermine if IPTC data should be passed for JPEG images.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/format/iptc-passthrough)",
 						"type": {
 							"kind": "ENUM",
 							"name": "ImgixParamsIptc",
@@ -4320,7 +4393,7 @@
 					},
 					{
 						"name": "jpgProgressive",
-						"description": "Jpg Progressive\n\nSpecifies whether or not a jpg/jpeg uses progressive (true) or baseline (false)",
+						"description": "Jpg Progressive\n\nSpecifies whether or not a jpg/jpeg uses progressive (true) or baseline (false)\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/format/jpg-progressive)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "BooleanType",
@@ -4332,7 +4405,7 @@
 					},
 					{
 						"name": "loop",
-						"description": "Animation Loop Count\n\nSpecifies the number of times an animated image should repeat. A value of 0 means infinite looping.",
+						"description": "Animation Loop Count\n\nSpecifies the number of times an animated image should repeat. A value of 0 means infinite looping.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/animation)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4344,7 +4417,7 @@
 					},
 					{
 						"name": "lossless",
-						"description": "Lossless Compression\n\nSpecifies that the output image should be a lossless variant.\n\nDepends on: `fm=webp`, `fm=jxr`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/format/lossless)",
+						"description": "Lossless Compression\n\nSpecifies that the output image should be a lossless variant.\n\nDepends on: `fm=webp`, `fm=jxr`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/format/lossless-compression)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "BooleanType",
@@ -4355,8 +4428,20 @@
 						"deprecationReason": null
 					},
 					{
+						"name": "lpBlur",
+						"description": "License Plate Blur\n\nSpecifies the amount of blur to apply to detected license plates. Defaults to 0.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/license-plate-detection/license-plate-blur)",
+						"type": {
+							"kind": "SCALAR",
+							"name": "IntType",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
 						"name": "mark",
-						"description": "Watermark Image Url\n\nSpecifies the location of the watermark image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark)",
+						"description": "Watermark Image Url\n\nSpecifies the location of the watermark image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/watermark/watermark-image-url)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -4368,7 +4453,7 @@
 					},
 					{
 						"name": "markAlign",
-						"description": "Watermark Alignment Mode\n\nChanges the watermark alignment relative to the parent image.\n\nDepends on: `mark`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-align)",
+						"description": "Watermark Alignment Mode\n\nChanges the watermark alignment relative to the parent image.\n\nDepends on: `mark`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/watermark/watermark-alignment-mode)",
 						"type": {
 							"kind": "LIST",
 							"name": null,
@@ -4388,7 +4473,7 @@
 					},
 					{
 						"name": "markAlpha",
-						"description": "Watermark Alpha\n\nChanges the alpha of the watermark image.\n\nDepends on: `mark`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-alpha)",
+						"description": "Watermark Alpha\n\nChanges the alpha of the watermark image.\n\nDepends on: `mark`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/watermark/watermark-alpha)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4400,7 +4485,7 @@
 					},
 					{
 						"name": "markBase",
-						"description": "Watermark Base Url\n\nChanges base URL of the watermark image.\n\nDepends on: `mark`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-base)",
+						"description": "Watermark Base Url\n\nChanges base URL of the watermark image.\n\nDepends on: `mark`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/watermark/watermark-base-url)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -4412,7 +4497,7 @@
 					},
 					{
 						"name": "markFit",
-						"description": "Watermark Fit Mode\n\nSpecifies the fit mode for watermark images.\n\nDepends on: `mark`, `markw`, `markh`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-fit)",
+						"description": "Watermark Fit Mode\n\nSpecifies the fit mode for watermark images.\n\nDepends on: `mark`, `markw`, `markh`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/watermark/watermark-fit-mode)",
 						"type": {
 							"kind": "ENUM",
 							"name": "ImgixParamsMarkFit",
@@ -4424,7 +4509,7 @@
 					},
 					{
 						"name": "markH",
-						"description": "Watermark Height\n\nAdjusts the height of the watermark image.\n\nDepends on: `mark`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-h)",
+						"description": "Watermark Height\n\nAdjusts the height of the watermark image.\n\nDepends on: `mark`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/watermark/watermark-height)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "FloatType",
@@ -4435,8 +4520,32 @@
 						"deprecationReason": null
 					},
 					{
+						"name": "markIfMinHeight",
+						"description": "Watermark If Minimum Height\n\nDisplays the watermark if rendered base image pixel height is equal to or larger than the supplied value\n\nDepends on: `mark`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/watermark/watermark-if-minimum-height)",
+						"type": {
+							"kind": "SCALAR",
+							"name": "IntType",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "markIfMinWidth",
+						"description": "Watermark If Minimum Width\n\nDisplays the watermark if rendered base image pixel width is equal to or larger than the supplied value\n\nDepends on: `mark`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/watermark/watermark-if-minimum-width)",
+						"type": {
+							"kind": "SCALAR",
+							"name": "IntType",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
 						"name": "markPad",
-						"description": "Watermark Padding\n\nApplies padding to the watermark image.\n\nDepends on: `mark`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-pad)",
+						"description": "Watermark Padding\n\nApplies padding to the watermark image.\n\nDepends on: `mark`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/watermark/watermark-padding)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4448,7 +4557,7 @@
 					},
 					{
 						"name": "markRot",
-						"description": "Watermark Rotation\n\nRotates a watermark or tiled watermarks by a specified number of degrees.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-rot)",
+						"description": "Watermark Rotation\n\nRotates a watermark or tiled watermarks by a specified number of degrees.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/watermark/watermark-rotation)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "FloatType",
@@ -4460,7 +4569,7 @@
 					},
 					{
 						"name": "markScale",
-						"description": "Watermark Scale\n\nAdjusts the scale of the watermark image.\n\nDepends on: `mark`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-scale)",
+						"description": "Watermark Scale\n\nAdjusts the scale of the watermark image.\n\nDepends on: `mark`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/watermark/watermark-scale)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4472,7 +4581,7 @@
 					},
 					{
 						"name": "markTile",
-						"description": "Watermark Tile\n\nAdds tiled watermark.\n\nDepends on: `mark`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-tile)",
+						"description": "Watermark Tile\n\nAdds tiled watermark.\n\nDepends on: `mark`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/watermark/watermark-tile)",
 						"type": {
 							"kind": "ENUM",
 							"name": "ImgixParamsMarkTile",
@@ -4484,7 +4593,7 @@
 					},
 					{
 						"name": "markW",
-						"description": "Watermark Width\n\nAdjusts the width of the watermark image.\n\nDepends on: `mark`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-w)",
+						"description": "Watermark Width\n\nAdjusts the width of the watermark image.\n\nDepends on: `mark`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/watermark/watermark-width)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "FloatType",
@@ -4496,7 +4605,7 @@
 					},
 					{
 						"name": "markX",
-						"description": "Watermark X Position\n\nAdjusts the x-offset of the watermark image relative to its parent.\n\nDepends on: `mark`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-x)",
+						"description": "Watermark X Position\n\nAdjusts the x-offset of the watermark image relative to its parent.\n\nDepends on: `mark`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/watermark/watermark-x-position)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4508,7 +4617,7 @@
 					},
 					{
 						"name": "markY",
-						"description": "Watermark Y Position\n\nAdjusts the y-offset of the watermark image relative to its parent.\n\nDepends on: `mark`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/watermark/mark-y)",
+						"description": "Watermark Y Position\n\nAdjusts the y-offset of the watermark image relative to its parent.\n\nDepends on: `mark`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/watermark/watermark-y-position)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4520,7 +4629,7 @@
 					},
 					{
 						"name": "mask",
-						"description": "Mask Type\n\nDefines the type of mask and specifies the URL if that type is selected.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/mask)",
+						"description": "Mask Type\n\nDefines the type of mask and specifies the URL if that type is selected.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/mask-image/mask-type)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -4532,7 +4641,7 @@
 					},
 					{
 						"name": "maskBg",
-						"description": "Mask Background Color\n\nColors the background of the transparent mask area of images\n\nDepends on: `mask`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/mask/mask-bg)",
+						"description": "Mask Background Color\n\nColors the background of the transparent mask area of images\n\nDepends on: `mask`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/mask-image/mask-background-color)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -4544,7 +4653,7 @@
 					},
 					{
 						"name": "maxH",
-						"description": "Maximum Height\n\nSpecifies the maximum height of the output image in pixels.\n\nDepends on: `fit=crop`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/size/max-height)",
+						"description": "Maximum Height\n\nSpecifies the maximum height of the output image in pixels.\n\nDepends on: `fit=crop`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/size/maximum-height)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4556,7 +4665,7 @@
 					},
 					{
 						"name": "maxW",
-						"description": "Maximum Width\n\nSpecifies the maximum width of the output image in pixels.\n\nDepends on: `fit=crop`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/size/max-width)",
+						"description": "Maximum Width\n\nSpecifies the maximum width of the output image in pixels.\n\nDepends on: `fit=crop`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/size/maximum-width)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4568,7 +4677,7 @@
 					},
 					{
 						"name": "minH",
-						"description": "Minimum Height\n\nSpecifies the minimum height of the output image in pixels.\n\nDepends on: `fit=crop`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/size/min-height)",
+						"description": "Minimum Height\n\nSpecifies the minimum height of the output image in pixels.\n\nDepends on: `fit=crop`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/size/minimum-height)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4580,7 +4689,7 @@
 					},
 					{
 						"name": "minW",
-						"description": "Minimum Width\n\nSpecifies the minimum width of the output image in pixels.\n\nDepends on: `fit=crop`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/size/min-width)",
+						"description": "Minimum Width\n\nSpecifies the minimum width of the output image in pixels.\n\nDepends on: `fit=crop`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/size/minimum-width)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4592,7 +4701,7 @@
 					},
 					{
 						"name": "monochrome",
-						"description": "Monochrome\n\nApplies a monochrome effect to the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/stylize/monochrome)",
+						"description": "Monochrome\n\nApplies a monochrome effect to the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/stylize/monochrome)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -4604,7 +4713,7 @@
 					},
 					{
 						"name": "nr",
-						"description": "Noise Reduction Bound\n\nReduces the noise in an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/noise-reduction/nr)",
+						"description": "Noise Reduction Bound\n\nReduces the noise in an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/noise-reduction/noise-reduction-bound)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4616,7 +4725,55 @@
 					},
 					{
 						"name": "nrs",
-						"description": "Noise Reduction Sharpen\n\nProvides a threshold by which to sharpen an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/noise-reduction/nrs)",
+						"description": "Noise Reduction Sharpen\n\nProvides a threshold by which to sharpen an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/noise-reduction/noise-reduction-sharpen)",
+						"type": {
+							"kind": "SCALAR",
+							"name": "IntType",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "objectRemovalNegativePrompt",
+						"description": "Object Removal Negative Prompt\n\nProvides a negative text suggestion to object-removal-prompt. Used to reduce the probability of a subject, detail, or object appearing in generative output.\n\nDepends on: `object-removal-rect`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/object-manipulation/object-removal-negative-prompt)",
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "objectRemovalPrompt",
+						"description": "Object Removal Prompt\n\nSuggest auto generative fill for the object-removal-rect parameter\n\nDepends on: `object-removal-rect`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/object-manipulation/object-removal-prompt)",
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "objectRemovalRect",
+						"description": "Object Removal\n\nUsing a specified rectangle, an object is removed from the image\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/object-manipulation/object-removal)",
+						"type": {
+							"kind": "SCALAR",
+							"name": "String",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "objectRemovalSeed",
+						"description": "Object Removal Seed\n\nSets the generative seed value for object-removal. Used to generate new outputs from the same prompt\n\nDepends on: `object-removal-rect`, `object-removal-prompt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/object-manipulation/object-removal-seed)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4628,7 +4785,7 @@
 					},
 					{
 						"name": "orient",
-						"description": "Orientation\n\nChanges the image orientation.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/rotation/orient)",
+						"description": "Orientation\n\nChanges the image orientation.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/rotation/orientation)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4640,7 +4797,7 @@
 					},
 					{
 						"name": "pad",
-						"description": "Padding\n\nPads an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/pad)",
+						"description": "Padding\n\nPads an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/border-and-padding/padding)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4652,7 +4809,7 @@
 					},
 					{
 						"name": "padBottom",
-						"description": "Padding Bottom\n\nSets bottom padding of an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/pad-bottom)",
+						"description": "Padding Bottom\n\nSets bottom padding of an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/border-and-padding/padding-bottom)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4664,7 +4821,7 @@
 					},
 					{
 						"name": "padLeft",
-						"description": "Padding Left\n\nSets left padding of an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/pad-left)",
+						"description": "Padding Left\n\nSets left padding of an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/border-and-padding/padding-left)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4676,7 +4833,7 @@
 					},
 					{
 						"name": "padRight",
-						"description": "Padding Right\n\nSets right padding of an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/pad-right)",
+						"description": "Padding Right\n\nSets right padding of an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/border-and-padding/padding-right)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4688,7 +4845,7 @@
 					},
 					{
 						"name": "padTop",
-						"description": "Padding Top\n\nSets top padding of an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/border-and-padding/pad-top)",
+						"description": "Padding Top\n\nSets top padding of an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/border-and-padding/padding-top)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4700,7 +4857,7 @@
 					},
 					{
 						"name": "page",
-						"description": "Pdf Page Number\n\nSelects a page from a PDF for display.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/pdf/page)",
+						"description": "Pdf Page Number\n\nSelects a page from a PDF for display.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/pdf/pdf-page-number)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4712,7 +4869,7 @@
 					},
 					{
 						"name": "palette",
-						"description": "Color Palette Extraction\n\nSpecifies an output format for palette-extraction.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/color-palette/palette)",
+						"description": "Color Palette Extraction\n\nSpecifies an output format for palette-extraction.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/color-palette/color-palette-extraction)",
 						"type": {
 							"kind": "ENUM",
 							"name": "ImgixParamsPalette",
@@ -4724,7 +4881,7 @@
 					},
 					{
 						"name": "pdfAnnotation",
-						"description": "Pdf Annotation\n\nEnables or disables PDF annotation.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/pdf/pdf-annotation)",
+						"description": "Pdf Annotation\n\nEnables or disables PDF annotation.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/pdf/pdf-annotation)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "BooleanType",
@@ -4736,7 +4893,7 @@
 					},
 					{
 						"name": "prefix",
-						"description": "Css Prefix\n\nSpecifies a CSS prefix for all classes in palette-extraction.\n\nDepends on: `palette=css`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/color-palette/prefix)",
+						"description": "Css Prefix\n\nSpecifies a CSS prefix for all classes in palette-extraction.\n\nDepends on: `palette=css`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/color-palette/css-prefix)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -4748,7 +4905,7 @@
 					},
 					{
 						"name": "px",
-						"description": "Pixellate\n\nApplies a pixelation effect to an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/stylize/px)",
+						"description": "Pixellate\n\nApplies a pixelation effect to an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/stylize/pixellate)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4760,7 +4917,7 @@
 					},
 					{
 						"name": "q",
-						"description": "Output Quality\n\nAdjusts the quality of an output image.\n\nDepends on: `fm=jpg`, `fm=pjpg`, `fm=webp`, `fm=jxr`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/format/q)",
+						"description": "Output Quality\n\nAdjusts the quality of an output image.\n\nDepends on: `fm=avif`, `fm=jpg`, `fm=pjpg`, `fm=webp`, `fm=jxr`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/format/output-quality)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4771,8 +4928,20 @@
 						"deprecationReason": null
 					},
 					{
+						"name": "rasterizeBypass",
+						"description": "Rasterize Bypass\n\nBypasses all rendering parameters (including default parameters) and serves the original image. Works for svg+xml,x-eps,pdf, and vnd.adobe.illustrator.",
+						"type": {
+							"kind": "SCALAR",
+							"name": "BooleanType",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
 						"name": "rect",
-						"description": "Source Rectangle Region\n\nCrops an image to a specified rectangle.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/size/rect)",
+						"description": "Source Rectangle Region\n\nCrops an image to a specified rectangle.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/size/source-rectangle-region)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -4784,7 +4953,7 @@
 					},
 					{
 						"name": "reverse",
-						"description": "Reverse\n\nReverses the frame order on the source animation.",
+						"description": "Reverse\n\nReverses the frame order on the source animation.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/animation/reverse)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "BooleanType",
@@ -4796,7 +4965,7 @@
 					},
 					{
 						"name": "rot",
-						"description": "Rotation\n\nRotates an image by a specified number of degrees.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/rotation/rot)",
+						"description": "Rotation\n\nRotates an image by a specified number of degrees.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/rotation/rotation)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "FloatType",
@@ -4807,8 +4976,20 @@
 						"deprecationReason": null
 					},
 					{
+						"name": "rotType",
+						"description": "Rotation Type\n\nChanges the rotation type.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/rotation/rotation-type)",
+						"type": {
+							"kind": "ENUM",
+							"name": "ImgixParamsRotType",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
 						"name": "sat",
-						"description": "Saturation\n\nAdjusts the saturation of an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/sat)",
+						"description": "Saturation\n\nAdjusts the saturation of an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/adjustment/saturation)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4820,7 +5001,7 @@
 					},
 					{
 						"name": "sepia",
-						"description": "Sepia Tone\n\nApplies a sepia effect to an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/stylize/sepia)",
+						"description": "Sepia Tone\n\nApplies a sepia effect to an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/stylize/sepia-tone)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4832,7 +5013,7 @@
 					},
 					{
 						"name": "shad",
-						"description": "Shadow\n\nAdjusts the highlights of the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/shad)",
+						"description": "Shadow\n\nAdjusts the highlights of the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/adjustment/shadow)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "FloatType",
@@ -4844,7 +5025,7 @@
 					},
 					{
 						"name": "sharp",
-						"description": "Sharpen\n\nAdjusts the sharpness of the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/sharp)",
+						"description": "Sharpen\n\nAdjusts the sharpness of the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/adjustment/sharpen)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "FloatType",
@@ -4856,7 +5037,7 @@
 					},
 					{
 						"name": "skip",
-						"description": "Frame Skip\n\nSkips every Nth frame starting with the first frame.",
+						"description": "Frame Skip\n\nSkips every Nth frame starting with the first frame.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/animation/frame-skip)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4880,7 +5061,7 @@
 					},
 					{
 						"name": "svgSanitize",
-						"description": "Sanitize Svg\n\nSpecifies whether to sanitize an SVG.",
+						"description": "Sanitize Svg\n\nSpecifies whether to sanitize an SVG.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/format/sanitize-svg)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "BooleanType",
@@ -4892,7 +5073,7 @@
 					},
 					{
 						"name": "transparency",
-						"description": "Transparency\n\nAdds checkerboard behind images which support transparency.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/fill/transparency)",
+						"description": "Transparency\n\nAdds checkerboard behind images which support transparency.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/fill/transparency)",
 						"type": {
 							"kind": "ENUM",
 							"name": "ImgixParamsTransparency",
@@ -4904,7 +5085,7 @@
 					},
 					{
 						"name": "trim",
-						"description": "Trim Image\n\nTrims the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/trim/trim)",
+						"description": "Trim Image\n\nTrims the source image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/trim/trim-image)",
 						"type": {
 							"kind": "ENUM",
 							"name": "ImgixParamsTrim",
@@ -4915,8 +5096,20 @@
 						"deprecationReason": null
 					},
 					{
+						"name": "trimAlpha",
+						"description": "Trim Alpha\n\nSpecifies a trim alpha on a trim operation.\n\nDepends on: `trim=alpha`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/trim/trim-alpha)",
+						"type": {
+							"kind": "SCALAR",
+							"name": "FloatType",
+							"ofType": null
+						},
+						"defaultValue": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
 						"name": "trimColor",
-						"description": "Trim Color\n\nSpecifies a trim color on a trim operation.\n\nDepends on: `trim=color`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/trim/trim-color)",
+						"description": "Trim Color\n\nSpecifies a trim color on a trim operation.\n\nDepends on: `trim=color`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/trim/trim-color)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -4928,7 +5121,7 @@
 					},
 					{
 						"name": "trimMd",
-						"description": "Trim Mean Difference\n\nSpecifies the mean difference on a trim operation.\n\nDepends on: `trim=auto`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/trim/trim-md)",
+						"description": "Trim Mean Difference\n\nSpecifies the mean difference on a trim operation.\n\nDepends on: `trim=auto`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/trim/trim-mean-difference)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "FloatType",
@@ -4940,7 +5133,7 @@
 					},
 					{
 						"name": "trimPad",
-						"description": "Trim Padding\n\nPads the area of the source image before trimming.\n\nDepends on: `trim`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/trim/trim-pad)",
+						"description": "Trim Padding\n\nPads the area of the source image before trimming.\n\nDepends on: `trim`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/trim/trim-padding)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -4952,7 +5145,7 @@
 					},
 					{
 						"name": "trimSd",
-						"description": "Trim Standard Deviation\n\nSpecifies the standard deviation on a trim operation.\n\nDepends on: `trim=auto`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/trim/trim-sd)",
+						"description": "Trim Standard Deviation\n\nSpecifies the standard deviation on a trim operation.\n\nDepends on: `trim=auto`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/trim/trim-standard-deviation)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "FloatType",
@@ -4964,7 +5157,7 @@
 					},
 					{
 						"name": "trimTol",
-						"description": "Trim Tolerance\n\nSpecifies the tolerance on a trim operation.\n\nDepends on: `trim=color`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/trim/trim-tol)",
+						"description": "Trim Tolerance\n\nSpecifies the tolerance on a trim operation.\n\nDepends on: `trim=color`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/trim/trim-tolerance)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "FloatType",
@@ -4976,7 +5169,7 @@
 					},
 					{
 						"name": "txt",
-						"description": "Text String\n\nSets the text string to render.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt)",
+						"description": "Text String\n\nSets the text string to render.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/text/text-string)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -4988,7 +5181,7 @@
 					},
 					{
 						"name": "txtAlign",
-						"description": "Text Align\n\nSets the vertical and horizontal alignment of rendered text relative to the base image.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-align)",
+						"description": "Text Align\n\nSets the vertical and horizontal alignment of rendered text relative to the base image.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/text/text-align)",
 						"type": {
 							"kind": "LIST",
 							"name": null,
@@ -5008,7 +5201,7 @@
 					},
 					{
 						"name": "txtClip",
-						"description": "Text Clipping Mode\n\nSets the clipping properties of rendered text.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-clip)",
+						"description": "Text Clipping Mode\n\nSets the clipping properties of rendered text.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/text/text-clipping-mode)",
 						"type": {
 							"kind": "LIST",
 							"name": null,
@@ -5028,7 +5221,7 @@
 					},
 					{
 						"name": "txtColor",
-						"description": "Text Color\n\nSpecifies the color of rendered text.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-color)",
+						"description": "Text Color\n\nSpecifies the color of rendered text.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/text/text-color)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -5040,7 +5233,7 @@
 					},
 					{
 						"name": "txtFit",
-						"description": "Text Fit Mode\n\nSpecifies the fit approach for rendered text.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-fit)",
+						"description": "Text Fit Mode\n\nSpecifies the fit approach for rendered text.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/text/text-fit-mode)",
 						"type": {
 							"kind": "ENUM",
 							"name": "ImgixParamsTxtFit",
@@ -5052,7 +5245,7 @@
 					},
 					{
 						"name": "txtFont",
-						"description": "Text Font\n\nSelects a font for rendered text.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-font)",
+						"description": "Text Font\n\nSelects a font for rendered text.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/text/text-font)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -5064,7 +5257,7 @@
 					},
 					{
 						"name": "txtLead",
-						"description": "Text Leading\n\nSets the leading (line spacing) for rendered text. Only works on the multi-line text endpoint.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/typesetting/txt-lead)",
+						"description": "Text Leading\n\nSets the leading (line spacing) for rendered text. Only works on the multi-line text endpoint.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/typesetting-endpoint/text-leading)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -5076,7 +5269,7 @@
 					},
 					{
 						"name": "txtLine",
-						"description": "Text Outline\n\nOutlines the rendered text with a specified color.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-line)",
+						"description": "Text Outline\n\nOutlines the rendered text with a specified color.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/text/text-outline)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -5088,7 +5281,7 @@
 					},
 					{
 						"name": "txtLineColor",
-						"description": "Text Outline Color\n\nSpecifies a text outline color.\n\nDepends on: `txt`, `txtline`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-line-color)",
+						"description": "Text Outline Color\n\nSpecifies a text outline color.\n\nDepends on: `txt`, `txtline`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/text/text-outline-color)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "String",
@@ -5100,7 +5293,7 @@
 					},
 					{
 						"name": "txtPad",
-						"description": "Text Padding\n\nSpecifies the padding (in device-independent pixels) between a textbox and the edges of the base image.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-pad)",
+						"description": "Text Padding\n\nSpecifies the padding (in device-independent pixels) between a textbox and the edges of the base image.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/text/text-padding)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -5112,7 +5305,7 @@
 					},
 					{
 						"name": "txtShad",
-						"description": "Text Shadow\n\nApplies a shadow to rendered text.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-shad)",
+						"description": "Text Shadow\n\nApplies a shadow to rendered text.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/text/text-shadow)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "FloatType",
@@ -5124,7 +5317,7 @@
 					},
 					{
 						"name": "txtSize",
-						"description": "Text Font Size\n\nSets the font size of rendered text.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-size)",
+						"description": "Text Font Size\n\nSets the font size of rendered text.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/text/text-font-size)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -5136,7 +5329,7 @@
 					},
 					{
 						"name": "txtTrack",
-						"description": "Text Tracking\n\nSets the tracking (letter spacing) for rendered text. Only works on the multi-line text endpoint.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/typesetting/txt-track)",
+						"description": "Text Tracking\n\nSets the tracking (letter spacing) for rendered text. Only works on the multi-line text endpoint.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/typesetting-endpoint/text-tracking)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -5148,7 +5341,7 @@
 					},
 					{
 						"name": "txtWidth",
-						"description": "Text Width\n\nSets the width of rendered text.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-width)",
+						"description": "Text Width\n\nSets the width of rendered text.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/text/text-width)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -5160,7 +5353,7 @@
 					},
 					{
 						"name": "txtX",
-						"description": "Text X Position\n\nSets the horizontal (x) position of the text in pixels relative to the left edge of the base image.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-x)",
+						"description": "Text X Position\n\nSets the horizontal (x) position of the text in pixels relative to the left edge of the base image.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/text/text-x-position)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -5172,7 +5365,7 @@
 					},
 					{
 						"name": "txtY",
-						"description": "Text Y Position\n\nSets the vertical (y) position of the text in pixels relative to the top edge of the base image.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/text/txt-y)",
+						"description": "Text Y Position\n\nSets the vertical (y) position of the text in pixels relative to the top edge of the base image.\n\nDepends on: `txt`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/text/text-y-position)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -5184,7 +5377,7 @@
 					},
 					{
 						"name": "upscale",
-						"description": "Super Resolution\n\nUses generative AI fill to upscale low resolution images.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/super-resolution/upscale)",
+						"description": "Super Resolution\n\nUses generative AI fill to upscale low resolution images.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/super-resolution)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "BooleanType",
@@ -5196,7 +5389,7 @@
 					},
 					{
 						"name": "upscaleFallback",
-						"description": "Super Resolution Fallback\n\nOverrides default fallback behavior for super resolution failures\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/super-resolution/upscale-fallback)",
+						"description": "Super Resolution Fallback\n\nOverrides default fallback behavior for super resolution failures\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/super-resolution)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "BooleanType",
@@ -5208,7 +5401,7 @@
 					},
 					{
 						"name": "usm",
-						"description": "Unsharp Mask\n\nSharpens the source image using an unsharp mask.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/usm)",
+						"description": "Unsharp Mask\n\nSharpens the source image using an unsharp mask.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/adjustment/unsharp-mask)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -5220,7 +5413,7 @@
 					},
 					{
 						"name": "usmrad",
-						"description": "Unsharp Mask Radius\n\nSpecifies the radius for an unsharp mask operation.\n\nDepends on: `usm`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/usmrad)",
+						"description": "Unsharp Mask Radius\n\nSpecifies the radius for an unsharp mask operation.\n\nDepends on: `usm`\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/adjustment/unsharp-mask-radius)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "FloatType",
@@ -5232,7 +5425,7 @@
 					},
 					{
 						"name": "vib",
-						"description": "Vibrance\n\nAdjusts the vibrance of an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/adjustment/vib)",
+						"description": "Vibrance\n\nAdjusts the vibrance of an image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/adjustment/vibrance)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "IntType",
@@ -5244,7 +5437,7 @@
 					},
 					{
 						"name": "w",
-						"description": "Image Width\n\nAdjusts the width of the output image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/url/size/w)",
+						"description": "Image Width\n\nAdjusts the width of the output image.\n\n[Open Imgix reference »](https://docs.imgix.com/apis/rendering/size/image-width)",
 						"type": {
 							"kind": "SCALAR",
 							"name": "FloatType",
@@ -5288,6 +5481,30 @@
 					},
 					{
 						"name": "redeye",
+						"description": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					}
+				],
+				"possibleTypes": null
+			},
+			{
+				"kind": "ENUM",
+				"name": "ImgixParamsBgRemoveFgType",
+				"description": null,
+				"isOneOf": null,
+				"fields": null,
+				"inputFields": null,
+				"interfaces": null,
+				"enumValues": [
+					{
+						"name": "auto",
+						"description": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "car",
 						"description": null,
 						"isDeprecated": false,
 						"deprecationReason": null
@@ -5654,6 +5871,12 @@
 				"enumValues": [
 					{
 						"name": "adobergb1998",
+						"description": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "origin",
 						"description": null,
 						"isDeprecated": false,
 						"deprecationReason": null
@@ -6221,6 +6444,30 @@
 			},
 			{
 				"kind": "ENUM",
+				"name": "ImgixParamsRotType",
+				"description": null,
+				"isOneOf": null,
+				"fields": null,
+				"inputFields": null,
+				"interfaces": null,
+				"enumValues": [
+					{
+						"name": "pivot",
+						"description": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
+					{
+						"name": "straighten",
+						"description": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					}
+				],
+				"possibleTypes": null
+			},
+			{
+				"kind": "ENUM",
 				"name": "ImgixParamsTransparency",
 				"description": null,
 				"isOneOf": null,
@@ -6246,6 +6493,12 @@
 				"inputFields": null,
 				"interfaces": null,
 				"enumValues": [
+					{
+						"name": "alpha",
+						"description": null,
+						"isDeprecated": false,
+						"deprecationReason": null
+					},
 					{
 						"name": "auto",
 						"description": null,
@@ -7911,9 +8164,13 @@
 						"description": null,
 						"args": [],
 						"type": {
-							"kind": "SCALAR",
-							"name": "DateTime",
-							"ofType": null
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "DateTime",
+								"ofType": null
+							}
 						},
 						"isDeprecated": false,
 						"deprecationReason": null
@@ -7967,9 +8224,13 @@
 						"description": null,
 						"args": [],
 						"type": {
-							"kind": "SCALAR",
-							"name": "DateTime",
-							"ofType": null
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "DateTime",
+								"ofType": null
+							}
 						},
 						"isDeprecated": false,
 						"deprecationReason": null
@@ -8938,9 +9199,13 @@
 						"description": null,
 						"args": [],
 						"type": {
-							"kind": "SCALAR",
-							"name": "DateTime",
-							"ofType": null
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "DateTime",
+								"ofType": null
+							}
 						},
 						"isDeprecated": false,
 						"deprecationReason": null
@@ -8994,9 +9259,13 @@
 						"description": null,
 						"args": [],
 						"type": {
-							"kind": "SCALAR",
-							"name": "DateTime",
-							"ofType": null
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "DateTime",
+								"ofType": null
+							}
 						},
 						"isDeprecated": false,
 						"deprecationReason": null
@@ -9613,9 +9882,13 @@
 						"description": null,
 						"args": [],
 						"type": {
-							"kind": "SCALAR",
-							"name": "DateTime",
-							"ofType": null
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "DateTime",
+								"ofType": null
+							}
 						},
 						"isDeprecated": false,
 						"deprecationReason": null
@@ -9669,9 +9942,13 @@
 						"description": null,
 						"args": [],
 						"type": {
-							"kind": "SCALAR",
-							"name": "DateTime",
-							"ofType": null
+							"kind": "NON_NULL",
+							"name": null,
+							"ofType": {
+								"kind": "SCALAR",
+								"name": "DateTime",
+								"ofType": null
+							}
 						},
 						"isDeprecated": false,
 						"deprecationReason": null

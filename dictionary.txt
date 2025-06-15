@@ -16,3 +16,6 @@ datocms
 urlset
 sitemapindex
 toyyyy
+codegen
+lefthook
+oneline
