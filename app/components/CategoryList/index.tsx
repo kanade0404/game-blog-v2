@@ -5,15 +5,15 @@ import CategoryList from "./CategoryList";
 import ScrollToActiveCategory from "./ScrollToActiveCategory";
 
 const Index = async () => {
-  const { allCategoryModels } = await getCategoryList();
-  if (!allCategoryModels) return <p>Not Found</p>;
-  
-  return (
-    <Suspense fallback={<Loading />}>
-      <CategoryList categories={allCategoryModels} />
-      <ScrollToActiveCategory />
-    </Suspense>
-  );
+	const { allCategoryModels } = await getCategoryList();
+	if (!allCategoryModels) return <p>Not Found</p>;
+
+	return (
+		<Suspense fallback={<Loading />}>
+			<CategoryList categories={allCategoryModels} />
+			<ScrollToActiveCategory />
+		</Suspense>
+	);
 };
 
 export default Index;

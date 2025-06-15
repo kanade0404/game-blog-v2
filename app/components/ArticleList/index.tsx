@@ -1,16 +1,13 @@
-import { Suspense } from "react";
+import { notFound } from "next/navigation";
 import { getArticleList } from "../../../lib/graphql/getArticleList";
-import Loading from "../../loading";
 import ArticleList from "./ArticleList";
 
 const Index = async () => {
 	const { allBlogModels } = await getArticleList();
-	if (!allBlogModels) return <p>Not Found</p>;
-	return (
-		<Suspense fallback={<Loading />}>
-			<ArticleList blogs={allBlogModels} />
-		</Suspense>
-	);
+	if (!allBlogModels) {
+		notFound();
+	}
+	return <ArticleList blogs={allBlogModels} />;
 };
 
 export default Index;

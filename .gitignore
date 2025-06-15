@@ -45,3 +45,6 @@ storybook-static/
 build-storybook.log
 *.css.d.ts
 public
+
+# Claude Code local settings
+.claude/settings.local.json

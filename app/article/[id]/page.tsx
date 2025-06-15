@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { getArticle } from "../../../lib/graphql/getArticle";
 import Article from "../../components/Article";
+import Loading from "../../loading";
 
 type Props = {
 	params: Promise<{
@@ -40,7 +42,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function Index({ params }: Props) {
 	return (
 		<main>
-			<Article params={await params} />
+			<Suspense fallback={<Loading />}>
+				<Article params={await params} />
+			</Suspense>
 		</main>
 	);
 }

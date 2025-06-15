@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import type { BlogQuery } from "../../../lib/api/query";
 import { convertToYYYYMMdd } from "../../../lib/time/convertToyyyyMMdd";
 import Markdown from "../Markdown";
@@ -7,10 +6,9 @@ import styles from "./article.module.css";
 type Props = {
 	params: {
 		blog: BlogQuery["blogModel"];
-		adElement: ReactNode;
 	};
 };
-const Article = ({ params: { blog, adElement } }: Props) => {
+const Article = ({ params: { blog } }: Props) => {
 	const { title, content, _firstPublishedAt, category, tag } = blog;
 	return (
 		<>
@@ -29,7 +27,6 @@ const Article = ({ params: { blog, adElement } }: Props) => {
 					<p key={t.id}>#{t.name}</p>
 				))}
 			</div>
-			{adElement}
 		</>
 	);
 };
