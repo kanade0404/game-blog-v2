@@ -1,17 +1,14 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.4.1/schema.json",
-	"organizeImports": {
-		"enabled": true
-	},
+	"$schema": "https://biomejs.dev/schemas/2.0.0-beta/schema.json",
 	"files": {
-		"ignore": [".next", "storybook-static/*", "lib/api/*", ".husky", "coverage"]
+		"includes": ["**/*", "!.next/**", "!storybook-static/**", "!lib/api/**", "!.husky/**", "!coverage/**"]
 	},
 	"linter": {
 		"enabled": true,
 		"rules": {
 			"recommended": true
 		},
-		"ignore": ["schema.json"]
+		"includes": ["**/*", "!schema.json"]
 	},
 	"formatter": {
 		"enabled": true
