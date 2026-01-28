@@ -82,8 +82,8 @@ importers:
         specifier: 4.6.1
         version: 4.6.1(graphql-sock@1.0.1(graphql@16.12.0))(graphql@16.12.0)
       '@next/bundle-analyzer':
-        specifier: 15.5.9
-        version: 15.5.9
+        specifier: 16.1.6
+        version: 16.1.6
       '@storybook/addon-links':
         specifier: 9.1.17
         version: 9.1.17(react@19.2.3)(storybook@9.1.17(@testing-library/dom@10.4.0)(msw@2.3.1(typescript@5.9.3))(prettier@3.5.3)(vite@5.4.10(@types/node@22.19.3)(sass@1.81.0)(terser@5.31.1)))
@@ -2121,8 +2121,8 @@ packages:
     resolution: {integrity: sha512-3rDakgJZ77+RiQUuSK69t1F0m8BQKA8Vh5DCS5V0DWvNY67zob2JhhQrhCO0AKLGINTRSFd1tBaHcJTkhefoSw==}
     engines: {node: '>=18'}
 
-  '@next/bundle-analyzer@15.5.9':
-    resolution: {integrity: sha512-lT1EBpFyGVN9u8M43f2jE78DsCu0A5KPA5OkF5PdIHrKDo4oTJ4lUQKciA9T2u9gccSXIPQcZb5TYkHF4f8iiw==}
+  '@next/bundle-analyzer@16.1.6':
+    resolution: {integrity: sha512-ee2kagdTaeEWPlotgdTOqFHYcD3e2m2bbE3I9Rq2i6ABYi5OgopmtEUe8NM23viaYxLV2tDH/2nd5+qKoEr6cw==}
 
   '@next/env@13.5.6':
     resolution: {integrity: sha512-Yac/bV5sBGkkEXmAX5FWPS9Mmo2rthrOPRQQNfycJPkjUAUclomCPH7QFVCDQ4Mp2k2K1SSM6m0zrxYrOwtFQw==}
@@ -9976,7 +9976,7 @@ snapshots:
       outvariant: 1.4.2
       strict-event-emitter: 0.5.1
 
-  '@next/bundle-analyzer@15.5.9':
+  '@next/bundle-analyzer@16.1.6':
     dependencies:
       webpack-bundle-analyzer: 4.10.1
     transitivePeerDependencies:
