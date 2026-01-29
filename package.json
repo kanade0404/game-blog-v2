@@ -29,7 +29,7 @@
 		"@graphql-codegen/typescript": "4.1.6",
 		"@graphql-codegen/typescript-graphql-request": "6.3.0",
 		"@graphql-codegen/typescript-operations": "4.6.1",
-		"@next/bundle-analyzer": "15.5.9",
+		"@next/bundle-analyzer": "16.1.6",
 		"@storybook/addon-links": "9.1.17",
 		"@storybook/addon-onboarding": "9.1.17",
 		"@storybook/cli": "9.1.17",
