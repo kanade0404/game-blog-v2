@@ -49,7 +49,7 @@
 		"cspell": "9.6.4",
 		"dotenv": "17.3.1",
 		"fixpack": "4.0.0",
-		"jsdom": "28.0.0",
+		"jsdom": "28.1.0",
 		"next-router-mock": "1.0.5",
 		"npm-run-all2": "8.0.4",
 		"react-test-renderer": "19.2.4",
