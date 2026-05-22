@@ -1,4 +1,4 @@
-node = "22.12.0"
+node = "22.22.3"
 
 [plugins]
 terraform = "https://raw.githubusercontent.com/theomessin/proto-toml-plugins/master/terraform.toml"
