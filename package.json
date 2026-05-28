@@ -39,7 +39,7 @@
 		"@testing-library/react": "16.3.2",
 		"@testing-library/user-event": "14.6.1",
 		"@types/mdx": "2.0.13",
-		"@types/node": "22.19.19",
+		"@types/node": "24.12.4",
 		"@types/react": "19.2.15",
 		"@types/react-dom": "19.2.3",
 		"@types/react-test-renderer": "19.1.0",
@@ -60,7 +60,7 @@
 		"vitest": "4.1.7"
 	},
 	"engines": {
-		"node": "=22.22.3"
+		"node": "=24.16.0"
 	},
 	"packageManager": "pnpm@10.33.4",
 	"private": true,
