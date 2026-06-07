@@ -19,9 +19,9 @@ jobs:
   build:
     runs-on: ubuntu-24.04
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v4.3.1
     - name: Use Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v4.4.0
       with:
         node-version-file: 'package.json'
     - uses: pnpm/action-setup@v3.0.0
@@ -32,7 +32,7 @@ jobs:
     - name: Get pnpm store directory
       shell: bash
       run: echo "STORE_PATH=$(pnpm store path --silent)" >> "$GITHUB_ENV"
-    - uses: actions/cache@v5
+    - uses: actions/cache@v5.0.5
       id: node_modules_cache_id
       env:
         cache-name: cache-node-modules
