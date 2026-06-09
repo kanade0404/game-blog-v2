@@ -7,7 +7,7 @@
 		"@graphql-tools/merge": "9.1.9",
 		"@graphql-tools/schema": "10.0.33",
 		"@js-temporal/polyfill": "0.5.1",
-		"@sentry/nextjs": "10.53.1",
+		"@sentry/nextjs": "10.57.0",
 		"@vercel/analytics": "1.6.1",
 		"@vercel/speed-insights": "2.0.0",
 		"clsx": "2.1.1",
