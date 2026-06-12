@@ -130,8 +130,8 @@ importers:
         specifier: 4.1.8
         version: 4.1.8(vitest@4.1.8)
       chromatic:
-        specifier: 17.4.0
-        version: 17.4.0
+        specifier: 17.4.1
+        version: 17.4.1
       cspell:
         specifier: 10.0.1
         version: 10.0.1
@@ -3462,8 +3462,8 @@ packages:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
     engines: {node: '>=10'}
 
-  chromatic@17.4.0:
-    resolution: {integrity: sha512-DWHWcnCO6NR6HZ6ta5XFKHI+PBvYxAPSFX8xORhXxRPangWpsAs0FgMlz64L1oZPkEkzM7r0B4PkMb0R6e43CQ==}
+  chromatic@17.4.1:
+    resolution: {integrity: sha512-qL1f0IhOBi0Z6kpQZGR62fJzzCOdjFJLHrJw3QL9YNktj2Kl3+adlU+6psqNGfZUycKF7+pizCSbhsUQNIS/uQ==}
     engines: {node: '>=22.0.0'}
     hasBin: true
     peerDependencies:
@@ -10161,7 +10161,7 @@ snapshots:
 
   chownr@2.0.0: {}
 
-  chromatic@17.4.0:
+  chromatic@17.4.1:
     dependencies:
       semver: 7.8.4
 
