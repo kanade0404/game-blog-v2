@@ -23,7 +23,7 @@ jobs:
         uses: actions/setup-node@v4.4.0
         with:
           node-version-file: 'package.json'
-      - uses: pnpm/action-setup@v3.0.0
+      - uses: pnpm/action-setup@v6.0.8
         name: Install pnpm
         with:
           version: 10.34.3
